@@ -29,10 +29,10 @@ export default function BottomNav() {
             href: '/dashboard',
         },
         {
-            label: 'Symptoms',
+            label: 'Doctors',
             icon: <MdOutlineMedicalServices className="text-2xl" />,
             activeIcon: <MdMedicalServices className="text-2xl" />,
-            href: '/medical-system',
+            href: '/doctors',
         },
         {
             label: 'AI Scan',

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -14,7 +14,7 @@ import {
 import { db } from '../../../lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 
-export default function AIScanReportPage() {
+function ScanReportContent() {
     const searchParams = useSearchParams();
     const id = searchParams.get('id');
     const [scan, setScan] = useState<any>(null);
@@ -220,5 +220,13 @@ export default function AIScanReportPage() {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function AIScanReportPage() {
+    return (
+        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
+            <ScanReportContent />
+        </Suspense>
     );
 }

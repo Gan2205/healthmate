@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import {
     MdArrowBack,
@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { db } from '../../../lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 
-export default function MedicalPlanScreen() {
+function MedicalPlanContent() {
     const searchParams = useSearchParams();
     const id = searchParams.get('id');
     const [plan, setPlan] = React.useState<any>(null);
@@ -171,5 +171,13 @@ export default function MedicalPlanScreen() {
             )}
 
         </div>
+    );
+}
+
+export default function MedicalPlanScreen() {
+    return (
+        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
+            <MedicalPlanContent />
+        </Suspense>
     );
 }

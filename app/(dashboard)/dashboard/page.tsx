@@ -21,6 +21,7 @@ import { useRouter } from 'next/navigation';
 import { useUserData } from '../../../hooks/useUserData';
 import { auth, db } from '../../../lib/firebase';
 import { doc, updateDoc, deleteDoc } from 'firebase/firestore';
+import VoiceAssistant from '../../../components/VoiceAssistant';
 
 export default function HomeScreen() {
     // Dummy data
@@ -334,6 +335,9 @@ export default function HomeScreen() {
                 </Link>
             </div>
 
+            {/* Upcoming Appointments */}
+            <UpcomingAppointments />
+
             {/* Doctor Selection Section */}
             <div className="mb-8">
                 <h2 className="text-xl font-bold text-black/87 mb-4">My Doctor</h2>
@@ -381,57 +385,25 @@ export default function HomeScreen() {
                         </Link>
                     </div>
                 ) : (
-                    <div className="space-y-3">
-                        {loadingDoctors ? (
-                            <div className="text-sm text-gray-500">Loading doctors...</div>
-                        ) : doctors.length === 0 ? (
-                            <div className="p-4 bg-gray-50 rounded-xl text-center text-gray-500 text-sm">
-                                No doctors registered yet.
-                            </div>
-                        ) : (
-                            <div className="grid grid-cols-1 gap-3">
-                                {doctors.map(doc => (
-                                    <div key={doc.id} className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex flex-col gap-3">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500">
-                                                    <MdMedicalServices />
-                                                </div>
-                                                <div>
-                                                    <div className="font-bold text-sm text-black/87">Dr. {doc.name}</div>
-                                                    <div className="text-xs text-gray-500 flex flex-col">
-                                                        <span>{doc.study ? `(${doc.study})` : ''} {doc.specialization ? `- ${doc.specialization}` : ''}</span>
-                                                        <span>{doc.hospitalName}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button
-                                                onClick={() => handleSendConnectionRequest(doc.id, doc.name)}
-                                                disabled={pendingRequests.some(r => r.doctorId === doc.id)}
-                                                className={`text-xs font-bold px-4 py-2 rounded-lg transition-colors ${pendingRequests.some(r => r.doctorId === doc.id)
-                                                        ? 'bg-yellow-100 text-yellow-700 cursor-not-allowed'
-                                                        : 'bg-black text-white hover:bg-gray-800'
-                                                    }`}
-                                            >
-                                                {pendingRequests.some(r => r.doctorId === doc.id) ? 'Pending...' : 'Connect'}
-                                            </button>
-                                        </div>
-                                        <Link
-                                            href={`/book-appointment/${doc.id}`}
-                                            className="w-full bg-gray-50 text-blue-600 border border-blue-100 py-2 rounded-lg font-bold text-xs hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
-                                        >
-                                            Book Appointment
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+                    <div className="bg-white p-6 rounded-2xl border border-dashed border-gray-300 flex flex-col items-center justify-center text-center">
+                        <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-3">
+                            <MdMedicalServices className="text-2xl text-gray-400" />
+                        </div>
+                        <h3 className="text-sm font-bold text-gray-700 mb-1">No Connected Doctor</h3>
+                        <p className="text-xs text-gray-500 max-w-[200px] mb-4">
+                            Connect with a doctor to share your vitals and get personalized care.
+                        </p>
+                        <Link
+                            href="/doctors"
+                            className="bg-black text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-gray-800 transition-colors"
+                        >
+                            Find a Doctor
+                        </Link>
                     </div>
                 )}
             </div>
 
-            {/* Upcoming Appointments */}
-            <UpcomingAppointments />
+
 
             {/* Recent Activity */}
             <div className="mb-4 flex justify-between items-center">
@@ -447,6 +419,13 @@ export default function HomeScreen() {
                     <span className="text-lg">+</span> Check Symptoms
                 </Link>
             </div>
+
+            {/* Voice Assistant - Patient Only */}
+            <VoiceAssistant
+                userName={username}
+                sugarLevel={sugarLevel}
+                heartRate={heartRate}
+            />
 
         </div>
     );

@@ -120,8 +120,8 @@ export default function DoctorDashboard() {
             });
 
             // Update local state
-            setConnectionRequests(prev => prev.filter(r => r.id !== request.id));
-            setPatients(prev => [...prev, { id: request.patientId, name: request.patientName, email: request.patientEmail }]);
+            setConnectionRequests((prev: any[]) => prev.filter(r => r.id !== request.id));
+            setPatients((prev: any[]) => [...prev, { id: request.patientId, name: request.patientName, email: request.patientEmail }]);
             alert(`Accepted ${request.patientName}'s connection request.`);
         } catch (e) {
             console.error("Error accepting request:", e);
@@ -144,7 +144,7 @@ export default function DoctorDashboard() {
                 createdAt: Timestamp.now()
             });
 
-            setConnectionRequests(prev => prev.filter(r => r.id !== request.id));
+            setConnectionRequests((prev: any[]) => prev.filter(r => r.id !== request.id));
             alert(`Rejected ${request.patientName}'s connection request.`);
         } catch (e) {
             console.error("Error rejecting request:", e);
@@ -171,7 +171,7 @@ export default function DoctorDashboard() {
             await updateDoc(doc(db, "appointments", appId), { status: newStatus });
 
             // Optimistic update
-            setAppointments(prev => prev.map(app =>
+            setAppointments((prev: any[]) => prev.map(app =>
                 app.id === appId ? { ...app, status: newStatus } : app
             ));
         } catch (error) {

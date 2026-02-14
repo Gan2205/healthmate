@@ -34,10 +34,21 @@ export default function SymptomCheckScreen() {
     const [loading, setLoading] = useState(false);
     const [analysisComplete, setAnalysisComplete] = useState(false);
     const [medicalPlan, setMedicalPlan] = useState<MedicalPlan | null>(null);
+    const fileInputRef = React.useRef<HTMLInputElement>(null);
 
     const handleImageSelect = () => {
-        // Simulate image selection
-        setSelectedImage("dummy_image_path");
+        fileInputRef.current?.click();
+    };
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setSelectedImage(reader.result as string);
+            };
+            reader.readAsDataURL(file);
+        }
     };
 
     const removeImage = () => {
@@ -160,11 +171,21 @@ export default function SymptomCheckScreen() {
                         <MdAddPhotoAlternate className="text-lg" />
                         Add Image
                     </button>
+                    <input
+                        type="file"
+                        ref={fileInputRef}
+                        className="hidden"
+                        accept="image/*"
+                        onChange={handleFileChange}
+                    />
 
                     {selectedImage && (
                         <div className="flex-[2] relative bg-gray-100 rounded-xl overflow-hidden h-12 flex items-center px-3 border border-gray-200">
                             <span className="text-xs text-gray-600 truncate font-medium">Image selected</span>
-                            <button onClick={removeImage} className="absolute right-2 bg-black/60 text-white rounded-full p-1 hover:bg-black/80 transition-colors">
+                            {selectedImage && selectedImage.startsWith('data:') && (
+                                <img src={selectedImage} alt="Preview" className="h-full w-auto absolute right-10 top-0 object-cover opacity-50" />
+                            )}
+                            <button onClick={removeImage} className="absolute right-2 bg-black/60 text-white rounded-full p-1 hover:bg-black/80 transition-colors z-10">
                                 <MdClose className="text-xs" />
                             </button>
                         </div>
