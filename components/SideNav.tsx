@@ -12,8 +12,11 @@ import {
     MdOutlineMedicalServices,
     MdScience,
     MdOutlineScience,
-    MdLogout
+    MdLogout,
+    MdDescription,
+    MdOutlineDescription
 } from 'react-icons/md';
+import { FaStethoscope } from 'react-icons/fa';
 import { useUserData } from '../hooks/useUserData';
 import { auth } from '../lib/firebase';
 import { useRouter } from 'next/navigation';
@@ -41,6 +44,12 @@ export default function SideNav() {
             icon: <MdOutlineScience className="text-2xl" />,
             activeIcon: <MdScience className="text-2xl" />,
             href: '/health-prediction',
+        },
+        {
+            label: 'My Reports',
+            icon: <MdOutlineDescription className="text-2xl" />,
+            activeIcon: <MdDescription className="text-2xl" />,
+            href: '/my-reports',
         },
         {
             label: 'Profile',
@@ -80,7 +89,11 @@ export default function SideNav() {
         <div className="hidden md:flex flex-col w-64 bg-white h-screen fixed left-0 top-0 border-r border-gray-200 z-50">
             <div className="p-6">
                 <h1 className="text-2xl font-bold text-black flex items-center gap-2">
-                    <MdMedicalServices className="text-blue-600" />
+                    {userData?.role === 'doctor' ? (
+                        <FaStethoscope className="text-teal-600" />
+                    ) : (
+                        <MdDescription className="text-violet-600" />
+                    )}
                     HealthMate
                 </h1>
             </div>

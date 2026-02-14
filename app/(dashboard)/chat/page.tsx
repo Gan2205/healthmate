@@ -158,7 +158,7 @@ export default function ChatScreen() {
     };
 
     return (
-        <div className="flex flex-col h-[calc(100vh-80px)] max-w-2xl mx-auto w-full bg-gray-50">
+        <div className="flex flex-col h-[calc(100vh-80px)] max-w-2xl mx-auto w-full bg-gray-50 animate-fade-in">
             {/* AppBar */}
             <div className="bg-white p-4 shadow-sm z-10 sticky top-0 flex items-center justify-between">
                 <div className="flex items-center gap-3">

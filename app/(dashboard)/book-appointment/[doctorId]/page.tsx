@@ -23,6 +23,11 @@ export default function BookAppointmentPage() {
     const [time, setTime] = useState('');
     const [reason, setReason] = useState('');
 
+    // Slot availability: { '10:00 AM': 2, '11:00 AM': 3, ... }
+    const [slotCounts, setSlotCounts] = useState<Record<string, number>>({});
+    const [loadingSlots, setLoadingSlots] = useState(false);
+    const MAX_PER_SLOT = 3;
+
     useEffect(() => {
         const fetchDoctor = async () => {
             if (!doctorId) return;
@@ -91,6 +96,41 @@ export default function BookAppointmentPage() {
         '01:30 PM', '02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM',
         '06:00 PM', '06:30 PM', '07:00 PM', '07:30 PM', '08:00 PM'
     ];
+
+    // Fetch slot availability whenever date changes
+    useEffect(() => {
+        const fetchSlotAvailability = async () => {
+            if (!date || !doctorId) {
+                setSlotCounts({});
+                return;
+            }
+            setLoadingSlots(true);
+            setTime(''); // Reset selected time when date changes
+            try {
+                const q = query(
+                    collection(db, "appointments"),
+                    where("doctorId", "==", doctorId),
+                    where("date", "==", date),
+                    where("status", "==", "booked")
+                );
+                const snap = await getDocs(q);
+                const counts: Record<string, number> = {};
+                snap.docs.forEach(d => {
+                    const t = d.data().time;
+                    if (t) counts[t] = (counts[t] || 0) + 1;
+                });
+                setSlotCounts(counts);
+            } catch (err) {
+                console.error("Error fetching slot availability:", err);
+            } finally {
+                setLoadingSlots(false);
+            }
+        };
+        fetchSlotAvailability();
+    }, [date, doctorId]);
+
+    const isSlotFull = (slot: string) => (slotCounts[slot] || 0) >= MAX_PER_SLOT;
+    const getSlotsRemaining = (slot: string) => MAX_PER_SLOT - (slotCounts[slot] || 0);
 
     const handleBookAppointment = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -330,19 +370,32 @@ export default function BookAppointmentPage() {
                         <div>
                             <div className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Morning (10:00 AM - 12:00 PM)</div>
                             <div className="grid grid-cols-3 gap-2">
-                                {['10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM'].map((slot) => (
-                                    <button
-                                        key={slot}
-                                        type="button"
-                                        onClick={() => setTime(slot)}
-                                        className={`py-2 px-1 rounded-lg text-xs font-bold transition-all border ${time === slot
-                                            ? 'bg-black text-white border-black shadow-md transform scale-105'
-                                            : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50'
-                                            }`}
-                                    >
-                                        {slot}
-                                    </button>
-                                ))}
+                                {['10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM'].map((slot) => {
+                                    const full = isSlotFull(slot);
+                                    const remaining = getSlotsRemaining(slot);
+                                    return (
+                                        <button
+                                            key={slot}
+                                            type="button"
+                                            onClick={() => !full && setTime(slot)}
+                                            disabled={full || loadingSlots}
+                                            className={`py-2 px-1 rounded-lg text-xs font-bold transition-all border relative ${full
+                                                    ? 'bg-gray-100 text-gray-300 border-gray-100 cursor-not-allowed line-through'
+                                                    : time === slot
+                                                        ? 'bg-black text-white border-black shadow-md transform scale-105'
+                                                        : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50'
+                                                }`}
+                                            title={full ? 'Slot full — 3/3 booked' : `${remaining} spot${remaining !== 1 ? 's' : ''} left`}
+                                        >
+                                            {slot}
+                                            {date && !loadingSlots && (
+                                                <span className={`block text-[9px] font-medium mt-0.5 ${full ? 'text-red-300' : remaining === 1 ? 'text-amber-500' : 'text-emerald-500'}`}>
+                                                    {full ? 'Full' : `${remaining} left`}
+                                                </span>
+                                            )}
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
 
@@ -350,19 +403,32 @@ export default function BookAppointmentPage() {
                         <div>
                             <div className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Afternoon (01:30 PM - 04:30 PM)</div>
                             <div className="grid grid-cols-3 gap-2">
-                                {['01:30 PM', '02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM'].map((slot) => (
-                                    <button
-                                        key={slot}
-                                        type="button"
-                                        onClick={() => setTime(slot)}
-                                        className={`py-2 px-1 rounded-lg text-xs font-bold transition-all border ${time === slot
-                                            ? 'bg-black text-white border-black shadow-md transform scale-105'
-                                            : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50'
-                                            }`}
-                                    >
-                                        {slot}
-                                    </button>
-                                ))}
+                                {['01:30 PM', '02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM'].map((slot) => {
+                                    const full = isSlotFull(slot);
+                                    const remaining = getSlotsRemaining(slot);
+                                    return (
+                                        <button
+                                            key={slot}
+                                            type="button"
+                                            onClick={() => !full && setTime(slot)}
+                                            disabled={full || loadingSlots}
+                                            className={`py-2 px-1 rounded-lg text-xs font-bold transition-all border relative ${full
+                                                    ? 'bg-gray-100 text-gray-300 border-gray-100 cursor-not-allowed line-through'
+                                                    : time === slot
+                                                        ? 'bg-black text-white border-black shadow-md transform scale-105'
+                                                        : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50'
+                                                }`}
+                                            title={full ? 'Slot full — 3/3 booked' : `${remaining} spot${remaining !== 1 ? 's' : ''} left`}
+                                        >
+                                            {slot}
+                                            {date && !loadingSlots && (
+                                                <span className={`block text-[9px] font-medium mt-0.5 ${full ? 'text-red-300' : remaining === 1 ? 'text-amber-500' : 'text-emerald-500'}`}>
+                                                    {full ? 'Full' : `${remaining} left`}
+                                                </span>
+                                            )}
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
 
@@ -370,19 +436,32 @@ export default function BookAppointmentPage() {
                         <div>
                             <div className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">Evening (06:00 PM - 08:00 PM)</div>
                             <div className="grid grid-cols-3 gap-2">
-                                {['06:00 PM', '06:30 PM', '07:00 PM', '07:30 PM', '08:00 PM'].map((slot) => (
-                                    <button
-                                        key={slot}
-                                        type="button"
-                                        onClick={() => setTime(slot)}
-                                        className={`py-2 px-1 rounded-lg text-xs font-bold transition-all border ${time === slot
-                                            ? 'bg-black text-white border-black shadow-md transform scale-105'
-                                            : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50'
-                                            }`}
-                                    >
-                                        {slot}
-                                    </button>
-                                ))}
+                                {['06:00 PM', '06:30 PM', '07:00 PM', '07:30 PM', '08:00 PM'].map((slot) => {
+                                    const full = isSlotFull(slot);
+                                    const remaining = getSlotsRemaining(slot);
+                                    return (
+                                        <button
+                                            key={slot}
+                                            type="button"
+                                            onClick={() => !full && setTime(slot)}
+                                            disabled={full || loadingSlots}
+                                            className={`py-2 px-1 rounded-lg text-xs font-bold transition-all border relative ${full
+                                                    ? 'bg-gray-100 text-gray-300 border-gray-100 cursor-not-allowed line-through'
+                                                    : time === slot
+                                                        ? 'bg-black text-white border-black shadow-md transform scale-105'
+                                                        : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400 hover:bg-gray-50'
+                                                }`}
+                                            title={full ? 'Slot full — 3/3 booked' : `${remaining} spot${remaining !== 1 ? 's' : ''} left`}
+                                        >
+                                            {slot}
+                                            {date && !loadingSlots && (
+                                                <span className={`block text-[9px] font-medium mt-0.5 ${full ? 'text-red-300' : remaining === 1 ? 'text-amber-500' : 'text-emerald-500'}`}>
+                                                    {full ? 'Full' : `${remaining} left`}
+                                                </span>
+                                            )}
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

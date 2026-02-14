@@ -8,8 +8,10 @@ import {
   MdSmartToy,
   MdArrowForward,
   MdCheckCircle,
-  MdSecurity
+  MdSecurity,
+  MdDescription
 } from 'react-icons/md';
+import { FaStethoscope } from 'react-icons/fa';
 
 export default function LandingPage() {
   return (
@@ -18,8 +20,9 @@ export default function LandingPage() {
       <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#1A1A1A] rounded-xl flex items-center justify-center text-white text-xl">
-              <MdHealthAndSafety />
+            <div className="w-10 h-10 bg-[#1A1A1A] rounded-xl flex items-center justify-center relative">
+              <MdDescription className="text-white/50 text-xl absolute -translate-x-0.5 -translate-y-0.5" />
+              <FaStethoscope className="text-white text-sm absolute translate-x-1 translate-y-1" />
             </div>
             <span className="text-xl font-bold text-[#1A1A1A] tracking-tight">HealthMate</span>
           </div>

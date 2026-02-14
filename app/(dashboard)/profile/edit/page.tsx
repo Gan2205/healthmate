@@ -18,10 +18,12 @@ export default function EditProfileScreen() {
         weight: '',
         age: '',
         bloodType: '',
+        gender: '',
+        phoneNumber: '',
+        preExistingDiseases: '',
         study: '',
         specialization: '',
-        hospitalName: '',
-        phoneNumber: ''
+        hospitalName: ''
     });
     const [saving, setSaving] = useState(false);
 
@@ -34,15 +36,17 @@ export default function EditProfileScreen() {
                 weight: userData.weight || '',
                 age: userData.age || '',
                 bloodType: userData.bloodType || '',
+                gender: userData.gender || '',
+                phoneNumber: userData.phoneNumber || '',
+                preExistingDiseases: userData.preExistingDiseases || '',
                 study: userData.study || '',
                 specialization: userData.specialization || '',
-                hospitalName: userData.hospitalName || '',
-                phoneNumber: userData.phoneNumber || ''
+                hospitalName: userData.hospitalName || ''
             });
         }
     }, [userData]);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev: any) => ({ ...prev, [name]: value }));
     };
@@ -236,6 +240,49 @@ export default function EditProfileScreen() {
                                     <option value="O-">O-</option>
                                 </select>
                             </div>
+                        </div>
+
+                        {/* Gender */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                            <select
+                                name="gender"
+                                value={formData.gender}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                            >
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        {/* Phone Number */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input
+                                type="tel"
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                placeholder="e.g. +91 9876543210"
+                            />
+                        </div>
+
+                        {/* Pre-existing Diseases */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Pre-existing Diseases</label>
+                            <textarea
+                                name="preExistingDiseases"
+                                value={formData.preExistingDiseases}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A] resize-none"
+                                placeholder="e.g. Diabetes, Hypertension, Asthma (comma separated)"
+                                rows={3}
+                            />
                         </div>
                     </>
                 )}

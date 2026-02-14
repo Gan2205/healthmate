@@ -53,29 +53,51 @@ export default function ProfileScreen() {
                     </Link>
                 </div>
                 <h2 className="text-xl font-bold text-black/87">{userData?.name || user.name}</h2>
-                <p className="text-sm text-gray-500">{userData?.email || user.email}</p>
+                <p className="text-sm text-gray-500">{userData?.email || auth.currentUser?.email || 'No email'}</p>
             </div>
 
             {/* Stats Grid - Hide for Doctors */}
             {userData?.role !== 'doctor' ? (
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                        <div className="text-xs text-gray-500 font-medium mb-1">Height</div>
-                        <div className="text-lg font-bold text-black/87">{userData?.height || '-'} cm</div>
+                <>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                            <div className="text-xs text-gray-500 font-medium mb-1">Height</div>
+                            <div className="text-lg font-bold text-black/87">{userData?.height || '-'} cm</div>
+                        </div>
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                            <div className="text-xs text-gray-500 font-medium mb-1">Weight</div>
+                            <div className="text-lg font-bold text-black/87">{userData?.weight || '-'} kg</div>
+                        </div>
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                            <div className="text-xs text-gray-500 font-medium mb-1">Age</div>
+                            <div className="text-lg font-bold text-black/87">{userData?.age || '-'} yrs</div>
+                        </div>
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                            <div className="text-xs text-gray-500 font-medium mb-1">Blood Type</div>
+                            <div className="text-lg font-bold text-black/87">{userData?.bloodType || '-'}</div>
+                        </div>
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                            <div className="text-xs text-gray-500 font-medium mb-1">Gender</div>
+                            <div className="text-lg font-bold text-black/87">{userData?.gender || '-'}</div>
+                        </div>
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                            <div className="text-xs text-gray-500 font-medium mb-1">Phone</div>
+                            <div className="text-lg font-bold text-black/87">{userData?.phoneNumber || '-'}</div>
+                        </div>
                     </div>
-                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                        <div className="text-xs text-gray-500 font-medium mb-1">Weight</div>
-                        <div className="text-lg font-bold text-black/87">{userData?.weight || '-'} kg</div>
-                    </div>
-                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                        <div className="text-xs text-gray-500 font-medium mb-1">Age</div>
-                        <div className="text-lg font-bold text-black/87">{userData?.age || '-'} yrs</div>
-                    </div>
-                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                        <div className="text-xs text-gray-500 font-medium mb-1">Blood Type</div>
-                        <div className="text-lg font-bold text-black/87">{userData?.bloodType || '-'}</div>
-                    </div>
-                </div>
+                    {userData?.preExistingDiseases && (
+                        <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] mb-6">
+                            <div className="text-xs text-gray-500 font-medium mb-2">Pre-existing Diseases</div>
+                            <div className="flex flex-wrap gap-2">
+                                {userData.preExistingDiseases.split(',').map((disease: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-red-50 text-red-700 text-xs font-semibold rounded-full border border-red-100">
+                                        {disease.trim()}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </>
             ) : (
                 <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
@@ -99,7 +121,7 @@ export default function ProfileScreen() {
 
             {/* Menu Items */}
             <div className="bg-white rounded-[20px] shadow-[0_2px_10px_rgba(0,0,0,0.05)] overflow-hidden">
-                <MenuItem icon={<MdPerson />} title="Personal Information" />
+                <MenuItem icon={<MdPerson />} title="Personal Information" onClick={() => router.push('/profile/edit')} />
                 <MenuItem icon={<MdLogout />} title="Logout" onClick={handleLogout} isDestructive />
             </div>
 

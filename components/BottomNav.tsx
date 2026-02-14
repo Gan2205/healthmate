@@ -11,7 +11,9 @@ import {
     MdMedicalServices,
     MdOutlineMedicalServices,
     MdScience,
-    MdOutlineScience
+    MdOutlineScience,
+    MdDescription,
+    MdOutlineDescription
 } from 'react-icons/md';
 
 // ... imports
@@ -39,6 +41,12 @@ export default function BottomNav() {
             icon: <MdOutlineScience className="text-2xl" />,
             activeIcon: <MdScience className="text-2xl" />,
             href: '/health-prediction',
+        },
+        {
+            label: 'My Reports',
+            icon: <MdOutlineDescription className="text-2xl" />,
+            activeIcon: <MdDescription className="text-2xl" />,
+            href: '/my-reports',
         },
         {
             label: 'Profile',

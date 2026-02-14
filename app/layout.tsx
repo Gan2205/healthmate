@@ -8,9 +8,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-import SideNav from "@/components/SideNav";
-import BottomNav from "@/components/BottomNav";
-
 export const metadata: Metadata = {
   title: "HealthMate",
   description: "A personalized medical system using AI",
@@ -24,13 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased bg-gray-50`}>
-        <div className="flex min-h-screen">
-          <SideNav />
-          <main className="flex-1 md:ml-64 pb-20 md:pb-0">
-            {children}
-          </main>
-          <BottomNav />
-        </div>
+        {children}
       </body>
     </html>
   );
