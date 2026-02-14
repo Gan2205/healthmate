@@ -261,22 +261,37 @@ export default function HomeScreen() {
     };
 
     return (
-        <div className="p-4 sm:p-6 max-w-2xl mx-auto w-full">
+        <div className="p-4 sm:p-6 max-w-7xl mx-auto w-full animate-fade-in">
             {/* AppBar / Header */}
-            <div className="mb-6">
-                <h1 className="text-xl font-bold text-black/87">
-                    Hello, {username} <span className="text-xs ml-2 font-normal text-gray-500">({loading ? 'loading...' : (userData?.role || 'Patient')})</span>
-                </h1>
-                <p className="text-xs text-gray-600">
-                    How are you feeling today?
-                </p>
+            <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h1 className="text-2xl font-bold text-black/87 tracking-tight">
+                        Hello, {username} <span className="text-sm font-normal text-gray-500 ml-2">({loading ? '...' : (userData?.role || 'Patient')})</span>
+                    </h1>
+                    <p className="text-sm text-gray-500 mt-1">
+                        How are you feeling today?
+                    </p>
+                </div>
+
+                {/* Vitals Summary Pill (Desktop) */}
+                <div className="hidden md:flex items-center gap-6 bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100">
+                    <div className="flex items-center gap-2">
+                        <MdWaterDrop className="text-blue-500" />
+                        <span className="text-sm font-bold">{sugarLevel} <span className="text-gray-400 font-normal text-xs">mg/dL</span></span>
+                    </div>
+                    <div className="w-px h-4 bg-gray-200" />
+                    <div className="flex items-center gap-2">
+                        <MdFavorite className="text-red-500" />
+                        <span className="text-sm font-bold">{heartRate} <span className="text-gray-400 font-normal text-xs">bpm</span></span>
+                    </div>
+                </div>
             </div>
 
             {/* Notifications */}
             {notifications.length > 0 && (
-                <div className="mb-5 space-y-3">
+                <div className="mb-8 space-y-3 animate-slide-up" style={{ animationDelay: '0.1s' }}>
                     {notifications.map((notif) => (
-                        <div key={notif.id} className="relative bg-orange-50 border border-orange-200 rounded-2xl p-4 pr-10 shadow-sm">
+                        <div key={notif.id} className="relative bg-orange-50 border border-orange-100 rounded-2xl p-4 pr-10 shadow-sm transition-all hover:shadow-md">
                             <button
                                 onClick={async () => {
                                     try {
@@ -284,20 +299,20 @@ export default function HomeScreen() {
                                         setNotifications(prev => prev.filter(n => n.id !== notif.id));
                                     } catch (e) { console.error(e); }
                                 }}
-                                className="absolute top-3 right-3 p-1 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full"
+                                className="absolute top-3 right-3 p-1 text-gray-400 hover:text-gray-600 hover:bg-white/50 rounded-full transition-colors"
                             >
                                 <MdClose className="text-lg" />
                             </button>
-                            <div className="flex items-start gap-3">
-                                <div className="p-2 bg-orange-100 rounded-xl shrink-0 mt-0.5">
-                                    <MdNotifications className="text-orange-600 text-xl" />
+                            <div className="flex items-start gap-4">
+                                <div className="p-2.5 bg-orange-100 rounded-xl shrink-0 text-orange-600">
+                                    <MdNotifications className="text-xl" />
                                 </div>
                                 <div>
-                                    <div className="text-sm font-bold text-orange-900 mb-1">{notif.title}</div>
-                                    <p className="text-sm text-gray-700 leading-relaxed">{notif.message}</p>
+                                    <div className="text-sm font-bold text-gray-900 mb-1">{notif.title}</div>
+                                    <p className="text-sm text-gray-600 leading-relaxed">{notif.message}</p>
                                     {notif.newTime && (
-                                        <div className="mt-2 inline-flex items-center gap-1 px-3 py-1 bg-white border border-orange-200 rounded-full text-xs font-bold text-orange-700">
-                                            <MdAccessTime className="text-sm" />
+                                        <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-orange-100 rounded-full text-xs font-bold text-orange-700 shadow-sm">
+                                            <MdAccessTime />
                                             New Time: {notif.newTime}
                                         </div>
                                     )}
@@ -308,116 +323,129 @@ export default function HomeScreen() {
                 </div>
             )}
 
-            {/* Quick Actions */}
-            <div className="mb-4">
-                <h2 className="text-xl font-bold text-black/87 mb-4">Quick Actions</h2>
-                <div className="flex gap-3 mb-4">
-                    {/* Symptom Check */}
-                    <Link href="/symptom-check" className="flex-1 p-[22px] bg-blue-50 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-blue-100 transition-colors">
-                        <MdHealthAndSafety className="text-[34px] text-blue-600 mb-3.5" />
-                        <div className="text-[17px] font-bold text-black/87">Symptom Check</div>
-                        <div className="text-[13px] text-gray-600 mt-1.5">AI-powered analysis</div>
-                    </Link>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Left Column (Main Actions) */}
+                <div className="lg:col-span-2 space-y-8">
 
-                    {/* View Plan */}
-                    <Link href="/medical-plan" className="flex-1 p-[22px] bg-green-50 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-green-100 transition-colors">
-                        <MdMedicalServices className="text-[34px] text-green-600 mb-3.5" />
-                        <div className="text-[17px] font-bold text-black/87">View Plan</div>
-                        <div className="text-[13px] text-gray-600 mt-1.5">Your medical plan</div>
-                    </Link>
+                    {/* Quick Actions */}
+                    <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                        <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <MdMedicalServices className="text-gray-400" /> Quick Actions
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {/* Symptom Check */}
+                            <Link href="/symptom-check" className="group p-6 bg-blue-50 rounded-3xl border border-blue-100 transition-all duration-300 hover:shadow-lg hover:shadow-blue-100 hover:-translate-y-1">
+                                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
+                                    <MdHealthAndSafety className="text-3xl text-blue-600" />
+                                </div>
+                                <div className="text-lg font-bold text-gray-900">Symptom Check</div>
+                                <div className="text-sm text-blue-700/80 mt-1">AI-powered health analysis</div>
+                            </Link>
+
+                            {/* View Plan */}
+                            <Link href="/medical-plan" className="group p-6 bg-emerald-50 rounded-3xl border border-emerald-100 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-100 hover:-translate-y-1">
+                                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
+                                    <MdMedicalServices className="text-3xl text-emerald-600" />
+                                </div>
+                                <div className="text-lg font-bold text-gray-900">View Plan</div>
+                                <div className="text-sm text-emerald-700/80 mt-1">Your personalized roadmap</div>
+                            </Link>
+
+                            {/* AI Chat */}
+                            <Link href="/chat" className="group sm:col-span-2 p-6 bg-purple-50 rounded-3xl border border-purple-100 transition-all duration-300 hover:shadow-lg hover:shadow-purple-100 hover:-translate-y-1 flex items-center justify-between">
+                                <div>
+                                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
+                                        <MdChatBubble className="text-3xl text-purple-600" />
+                                    </div>
+                                    <div className="text-lg font-bold text-gray-900">AI Medical Chat</div>
+                                    <div className="text-sm text-purple-700/80 mt-1">Instant medical answers</div>
+                                </div>
+                                <div className="w-24 h-24 bg-purple-100 rounded-full opacity-50 blur-2xl -mr-4"></div>
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Upcoming Appointments */}
+                    <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+                        <UpcomingAppointments />
+                    </div>
                 </div>
 
-                {/* AI Chat */}
-                <Link href="/chat" className="block w-full p-[22px] bg-purple-50 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-purple-100 transition-colors">
-                    <MdChatBubble className="text-[34px] text-purple-600 mb-3.5" />
-                    <div className="text-[17px] font-bold text-black/87">AI Medical Chat</div>
-                    <div className="text-[13px] text-gray-600 mt-1.5">Chat with AI or upload medical images</div>
-                </Link>
-            </div>
-
-            {/* Upcoming Appointments */}
-            <UpcomingAppointments />
-
-            {/* Doctor Selection Section */}
-            <div className="mb-8">
-                <h2 className="text-xl font-bold text-black/87 mb-4">My Doctor</h2>
-
-                {/* Assigned Doctor Card */}
-                {userData?.assignedDoctorId ? (
-                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                                    <MdMedicalServices className="text-2xl" />
+                {/* Right Column (Doctor & Sidebar info) */}
+                <div className="space-y-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                    {/* My Doctor - Compact */}
+                    <div>
+                        <h2 className="text-lg font-bold text-gray-900 mb-4">My Doctor</h2>
+                        {userData?.assignedDoctorId ? (
+                            <div className="bg-white p-6 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-lg transition-all duration-300">
+                                <div className="flex gap-4 items-start mb-6">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-blue-200 shadow-lg">
+                                        <MdMedicalServices className="text-2xl" />
+                                    </div>
+                                    <div>
+                                        <div className="font-bold text-gray-900 text-lg line-clamp-1">
+                                            Dr. {doctors.find(d => d.id === userData.assignedDoctorId)?.name?.split(' ')[0] || 'Doc'}
+                                        </div>
+                                        <div className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md inline-block mt-1">
+                                            {doctors.find(d => d.id === userData.assignedDoctorId)?.specialization || 'Specialist'}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className="font-bold text-black/87">
-                                        Dr. {doctors.find(d => d.id === userData.assignedDoctorId)?.name || 'Loading...'}
-                                    </div>
-                                    <div className="text-xs text-gray-500 flex flex-col">
-                                        {(() => {
-                                            const doc = doctors.find(d => d.id === userData.assignedDoctorId);
-                                            if (!doc) return <span>Your specific doctor</span>;
-                                            return (
-                                                <>
-                                                    <span>{doc.study ? `(${doc.study})` : ''} {doc.specialization ? `- ${doc.specialization}` : ''}</span>
-                                                    <span>{doc.hospitalName}</span>
-                                                </>
-                                            );
-                                        })()}
-                                    </div>
+                                <div className="space-y-3">
+                                    <Link
+                                        href={`/book-appointment/${userData.assignedDoctorId}`}
+                                        className="w-full bg-gray-900 text-white py-3.5 rounded-xl font-bold text-sm hover:bg-black hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-gray-200"
+                                    >
+                                        Book Visit
+                                    </Link>
+                                    <button
+                                        onClick={() => handleAssignDoctor(null)}
+                                        className="w-full text-gray-400 text-xs font-medium hover:text-red-500 transition-colors"
+                                    >
+                                        Disconnect
+                                    </button>
                                 </div>
                             </div>
-                            <button
-                                onClick={() => handleAssignDoctor(null)}
-                                className="text-red-500 text-sm font-medium hover:bg-red-50 px-3 py-1.5 rounded-lg transition-colors"
-                            >
-                                Change
-                            </button>
+                        ) : (
+                            <div className="bg-white p-8 rounded-3xl border border-dashed border-gray-300 flex flex-col items-center justify-center text-center hover:border-gray-400 transition-colors">
+                                <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                                    <MdMedicalServices className="text-2xl text-gray-400" />
+                                </div>
+                                <p className="text-sm text-gray-500 mb-6 max-w-[200px]">
+                                    Connect with a doctor for personalized care.
+                                </p>
+                                <Link
+                                    href="/doctors"
+                                    className="bg-white border border-gray-300 text-gray-700 px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-gray-50 hover:text-black transition-all"
+                                >
+                                    Find Doctor
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Recent Activity Mini-List */}
+                    <div className="bg-gray-900 rounded-3xl p-6 text-white relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+
+                        <div className="flex justify-between items-center mb-6 relative z-10">
+                            <h2 className="font-bold">Recent Updates</h2>
+                            <button className="text-xs text-white/60 hover:text-white transition-colors">History</button>
                         </div>
 
-                        <Link
-                            href={`/book-appointment/${userData.assignedDoctorId}`}
-                            className="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
-                        >
-                            <MdCalendarMonth className="text-lg" />
-                            Book Appointment
-                        </Link>
-                    </div>
-                ) : (
-                    <div className="bg-white p-6 rounded-2xl border border-dashed border-gray-300 flex flex-col items-center justify-center text-center">
-                        <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-3">
-                            <MdMedicalServices className="text-2xl text-gray-400" />
+                        <div className="flex flex-col items-center justify-center py-6 text-center relative z-10">
+                            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-3 group-hover:bg-white/20 transition-colors">
+                                <MdCheckCircleOutline className="text-xl text-green-400" />
+                            </div>
+                            <div className="text-sm font-medium text-white/90">All systems normal</div>
+                            <div className="text-xs text-white/50 mt-1">No critical alerts</div>
                         </div>
-                        <h3 className="text-sm font-bold text-gray-700 mb-1">No Connected Doctor</h3>
-                        <p className="text-xs text-gray-500 max-w-[200px] mb-4">
-                            Connect with a doctor to share your vitals and get personalized care.
-                        </p>
-                        <Link
-                            href="/doctors"
-                            className="bg-black text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-gray-800 transition-colors"
-                        >
-                            Find a Doctor
+
+                        <Link href="/symptom-check" className="mt-4 w-full bg-white/10 hover:bg-white/20 border border-white/5 text-center block py-3 rounded-xl text-sm font-bold transition-all backdrop-blur-sm">
+                            New Checkup
                         </Link>
                     </div>
-                )}
-            </div>
-
-
-
-            {/* Recent Activity */}
-            <div className="mb-4 flex justify-between items-center">
-                <h2 className="text-xl font-bold text-black/87">Recent Activity</h2>
-                <button className="text-blue-600 text-sm font-medium hover:underline">View All</button>
-            </div>
-
-            {/* Empty State for Recent Activity */}
-            <div className="p-6 bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                <MdMedicalServices className="text-5xl text-gray-300 mb-3" />
-                <div className="text-sm text-gray-600 mb-2">No symptoms recorded yet</div>
-                <Link href="/symptom-check" className="flex items-center gap-2 bg-[#1A1A1A] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-black/90 transition-colors mt-2">
-                    <span className="text-lg">+</span> Check Symptoms
-                </Link>
+                </div>
             </div>
 
             {/* Voice Assistant - Patient Only */}
