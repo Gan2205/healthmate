@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HealthMate - Next.js Migration
+
+HealthMate is a comprehensive health management application migrated from Flutter to Next.js. It features a modern UI/UX, Firebase Authentication, Firestore database integration, and AI-powered health analysis using Google Gemini.
+
+## Features
+
+-   **Authentication**: Secure Login and Signup using Firebase Auth (Email/Password & Google).
+-   **Dashboard**: Overview of health status, vitals, and quick actions.
+-   **Symptom Checker**: AI-powered analysis of symptoms with optional image upload (Gemini 1.5 Flash).
+-   **Medical System**: Digital record of user profile and symptom history.
+-   **Medical Plan**: Detailed AI-generated health advice including risk level, precautions, and treatment steps.
+-   **AI Chat**: Interactive chat assistant for medical health queries.
+-   **Responsive Design**: Fully responsive layout adapting from mobile bottom navigation to desktop sidebar.
+
+## Tech Stack
+
+-   **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+-   **Language**: TypeScript
+-   **Styling**: Tailwind CSS
+-   **Backend**: Firebase (Auth, Firestore)
+-   **AI**: Google Generative AI (Gemini)
+-   **Icons**: React Icons (Material Design)
 
 ## Getting Started
 
-First, run the development server:
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository-url>
+    cd healthmate
+    ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.  **Environment Setup**:
+    -   Ensure `lib/firebase.ts` has your Firebase configuration.
+    -   The Gemini API key is currently configured in the API routes (`app/api/gemini/...`). For production, move this to `.env.local`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5.  **Open Application**:
+    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+-   `app/(auth)`: Authentication pages (Login, Signup).
+-   `app/(dashboard)`: Protected dashboard pages (Home, Symptom Check, Medical System, Profile, Chat).
+-   `app/api/gemini`: Backend API routes for AI integration.
+-   `components`: Reusable UI components.
+-   `hooks`: Custom React hooks (e.g., `useUserData`).
+-   `lib`: Configuration files (Firebase).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
