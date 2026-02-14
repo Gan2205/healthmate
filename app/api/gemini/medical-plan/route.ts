@@ -68,12 +68,16 @@ Important guidelines:
 - Ensure treatment plan spans at least 3-7 days
 - Risk level should accurately reflect symptom severity
 - **CRITICAL:** The 'suggestedSpecialist' and 'consultation.specialist' MUST be the most specific and relevant doctor for the reported symptoms.
-    - Heart/Chest pain/High BP -> Cardiologist
+    - Heart/Chest pain/High BP/Low heart rate (bradycardia)/High heart rate (tachycardia)/Abnormal heart rate -> Cardiologist
     - Skin issues/Rashes -> Dermatologist
     - Bone/Joint pain -> Orthopedist
-    - Stomach/Digestion -> Gastroenterologist
-    - General/Fever/Flu -> General Practitioner or Internal Medicine
-    - Diabetes/High Sugar -> Endocrinologist
+    - Stomach/Digestion/Nausea -> Gastroenterologist
+    - Cough/Shortness of Breath/Asthma/Respiratory issues -> Pulmonologist
+    - Headache/Dizziness/Neurological issues -> Neurologist
+    - Diabetes/High Sugar/Hormonal issues -> Endocrinologist
+    - General/Fever/Flu with NO abnormal vitals -> General Practitioner or Internal Medicine
+    - **IMPORTANT: If heart rate is below 60 bpm or above 100 bpm, ALWAYS recommend Cardiologist, NOT General Practitioner.**
+    - **IMPORTANT: If vitals (heart rate, sugar level) are abnormal, do NOT suggest General Practitioner. Pick the most relevant specialist.**
     - If unsure, recommend 'General Practitioner'
 `;
 

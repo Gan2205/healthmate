@@ -98,9 +98,8 @@ export default function LoginScreen() {
                 <form onSubmit={handleLogin} className="w-full space-y-6">
                     <div className="space-y-4">
                         {/* Email Input */}
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-white rounded-[30px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-shadow group-focus-within:shadow-[0_4px_16px_rgba(0,0,0,0.15)] pointer-events-none" />
-                            <div className="relative flex items-center h-[65px] px-6">
+                        <div className="relative group bg-white rounded-[30px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] focus-within:shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-shadow">
+                            <div className="flex items-center h-[65px] px-6">
                                 <div className="absolute top-2 left-6 text-xs text-gray-500 font-medium">Email</div>
                                 <input
                                     type="email"
@@ -115,9 +114,8 @@ export default function LoginScreen() {
                         </div>
 
                         {/* Password Input */}
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-white rounded-[30px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-shadow group-focus-within:shadow-[0_4px_16px_rgba(0,0,0,0.15)] pointer-events-none" />
-                            <div className="relative flex items-center h-[65px] px-6">
+                        <div className="relative group bg-white rounded-[30px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] focus-within:shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-shadow">
+                            <div className="flex items-center h-[65px] px-6">
                                 <div className="absolute top-2 left-6 text-xs text-gray-500 font-medium">Password</div>
                                 <input
                                     type={showPassword ? "text" : "password"}

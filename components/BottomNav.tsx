@@ -10,8 +10,8 @@ import {
     MdOutlinePerson,
     MdMedicalServices,
     MdOutlineMedicalServices,
-    MdSettings,
-    MdOutlineSettings
+    MdScience,
+    MdOutlineScience
 } from 'react-icons/md';
 
 // ... imports
@@ -33,6 +33,12 @@ export default function BottomNav() {
             icon: <MdOutlineMedicalServices className="text-2xl" />,
             activeIcon: <MdMedicalServices className="text-2xl" />,
             href: '/medical-system',
+        },
+        {
+            label: 'AI Scan',
+            icon: <MdOutlineScience className="text-2xl" />,
+            activeIcon: <MdScience className="text-2xl" />,
+            href: '/health-prediction',
         },
         {
             label: 'Profile',
