@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 import { FaGoogle, FaUserMd, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../../lib/firebase';
+import { auth, db } from '../../lib/firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 export default function LoginScreen() {
     const router = useRouter();
@@ -21,8 +22,16 @@ export default function LoginScreen() {
         setIsLoading(true);
         setError('');
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            router.push('/dashboard');
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            // Check role
+            const userDoc = await getDoc(doc(db, "users", userCredential.user.uid));
+            const userData = userDoc.data();
+
+            if (userData?.role === 'doctor') {
+                router.push('/doctor');
+            } else {
+                router.push('/dashboard');
+            }
         } catch (err: any) {
             console.error(err);
             if (err.code === 'auth/invalid-credential' || err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password') {
@@ -44,8 +53,17 @@ export default function LoginScreen() {
         setError('');
         try {
             const provider = new GoogleAuthProvider();
-            await signInWithPopup(auth, provider);
-            router.push('/dashboard');
+            const result = await signInWithPopup(auth, provider);
+
+            // Check role
+            const userDoc = await getDoc(doc(db, "users", result.user.uid));
+            const userData = userDoc.data();
+
+            if (userData?.role === 'doctor') {
+                router.push('/doctor');
+            } else {
+                router.push('/dashboard');
+            }
         } catch (err: unknown) {
             console.error(err);
             if (err instanceof Error) {
@@ -154,14 +172,7 @@ export default function LoginScreen() {
                     </Link>
                 </div>
 
-                {/* Doctor Login */}
-                <Link
-                    href="/doctor/login"
-                    className="flex items-center gap-2 text-blue-700 font-medium hover:underline"
-                >
-                    <FaUserMd className="text-lg" />
-                    <span>Doctor Login</span>
-                </Link>
+
 
             </div>
         </div>

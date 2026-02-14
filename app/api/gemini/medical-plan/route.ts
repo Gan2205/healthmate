@@ -10,13 +10,19 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 export async function POST(req: NextRequest) {
   try {
-    const { description, imageBase64 } = await req.json();
+    const { description, imageBase64, vitals } = await req.json();
 
     if (!description && !imageBase64) {
       return NextResponse.json({ error: "Description or image is required" }, { status: 400 });
     }
 
-    let prompt = `You are an advanced medical AI assistant. A user reports these symptoms: ${description || 'No text description provided.'}\n\n`;
+    let prompt = `You are an advanced medical AI assistant. A user reports these symptoms: ${description || 'No text description provided.'}\n`;
+
+    if (vitals) {
+      prompt += `\nUser Vitals Context:\n- Sugar Level: ${vitals.sugarLevel || 'Not provided'}\n- Heart Rate: ${vitals.heartRate || 'Not provided'}\n\nConsider these vitals when formulating the plan. If they are abnormal, prioritize advice related to managing them alongside the symptoms.\n`;
+    }
+
+    prompt += `\n`;
 
     if (imageBase64) {
       prompt += '\n\nThe user has also provided an image related to their symptoms. Please analyze the image carefully and incorporate any visible symptoms, conditions, or relevant medical information you observe in the image into your analysis.';
@@ -61,6 +67,14 @@ Important guidelines:
 - Make precautions specific and practical
 - Ensure treatment plan spans at least 3-7 days
 - Risk level should accurately reflect symptom severity
+- **CRITICAL:** The 'suggestedSpecialist' and 'consultation.specialist' MUST be the most specific and relevant doctor for the reported symptoms.
+    - Heart/Chest pain/High BP -> Cardiologist
+    - Skin issues/Rashes -> Dermatologist
+    - Bone/Joint pain -> Orthopedist
+    - Stomach/Digestion -> Gastroenterologist
+    - General/Fever/Flu -> General Practitioner or Internal Medicine
+    - Diabetes/High Sugar -> Endocrinologist
+    - If unsure, recommend 'General Practitioner'
 `;
 
     const parts: Part[] = [{ text: prompt }];

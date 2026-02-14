@@ -14,6 +14,7 @@ export default function SignupScreen() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [role, setRole] = useState<'patient' | 'doctor'>('patient'); // Default to patient
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
@@ -40,7 +41,7 @@ export default function SignupScreen() {
                 email: email,
                 uid: user.uid,
                 createdAt: new Date().toISOString(),
-                role: 'patient'
+                role: role // Use state value
             });
             console.log("Firestore document created.");
 
@@ -77,10 +78,16 @@ export default function SignupScreen() {
                 name: user.displayName || 'Unknown',
                 email: user.email,
                 uid: user.uid,
-                lastLogin: new Date().toISOString()
+                lastLogin: new Date().toISOString(),
+                role: role // Add role for Google signup as well
             }, { merge: true });
 
-            router.push('/dashboard');
+            // Step 3: Redirect
+            if (role === 'doctor') {
+                router.push('/doctor');
+            } else {
+                router.push('/dashboard');
+            }
         } catch (err: unknown) {
             console.error(err);
             if (err instanceof Error) {
@@ -171,6 +178,27 @@ export default function SignupScreen() {
                                 </button>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="flex gap-4 mb-6">
+                        <button
+                            type="button"
+                            onClick={() => setRole('patient')}
+                            className={`flex-1 py-3 rounded-xl border font-medium text-sm transition-all ${role === 'patient'
+                                ? 'bg-black text-white border-black'
+                                : 'bg-white text-gray-500 border-gray-200 hover:border-gray-300'}`}
+                        >
+                            Patient
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => setRole('doctor')}
+                            className={`flex-1 py-3 rounded-xl border font-medium text-sm transition-all ${role === 'doctor'
+                                ? 'bg-black text-white border-black'
+                                : 'bg-white text-gray-500 border-gray-200 hover:border-gray-300'}`}
+                        >
+                            Doctor
+                        </button>
                     </div>
 
                     <button

@@ -56,25 +56,46 @@ export default function ProfileScreen() {
                 <p className="text-sm text-gray-500">{userData?.email || user.email}</p>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                    <div className="text-xs text-gray-500 font-medium mb-1">Height</div>
-                    <div className="text-lg font-bold text-black/87">{userData?.height || '-'} cm</div>
+            {/* Stats Grid - Hide for Doctors */}
+            {userData?.role !== 'doctor' ? (
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Height</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.height || '-'} cm</div>
+                    </div>
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Weight</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.weight || '-'} kg</div>
+                    </div>
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Age</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.age || '-'} yrs</div>
+                    </div>
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Blood Type</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.bloodType || '-'}</div>
+                    </div>
                 </div>
-                <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                    <div className="text-xs text-gray-500 font-medium mb-1">Weight</div>
-                    <div className="text-lg font-bold text-black/87">{userData?.weight || '-'} kg</div>
+            ) : (
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Study/Degree</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.study || '-'}</div>
+                    </div>
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Specialization</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.specialization || '-'}</div>
+                    </div>
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Hospital</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.hospitalName || '-'}</div>
+                    </div>
+                    <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+                        <div className="text-xs text-gray-500 font-medium mb-1">Phone No</div>
+                        <div className="text-lg font-bold text-black/87">{userData?.phoneNumber || '-'}</div>
+                    </div>
                 </div>
-                <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                    <div className="text-xs text-gray-500 font-medium mb-1">Age</div>
-                    <div className="text-lg font-bold text-black/87">{userData?.age || '-'} yrs</div>
-                </div>
-                <div className="bg-white p-5 rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
-                    <div className="text-xs text-gray-500 font-medium mb-1">Blood Type</div>
-                    <div className="text-lg font-bold text-black/87">{userData?.bloodType || '-'}</div>
-                </div>
-            </div>
+            )}
 
             {/* Menu Items */}
             <div className="bg-white rounded-[20px] shadow-[0_2px_10px_rgba(0,0,0,0.05)] overflow-hidden">

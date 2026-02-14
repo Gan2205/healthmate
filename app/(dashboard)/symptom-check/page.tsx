@@ -15,6 +15,7 @@ import {
 } from 'react-icons/md';
 import { auth, db } from '../../../lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { useUserData } from '../../../hooks/useUserData';
 
 // Define interfaces for type safety
 interface MedicalPlan {
@@ -27,6 +28,7 @@ interface MedicalPlan {
 
 export default function SymptomCheckScreen() {
     const router = useRouter();
+    const { userData } = useUserData();
     const [symptomText, setSymptomText] = useState('');
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
@@ -65,7 +67,8 @@ export default function SymptomCheckScreen() {
                 },
                 body: JSON.stringify({
                     description: symptomText,
-                    imageBase64: selectedImage
+                    imageBase64: selectedImage,
+                    vitals: userData?.vitals || {}
                 }),
             });
 

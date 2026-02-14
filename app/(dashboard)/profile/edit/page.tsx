@@ -12,12 +12,16 @@ export default function EditProfileScreen() {
     const { userData, loading } = useUserData();
 
     // Form state
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<any>({
         name: '',
         height: '',
         weight: '',
         age: '',
-        bloodType: ''
+        bloodType: '',
+        study: '',
+        specialization: '',
+        hospitalName: '',
+        phoneNumber: ''
     });
     const [saving, setSaving] = useState(false);
 
@@ -29,7 +33,11 @@ export default function EditProfileScreen() {
                 height: userData.height || '',
                 weight: userData.weight || '',
                 age: userData.age || '',
-                bloodType: userData.bloodType || ''
+                bloodType: userData.bloodType || '',
+                study: userData.study || '',
+                specialization: userData.specialization || '',
+                hospitalName: userData.hospitalName || '',
+                phoneNumber: userData.phoneNumber || ''
             });
         }
     }, [userData]);
@@ -109,69 +117,128 @@ export default function EditProfileScreen() {
                     />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                    {/* Height */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Height (cm)</label>
-                        <input
-                            type="number"
-                            name="height"
-                            value={formData.height}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
-                            placeholder="e.g. 175"
-                        />
-                    </div>
+                {/* Conditional Fields based on Role */}
+                {userData?.role === 'doctor' ? (
+                    <div className="grid grid-cols-1 gap-4">
+                        {/* Study */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Study / Degree</label>
+                            <input
+                                type="text"
+                                name="study"
+                                value={formData.study || ''}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                placeholder="e.g. MBBS, MD"
+                            />
+                        </div>
 
-                    {/* Weight */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Weight (kg)</label>
-                        <input
-                            type="number"
-                            name="weight"
-                            value={formData.weight}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
-                            placeholder="e.g. 70"
-                        />
-                    </div>
-                </div>
+                        {/* Specialization */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Specialization</label>
+                            <input
+                                type="text"
+                                name="specialization"
+                                value={formData.specialization || ''}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                placeholder="e.g. Cardiologist"
+                            />
+                        </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                    {/* Age */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Age</label>
-                        <input
-                            type="number"
-                            name="age"
-                            value={formData.age}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
-                            placeholder="e.g. 25"
-                        />
-                    </div>
+                        {/* Hospital */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Hospital Name</label>
+                            <input
+                                type="text"
+                                name="hospitalName"
+                                value={formData.hospitalName || ''}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                placeholder="e.g. City General Hospital"
+                            />
+                        </div>
 
-                    {/* Blood Type */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Blood Type</label>
-                        <select
-                            name="bloodType"
-                            value={formData.bloodType}
-                            onChange={handleChange}
-                            className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
-                        >
-                            <option value="">Select</option>
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-                        </select>
+                        {/* Phone */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input
+                                type="tel"
+                                name="phoneNumber"
+                                value={formData.phoneNumber || ''}
+                                onChange={handleChange}
+                                className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                placeholder="e.g. +91 9876543210"
+                            />
+                        </div>
                     </div>
-                </div>
+                ) : (
+                    <>
+                        <div className="grid grid-cols-2 gap-4">
+                            {/* Height */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Height (cm)</label>
+                                <input
+                                    type="number"
+                                    name="height"
+                                    value={formData.height}
+                                    onChange={handleChange}
+                                    className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                    placeholder="e.g. 175"
+                                />
+                            </div>
+
+                            {/* Weight */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Weight (kg)</label>
+                                <input
+                                    type="number"
+                                    name="weight"
+                                    value={formData.weight}
+                                    onChange={handleChange}
+                                    className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                    placeholder="e.g. 70"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            {/* Age */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Age</label>
+                                <input
+                                    type="number"
+                                    name="age"
+                                    value={formData.age}
+                                    onChange={handleChange}
+                                    className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                    placeholder="e.g. 25"
+                                />
+                            </div>
+
+                            {/* Blood Type */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Blood Type</label>
+                                <select
+                                    name="bloodType"
+                                    value={formData.bloodType}
+                                    onChange={handleChange}
+                                    className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-[#1A1A1A]"
+                                >
+                                    <option value="">Select</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                        </div>
+                    </>
+                )}
 
                 <button
                     type="submit"

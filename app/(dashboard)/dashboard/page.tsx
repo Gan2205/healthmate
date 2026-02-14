@@ -11,13 +11,16 @@ import {
     MdHealthAndSafety,
     MdChatBubble
 } from 'react-icons/md';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useUserData } from '../../../hooks/useUserData';
 import { auth, db } from '../../../lib/firebase';
 import { doc, updateDoc } from 'firebase/firestore';
 
 export default function HomeScreen() {
     // Dummy data
+    const router = useRouter();
     const { userData, loading } = useUserData();
     const username = userData?.name || auth.currentUser?.displayName || "User";
     // Vitals State
@@ -30,17 +33,54 @@ export default function HomeScreen() {
     const [isAnalyzing, setIsAnalyzing] = React.useState(false);
 
     // Initialize state from userData when available
+    const [doctors, setDoctors] = React.useState<any[]>([]);
+    const [loadingDoctors, setLoadingDoctors] = React.useState(true);
+
     React.useEffect(() => {
+        if (userData?.role === 'doctor') {
+            router.push('/doctor');
+        }
+
         if (userData?.vitals) {
             if (userData.vitals.sugarLevel) setSugarLevel(userData.vitals.sugarLevel);
             if (userData.vitals.heartRate) setHeartRate(userData.vitals.heartRate);
         }
-        // Load saved analysis if available (optional, can be added to user schema later)
+        // Load saved analysis if available
         if (userData?.latestAnalysis) {
             setHealthStatus(userData.latestAnalysis.status);
             setHealthMessage(userData.latestAnalysis.message);
         }
-    }, [userData]);
+
+        // Fetch Doctors
+        const fetchDoctors = async () => {
+            try {
+                const q = query(collection(db, "users"), where("role", "==", "doctor"));
+                const querySnapshot = await getDocs(q);
+                const docs = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                setDoctors(docs);
+            } catch (e) {
+                console.error("Error fetching doctors", e);
+            } finally {
+                setLoadingDoctors(false);
+            }
+        };
+        fetchDoctors();
+
+    }, [userData, router]);
+
+    const handleAssignDoctor = async (doctorId: string | null) => {
+        if (!auth.currentUser) return;
+        try {
+            const userRef = doc(db, "users", auth.currentUser.uid);
+            await updateDoc(userRef, {
+                assignedDoctorId: doctorId
+            });
+            // Force reload or optimistic update (useUserData should handle it if it listens, but standard hook might need reload)
+            window.location.reload();
+        } catch (error) {
+            console.error("Error assigning doctor:", error);
+        }
+    };
 
     const handleUpdateVital = async (field: 'sugarLevel' | 'heartRate', value: string) => {
         // Optimistic update
@@ -143,7 +183,7 @@ export default function HomeScreen() {
             {/* AppBar / Header */}
             <div className="mb-6">
                 <h1 className="text-xl font-bold text-black/87">
-                    Hello, {username}
+                    Hello, {username} <span className="text-xs ml-2 font-normal text-gray-500">({userData?.role || 'loading...'})</span>
                 </h1>
                 <p className="text-xs text-gray-600">
                     How are you feeling today?
@@ -270,8 +310,82 @@ export default function HomeScreen() {
                 </Link>
             </div>
 
+            {/* Doctor Selection Section */}
+            <div className="mb-8">
+                <h2 className="text-xl font-bold text-black/87 mb-4">My Doctor</h2>
+
+                {/* Assigned Doctor Card */}
+                {userData?.assignedDoctorId ? (
+                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                <MdMedicalServices className="text-2xl" />
+                            </div>
+                            <div>
+                                <div className="font-bold text-black/87">
+                                    Dr. {doctors.find(d => d.id === userData.assignedDoctorId)?.name || 'Loading...'}
+                                </div>
+                                <div className="text-xs text-gray-500 flex flex-col">
+                                    {(() => {
+                                        const doc = doctors.find(d => d.id === userData.assignedDoctorId);
+                                        if (!doc) return <span>Your specific doctor</span>;
+                                        return (
+                                            <>
+                                                <span>{doc.study ? `(${doc.study})` : ''} {doc.specialization ? `- ${doc.specialization}` : ''}</span>
+                                                <span>{doc.hospitalName}</span>
+                                            </>
+                                        );
+                                    })()}
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            onClick={() => handleAssignDoctor(null)}
+                            className="text-red-500 text-sm font-medium hover:bg-red-50 px-3 py-1.5 rounded-lg transition-colors"
+                        >
+                            Change
+                        </button>
+                    </div>
+                ) : (
+                    <div className="space-y-3">
+                        {loadingDoctors ? (
+                            <div className="text-sm text-gray-500">Loading doctors...</div>
+                        ) : doctors.length === 0 ? (
+                            <div className="p-4 bg-gray-50 rounded-xl text-center text-gray-500 text-sm">
+                                No doctors registered yet.
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 gap-3">
+                                {doctors.map(doc => (
+                                    <div key={doc.id} className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500">
+                                                <MdMedicalServices />
+                                            </div>
+                                            <div>
+                                                <div className="font-bold text-sm text-black/87">Dr. {doc.name}</div>
+                                                <div className="text-xs text-gray-500 flex flex-col">
+                                                    <span>{doc.study ? `(${doc.study})` : ''} {doc.specialization ? `- ${doc.specialization}` : ''}</span>
+                                                    <span>{doc.hospitalName}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button
+                                            onClick={() => handleAssignDoctor(doc.id)}
+                                            className="bg-black text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+                                        >
+                                            Connect
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
+            </div>
+
             {/* Recent Activity */}
-            <div className="mt-7 mb-4 flex justify-between items-center">
+            <div className="mb-4 flex justify-between items-center">
                 <h2 className="text-xl font-bold text-black/87">Recent Activity</h2>
                 <button className="text-blue-600 text-sm font-medium hover:underline">View All</button>
             </div>
