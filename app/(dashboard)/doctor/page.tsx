@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { MdPerson, MdSearch, MdArrowForward, MdCheck, MdClose, MdDescription, MdCalendarMonth, MdZoomIn } from 'react-icons/md';
+import { MdPerson, MdSearch, MdArrowForward, MdCheck, MdClose, MdDescription, MdCalendarMonth, MdZoomIn, MdEdit } from 'react-icons/md';
 import { collection, query, where, getDocs, updateDoc, doc, addDoc, deleteDoc, Timestamp } from 'firebase/firestore';
 import { db, auth } from '../../../lib/firebase';
 import { useUserData } from '../../../hooks/useUserData';
@@ -18,6 +18,7 @@ export default function DoctorDashboard() {
     const [activeTab, setActiveTab] = useState('patients'); // 'patients', 'appointments', or 'requests'
     const [appointmentSubTab, setAppointmentSubTab] = useState<'upcoming' | 'completed'>('upcoming');
     const [connectionRequests, setConnectionRequests] = useState<any[]>([]);
+    const [editingRiskId, setEditingRiskId] = useState<string | null>(null);
 
     // Patient reports viewer state
     const [viewingPatientReports, setViewingPatientReports] = useState(false);
@@ -184,6 +185,34 @@ export default function DoctorDashboard() {
         } catch (error) {
             console.error("Error updating status:", error);
             alert("Failed to update status");
+        }
+    };
+
+    const updateRiskLevel = async (appointmentId: string, newRisk: string) => {
+        try {
+            const appRef = doc(db, "appointments", appointmentId);
+            await updateDoc(appRef, { riskLevel: newRisk });
+
+            setAppointments((prev: any[]) => {
+                const updated = prev.map(a => a.id === appointmentId ? { ...a, riskLevel: newRisk } : a);
+
+                const riskOrder = { 'High': 3, 'Medium': 2, 'Low': 1, 'Unknown': 0 };
+                return [...updated].sort((a, b) => {
+                    const dateA = new Date(`${a.date}T${convertTo24Hour(a.time)}`);
+                    const dateB = new Date(`${b.date}T${convertTo24Hour(b.time)}`);
+
+                    const timeDiff = dateA.getTime() - dateB.getTime();
+                    if (timeDiff !== 0) return timeDiff;
+
+                    const riskA = riskOrder[a.riskLevel as keyof typeof riskOrder] || 0;
+                    const riskB = riskOrder[b.riskLevel as keyof typeof riskOrder] || 0;
+                    return riskB - riskA;
+                });
+            });
+            setEditingRiskId(null);
+        } catch (error) {
+            console.error("Error updating risk:", error);
+            alert("Failed to update risk level");
         }
     };
 
@@ -475,10 +504,42 @@ export default function DoctorDashboard() {
                                         <div>
                                             <div className="font-bold text-lg text-gray-900 flex items-center gap-2">
                                                 {app.patientName}
-                                                {app.riskLevel && (
-                                                    <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-bold uppercase border ${getRiskBadgeColor(app.riskLevel)}`}>
-                                                        {app.riskLevel} Risk
-                                                    </span>
+                                                {/* Risk Badge / Edit */}
+                                                {editingRiskId === app.id ? (
+                                                    <div className="flex items-center gap-1 ml-2 animate-fade-in" onClick={e => e.stopPropagation()}>
+                                                        {['High', 'Medium', 'Low'].map(risk => (
+                                                            <button
+                                                                key={risk}
+                                                                onClick={(e) => { e.stopPropagation(); updateRiskLevel(app.id, risk); }}
+                                                                className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase border transition-colors ${risk === 'High' ? 'bg-red-100 text-red-700 border-red-200 hover:bg-red-200' :
+                                                                    risk === 'Medium' ? 'bg-amber-100 text-amber-700 border-amber-200 hover:bg-amber-200' :
+                                                                        'bg-teal-100 text-teal-700 border-teal-200 hover:bg-teal-200'
+                                                                    }`}
+                                                            >
+                                                                {risk}
+                                                            </button>
+                                                        ))}
+                                                        <button
+                                                            onClick={(e) => { e.stopPropagation(); setEditingRiskId(null); }}
+                                                            className="px-1.5 py-0.5 ml-1 rounded text-[10px] bg-gray-100 text-gray-500 hover:bg-gray-200"
+                                                            title="Cancel"
+                                                        >
+                                                            ✕
+                                                        </button>
+                                                    </div>
+                                                ) : (
+                                                    <div className="flex items-center gap-1 group/risk cursor-pointer" onClick={(e) => { e.stopPropagation(); setEditingRiskId(app.id); }} title="Click to change risk level">
+                                                        {app.riskLevel ? (
+                                                            <span className={`px-2.5 py-0.5 rounded-lg text-[10px] font-bold uppercase border ${getRiskBadgeColor(app.riskLevel)}`}>
+                                                                {app.riskLevel} Risk
+                                                            </span>
+                                                        ) : (
+                                                            <span className="px-2.5 py-0.5 rounded-lg text-[10px] font-bold uppercase border bg-gray-100 text-gray-500 border-gray-200 hover:bg-gray-200 transition-colors">
+                                                                Set Risk
+                                                            </span>
+                                                        )}
+                                                        <MdEdit className="text-gray-300 group-hover/risk:text-gray-500 transition-colors text-sm opacity-0 group-hover/risk:opacity-100" />
+                                                    </div>
                                                 )}
                                             </div>
                                             <div className="text-sm text-teal-600 font-medium">{app.visitType || 'General Visit'}</div>

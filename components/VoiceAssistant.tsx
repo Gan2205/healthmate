@@ -95,11 +95,12 @@ export default function VoiceAssistant({ userName, sugarLevel, heartRate }: Voic
         setError('');
 
         try {
-            const res = await fetch('/api/gemini/voice-assistant', {
+            const res = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    transcript: text,
+                    message: text,
+                    // Keeping these for context if we enhance the backend later, though currently unused by the simple BLOOM backend
                     language: lang,
                     userContext: {
                         name: userName || 'User',
@@ -115,29 +116,24 @@ export default function VoiceAssistant({ userName, sugarLevel, heartRate }: Voic
                 if (data.error.includes('429') || data.error.includes('Quota') || data.error.includes('Too Many Requests')) {
                     setError('System is currently overloaded. Please try again in a moment.');
                 } else {
-                    setError(data.error);
+                    setError(typeof data.error === 'string' ? data.error : JSON.stringify(data.error));
                 }
                 return;
             }
 
-            setResponse(data.response);
+            setResponse(data.reply);
 
             // Speak the response
-            speak(data.response, data.language || lang);
+            speak(data.reply, lang); // Using input lang as output lang for now since backend doesn't return language
 
-            // Handle navigation action
-            if (data.action && data.action !== 'null') {
-                setTimeout(() => {
-                    router.push(data.action);
-                }, 2500);
-            }
+            // Navigation action is removed as the simple backend doesn't support it
         } catch (err) {
             setError('Failed to process. Please try again.');
             console.error('Voice assistant error:', err);
         } finally {
             setIsProcessing(false);
         }
-    }, [userName, sugarLevel, heartRate, speak, router]);
+    }, [userName, sugarLevel, heartRate, speak]);
 
     const [retryCount, setRetryCount] = useState(0);
     const isStoppedRef = useRef(false);
