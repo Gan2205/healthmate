@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 
 export async function POST(req: Request) {
     try {
-        const { message, imageBase64, userContext } = await req.json();
+        const { message, imageBase64, patientData } = await req.json();
 
         if (!process.env.GEMINI_API_KEY) {
             return NextResponse.json({ error: "GEMINI_API_KEY is not set" }, { status: 500 });
@@ -17,24 +17,37 @@ export async function POST(req: Request) {
 
         let prompt = message;
 
-        if (userContext) {
+        if (patientData && patientData.profile) {
+            const profile = patientData.profile;
+            const appointments = patientData.appointments || [];
+            const reports = patientData.reports || [];
+
             const contextString = `
 User Profile:
-Name: ${userContext.name || 'Unknown'}
-Age: ${userContext.age || 'Unknown'}
-Gender: ${userContext.gender || 'Unknown'}
-Health Metrics:
-- Sugar Level: ${userContext.sugarLevel || 'Not recorded'}
-- Heart Rate: ${userContext.heartRate || 'Not recorded'}
-- Blood Pressure: ${userContext.bloodPressure || 'Not recorded'}
-- Weight: ${userContext.weight || 'Not recorded'}
-- Allergies: ${userContext.allergies || 'None'}
-- Conditions: ${userContext.conditions || 'None'}
+- Name: ${profile.name || 'Unknown'}
+- Age: ${profile.age || 'Unknown'}
+- Gender: ${profile.gender || 'Unknown'}
+- Pre-Existing Diseases: ${profile.preExistingDiseases || 'None'}
+- Allergies: ${profile.allergies || 'None'}
 
-Instructions: You are a personalized AI medical assistant. 
-1. Use the User Profile above to tailor your advice. 
-2. If the user asks about their own health data (e.g., "what is my sugar level?"), answer based on the profile.
-3. If the query is general, answer generally but keep the user's context in mind (e.g., for a diabetic user, warn about sugar in recipes).
+Health Metrics:
+- Sugar Level: ${profile.vitals?.sugarLevel || 'Not recorded'}
+- Heart Rate: ${profile.vitals?.heartRate || 'Not recorded'}
+- Blood Pressure: ${profile.bloodPressure || 'Not recorded'}
+- Weight: ${profile.weight || 'Not recorded'}
+
+Upcoming Appointments:
+${appointments.length > 0 ? appointments.map((a: any) => `- Dr. ${a.doctorName} on ${a.date} at ${a.time} for ${a.reason}`).join('\n') : 'No upcoming appointments.'}
+
+Recent Medical Reports:
+${reports.length > 0 ? reports.map((r: any) => `- ${r.reportName} (${r.reportCategory}) on ${r.reportDate}`).join('\n') : 'No recent reports.'}
+
+Instructions:
+1. You are a personalized AI medical assistant having access to the user's full dashboard.
+2. Use the "User Profile", "Health Metrics", "Appointments", and "Reports" above to answer.
+3. If the user asks about their health history, refer to the data provided.
+4. If the user asks "When is my next appointment?", use the appointment data.
+5. If the user asks about their diseases, check "Pre-Existing Diseases".
 `;
             prompt = contextString + "\nUser Query: " + message;
         }

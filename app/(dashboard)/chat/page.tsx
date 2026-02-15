@@ -14,7 +14,7 @@ import {
     Timestamp
 } from 'firebase/firestore';
 import { db, auth } from '../../../lib/firebase';
-import { useUserData } from '../../../hooks/useUserData';
+import { usePatientData } from '../../../hooks/usePatientData';
 
 interface Message {
     id: string;
@@ -25,7 +25,7 @@ interface Message {
 }
 
 export default function ChatScreen() {
-    const { userData } = useUserData();
+    const patientData = usePatientData(); // Use new hook
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputText, setInputText] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -106,7 +106,7 @@ export default function ChatScreen() {
                 body: JSON.stringify({
                     message: textToSend,
                     imageBase64: imageToSend,
-                    userContext: userData // Send full user data including vitals
+                    patientData: patientData // Send full patient dashboard data
                 }),
             });
 
