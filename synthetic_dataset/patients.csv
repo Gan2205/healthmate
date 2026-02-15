@@ -1,0 +1,3001 @@
+Patient_ID,Age,Gender,Chest_Pain,Fever,Blood_Pressure,Heart_Rate,Temperature,Pre_Diseases,Risk_Level
+P0001,82,Male,Yes,No,121,74,98.0,None,High
+P0002,70,Male,No,Yes,93,65,98.5,Diabetes,Medium
+P0003,72,Male,No,Yes,147,97,98.9,"Asthma, Hypertension",Medium
+P0004,44,Female,Yes,Yes,133,66,97.6,None,High
+P0005,45,Female,Yes,No,158,67,103.8,None,High
+P0006,71,Female,No,Yes,180,64,97.3,None,High
+P0007,38,Male,Yes,Yes,138,77,100.2,"Heart_Disease, Hypertension",High
+P0008,46,Male,No,Yes,167,100,98.2,Hypertension,High
+P0009,60,Female,No,Yes,177,80,102.9,"Diabetes, Hypertension",High
+P0010,41,Female,No,Yes,117,118,103.6,"Heart_Disease, Hypertension",High
+P0011,84,Female,No,No,108,76,98.0,Kidney_Disease,High
+P0012,34,Female,No,No,118,68,100.6,None,Low
+P0013,7,Male,Yes,Yes,177,87,101.2,None,High
+P0014,77,Female,No,Yes,177,106,97.8,"Heart_Disease, Kidney_Disease",High
+P0015,15,Female,No,Yes,148,60,103.7,"Heart_Disease, Hypertension",High
+P0016,65,Male,No,Yes,109,83,102.3,Kidney_Disease,High
+P0017,1,Female,No,Yes,104,119,99.5,"Diabetes, Heart_Disease, Hypertension",High
+P0018,31,Male,Yes,No,98,108,100.7,None,High
+P0019,85,Female,Yes,No,157,115,101.2,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0020,40,Female,No,No,156,88,97.8,None,High
+P0021,44,Male,Yes,Yes,90,64,102.0,None,High
+P0022,9,Male,No,Yes,155,75,98.9,Kidney_Disease,High
+P0023,17,Female,Yes,No,142,72,97.7,Heart_Disease,High
+P0024,55,Female,No,Yes,176,101,103.9,None,High
+P0025,52,Female,Yes,Yes,114,72,100.8,None,High
+P0026,24,Female,No,Yes,99,88,102.7,"Diabetes, Kidney_Disease",High
+P0027,84,Male,Yes,Yes,111,86,100.4,None,High
+P0028,52,Male,Yes,No,90,84,98.9,"Asthma, Heart_Disease",High
+P0029,55,Female,Yes,Yes,127,73,103.8,Kidney_Disease,High
+P0030,8,Female,Yes,Yes,164,90,100.5,"Diabetes, Hypertension",High
+P0031,66,Male,Yes,Yes,166,64,101.7,None,High
+P0032,16,Male,Yes,Yes,143,102,101.1,Heart_Disease,High
+P0033,27,Female,Yes,No,140,68,101.7,None,High
+P0034,41,Male,Yes,No,169,96,104.0,None,High
+P0035,28,Female,Yes,No,98,116,98.7,None,High
+P0036,57,Female,Yes,No,174,66,103.6,None,High
+P0037,15,Male,Yes,No,126,98,98.5,None,High
+P0038,88,Female,No,No,96,65,101.4,"Diabetes, Kidney_Disease",High
+P0039,43,Male,No,Yes,146,95,101.9,Diabetes,Medium
+P0040,10,Male,Yes,No,164,95,98.0,None,High
+P0041,40,Female,Yes,No,116,103,98.7,None,High
+P0042,72,Female,Yes,Yes,110,111,102.7,"Diabetes, Hypertension",High
+P0043,43,Female,Yes,No,110,110,101.9,None,High
+P0044,5,Female,Yes,Yes,148,82,99.1,"Hypertension, Kidney_Disease",High
+P0045,4,Male,No,No,125,115,97.5,"Asthma, Heart_Disease",High
+P0046,87,Female,Yes,Yes,123,71,101.1,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0047,56,Female,No,No,167,92,97.8,"Heart_Disease, Hypertension",High
+P0048,6,Female,Yes,Yes,136,87,97.5,Heart_Disease,High
+P0049,80,Female,Yes,No,154,79,101.7,None,High
+P0050,90,Female,Yes,Yes,143,102,103.6,Hypertension,High
+P0051,79,Female,No,Yes,128,78,98.5,"Heart_Disease, Kidney_Disease",High
+P0052,60,Female,No,Yes,155,90,102.6,"Diabetes, Hypertension, Kidney_Disease",High
+P0053,66,Female,Yes,Yes,176,79,98.6,None,High
+P0054,4,Male,Yes,No,168,114,102.4,Kidney_Disease,High
+P0055,25,Female,No,No,121,69,101.6,None,Low
+P0056,14,Female,Yes,Yes,179,93,100.3,Diabetes,High
+P0057,59,Male,No,No,146,99,102.7,"Asthma, Kidney_Disease",High
+P0058,21,Female,No,No,121,113,101.5,"Asthma, Kidney_Disease",High
+P0059,81,Male,No,No,99,105,99.0,None,Low
+P0060,41,Male,Yes,Yes,119,84,101.9,Diabetes,High
+P0061,54,Female,No,No,143,63,98.4,Kidney_Disease,High
+P0062,90,Male,No,No,90,120,99.5,"Asthma, Hypertension",Medium
+P0063,63,Male,No,No,152,61,99.7,Asthma,High
+P0064,22,Female,Yes,Yes,140,97,101.0,None,High
+P0065,83,Female,Yes,No,113,63,98.8,None,High
+P0066,59,Female,No,No,125,108,103.7,Diabetes,High
+P0067,61,Male,Yes,No,118,101,97.5,"Asthma, Diabetes, Kidney_Disease",High
+P0068,26,Male,Yes,Yes,106,90,101.7,Hypertension,High
+P0069,60,Female,No,Yes,167,98,103.7,Hypertension,High
+P0070,40,Male,Yes,No,163,103,103.4,None,High
+P0071,26,Male,Yes,Yes,179,109,99.1,Diabetes,High
+P0072,73,Male,No,No,174,83,97.5,Diabetes,High
+P0073,54,Female,Yes,No,136,100,103.2,Hypertension,High
+P0074,56,Male,No,No,149,87,102.8,Heart_Disease,High
+P0075,32,Male,No,No,121,108,100.3,Asthma,Medium
+P0076,44,Male,No,No,113,91,98.5,"Heart_Disease, Kidney_Disease",High
+P0077,77,Female,Yes,Yes,100,75,102.0,Hypertension,High
+P0078,89,Female,No,No,92,65,99.1,Hypertension,Medium
+P0079,40,Female,No,No,144,107,100.9,None,Medium
+P0080,59,Female,No,No,119,67,102.0,None,Low
+P0081,69,Male,Yes,Yes,151,77,102.1,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0082,25,Female,Yes,No,112,79,97.1,Heart_Disease,High
+P0083,6,Male,No,Yes,171,115,102.3,None,High
+P0084,2,Female,No,No,146,81,98.3,None,Medium
+P0085,62,Male,Yes,No,152,64,101.0,Hypertension,High
+P0086,20,Female,Yes,Yes,105,95,102.4,Kidney_Disease,High
+P0087,29,Female,No,No,128,115,101.1,Kidney_Disease,High
+P0088,80,Male,Yes,Yes,170,73,98.9,None,High
+P0089,31,Male,Yes,Yes,90,86,100.2,Heart_Disease,High
+P0090,5,Male,No,No,179,115,100.2,Heart_Disease,High
+P0091,81,Male,No,Yes,159,74,101.5,"Diabetes, Hypertension",High
+P0092,8,Male,No,No,146,67,100.3,None,Medium
+P0093,52,Female,No,No,100,98,97.3,Heart_Disease,High
+P0094,78,Female,Yes,Yes,119,103,102.9,Diabetes,High
+P0095,87,Female,Yes,Yes,150,93,101.6,"Asthma, Hypertension",High
+P0096,82,Female,Yes,No,134,86,99.3,Hypertension,High
+P0097,43,Female,No,No,174,120,99.8,"Asthma, Diabetes",High
+P0098,12,Female,No,No,104,109,99.8,Diabetes,Medium
+P0099,85,Female,No,Yes,114,93,99.5,"Asthma, Diabetes",Medium
+P0100,27,Female,Yes,No,146,116,101.9,None,High
+P0101,81,Male,Yes,No,160,60,100.9,None,High
+P0102,15,Female,Yes,Yes,153,119,102.0,Heart_Disease,High
+P0103,54,Female,No,Yes,148,95,98.0,None,Medium
+P0104,77,Male,Yes,No,143,81,103.5,Diabetes,High
+P0105,37,Female,No,Yes,147,94,100.4,None,Medium
+P0106,70,Female,No,No,114,104,98.7,None,Low
+P0107,53,Male,No,No,180,118,102.7,None,High
+P0108,85,Male,No,Yes,106,92,103.8,None,High
+P0109,13,Female,Yes,No,91,106,98.0,"Diabetes, Hypertension",High
+P0110,61,Female,No,No,173,65,103.0,"Asthma, Kidney_Disease",High
+P0111,41,Female,Yes,Yes,120,100,101.8,None,High
+P0112,30,Male,No,Yes,171,105,103.1,Heart_Disease,High
+P0113,4,Male,No,Yes,127,82,99.6,None,Medium
+P0114,68,Female,Yes,Yes,112,65,101.3,None,High
+P0115,88,Male,No,Yes,119,89,101.5,Diabetes,Medium
+P0116,60,Female,Yes,Yes,146,120,99.4,Asthma,High
+P0117,89,Female,No,No,115,84,103.0,None,High
+P0118,49,Female,No,No,92,113,101.6,None,Low
+P0119,73,Male,No,No,119,98,102.6,None,High
+P0120,25,Female,Yes,Yes,170,101,97.3,"Diabetes, Heart_Disease",High
+P0121,17,Male,No,No,143,71,98.4,"Heart_Disease, Kidney_Disease",High
+P0122,22,Female,No,No,133,111,97.8,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0123,87,Female,No,Yes,140,60,98.9,None,Medium
+P0124,48,Female,No,No,103,103,98.6,None,Low
+P0125,72,Female,Yes,Yes,171,112,100.2,Asthma,High
+P0126,15,Male,Yes,Yes,128,91,97.8,None,High
+P0127,69,Male,No,No,137,102,103.6,Kidney_Disease,High
+P0128,54,Male,No,Yes,152,99,99.9,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0129,57,Female,Yes,No,102,103,99.6,"Diabetes, Heart_Disease",High
+P0130,51,Female,Yes,Yes,148,65,101.6,Kidney_Disease,High
+P0131,3,Male,No,Yes,106,110,101.0,None,Medium
+P0132,71,Male,Yes,Yes,132,109,98.0,"Diabetes, Heart_Disease",High
+P0133,19,Male,No,Yes,104,102,103.1,None,High
+P0134,46,Male,No,Yes,112,76,97.4,Kidney_Disease,High
+P0135,15,Male,No,No,136,92,101.2,Hypertension,Medium
+P0136,79,Male,No,No,172,61,97.4,Asthma,High
+P0137,55,Male,No,No,99,117,97.6,Diabetes,Medium
+P0138,17,Female,No,No,166,93,99.1,Asthma,High
+P0139,13,Male,Yes,No,147,116,98.6,None,High
+P0140,59,Female,No,Yes,130,87,99.2,None,Medium
+P0141,20,Female,Yes,Yes,100,65,100.0,Heart_Disease,High
+P0142,17,Male,No,Yes,142,82,103.1,"Asthma, Diabetes",High
+P0143,37,Female,No,Yes,163,92,98.5,Hypertension,High
+P0144,14,Female,No,Yes,125,96,98.6,Kidney_Disease,High
+P0145,80,Male,No,Yes,113,77,101.9,None,Medium
+P0146,44,Female,Yes,Yes,108,96,101.6,None,High
+P0147,82,Male,Yes,Yes,138,86,100.2,None,High
+P0148,40,Female,Yes,Yes,109,70,102.3,None,High
+P0149,11,Female,No,No,152,98,100.1,None,High
+P0150,66,Male,No,No,104,78,101.7,Kidney_Disease,High
+P0151,86,Female,Yes,Yes,140,98,97.4,None,High
+P0152,28,Male,No,No,131,67,97.1,Hypertension,Medium
+P0153,17,Female,Yes,No,99,85,103.0,None,High
+P0154,3,Female,Yes,No,163,87,101.0,Asthma,High
+P0155,38,Male,No,Yes,131,70,102.6,Heart_Disease,High
+P0156,12,Female,Yes,Yes,145,97,99.8,None,High
+P0157,40,Female,Yes,No,111,64,100.6,None,High
+P0158,66,Male,No,No,172,112,98.0,None,High
+P0159,33,Male,Yes,Yes,173,64,98.2,"Asthma, Kidney_Disease",High
+P0160,73,Female,No,No,109,88,97.5,Heart_Disease,High
+P0161,36,Male,No,Yes,129,89,100.2,None,Medium
+P0162,37,Male,Yes,No,149,97,100.9,"Asthma, Diabetes",High
+P0163,74,Male,No,No,154,69,103.7,Heart_Disease,High
+P0164,11,Male,Yes,Yes,180,88,103.9,Kidney_Disease,High
+P0165,21,Female,No,No,139,86,102.4,Diabetes,High
+P0166,81,Female,Yes,No,102,95,101.7,None,High
+P0167,85,Male,No,Yes,164,102,98.0,None,High
+P0168,84,Female,Yes,Yes,129,95,99.6,"Diabetes, Hypertension",High
+P0169,83,Female,No,Yes,136,79,98.3,None,Medium
+P0170,63,Male,Yes,Yes,109,64,99.1,"Diabetes, Kidney_Disease",High
+P0171,85,Female,Yes,No,109,70,98.3,Kidney_Disease,High
+P0172,22,Female,Yes,No,136,103,102.0,"Asthma, Heart_Disease, Kidney_Disease",High
+P0173,58,Male,Yes,No,150,117,102.8,None,High
+P0174,74,Female,No,No,138,92,100.7,"Asthma, Hypertension, Kidney_Disease",High
+P0175,7,Female,No,Yes,156,114,97.9,None,High
+P0176,21,Female,No,Yes,145,65,103.6,None,High
+P0177,58,Female,Yes,No,96,85,100.5,None,High
+P0178,11,Female,Yes,Yes,130,119,97.7,Heart_Disease,High
+P0179,19,Male,Yes,No,150,104,102.8,"Asthma, Kidney_Disease",High
+P0180,79,Male,Yes,Yes,122,73,102.8,Kidney_Disease,High
+P0181,68,Female,Yes,No,120,79,97.9,None,High
+P0182,82,Female,Yes,Yes,153,98,100.8,Kidney_Disease,High
+P0183,31,Male,No,No,90,99,99.5,Hypertension,Medium
+P0184,86,Male,No,Yes,157,94,100.6,"Diabetes, Hypertension, Kidney_Disease",High
+P0185,61,Male,No,No,122,107,97.1,"Heart_Disease, Hypertension",High
+P0186,85,Male,No,Yes,95,82,100.8,"Asthma, Hypertension",Medium
+P0187,90,Female,Yes,Yes,98,105,102.4,Heart_Disease,High
+P0188,26,Male,Yes,Yes,130,119,99.2,None,High
+P0189,70,Female,No,Yes,172,72,99.0,"Diabetes, Heart_Disease",High
+P0190,35,Male,No,No,141,107,100.1,"Asthma, Heart_Disease, Hypertension",High
+P0191,89,Female,No,No,100,106,100.0,Hypertension,Medium
+P0192,70,Female,No,Yes,100,80,101.6,None,Medium
+P0193,78,Female,Yes,No,134,88,97.3,"Asthma, Heart_Disease",High
+P0194,36,Male,Yes,No,136,92,102.6,Diabetes,High
+P0195,19,Female,Yes,Yes,98,75,102.4,None,High
+P0196,50,Male,Yes,No,137,83,100.1,None,High
+P0197,18,Female,No,No,173,77,98.7,None,High
+P0198,24,Female,No,Yes,123,109,98.8,Kidney_Disease,High
+P0199,37,Female,Yes,Yes,107,114,97.5,None,High
+P0200,57,Male,No,No,180,64,100.8,None,High
+P0201,39,Male,Yes,No,155,74,97.8,None,High
+P0202,18,Male,No,Yes,136,95,101.0,Kidney_Disease,High
+P0203,17,Male,Yes,No,140,105,102.0,Asthma,High
+P0204,74,Male,Yes,No,172,64,100.1,Heart_Disease,High
+P0205,17,Male,Yes,No,154,118,103.1,"Hypertension, Kidney_Disease",High
+P0206,39,Male,Yes,No,180,74,99.4,"Diabetes, Heart_Disease",High
+P0207,33,Male,No,Yes,170,79,101.3,None,High
+P0208,83,Male,Yes,Yes,174,99,102.0,Kidney_Disease,High
+P0209,6,Male,Yes,Yes,172,109,101.0,Kidney_Disease,High
+P0210,54,Male,No,No,172,79,100.4,"Asthma, Heart_Disease",High
+P0211,59,Male,Yes,Yes,146,86,100.4,None,High
+P0212,78,Male,No,No,134,85,97.9,None,Medium
+P0213,72,Male,No,Yes,149,67,98.9,None,Medium
+P0214,13,Male,No,No,168,86,98.7,"Heart_Disease, Hypertension",High
+P0215,74,Female,Yes,Yes,153,92,100.3,"Asthma, Diabetes",High
+P0216,12,Female,No,Yes,117,97,99.5,None,Medium
+P0217,64,Female,No,Yes,103,87,97.9,None,Medium
+P0218,47,Female,No,Yes,141,63,101.0,None,Medium
+P0219,71,Female,Yes,No,154,88,102.4,None,High
+P0220,80,Male,Yes,Yes,140,83,102.6,None,High
+P0221,47,Male,Yes,No,154,62,97.3,None,High
+P0222,43,Female,No,Yes,167,117,100.6,None,High
+P0223,79,Female,Yes,No,168,107,102.9,Kidney_Disease,High
+P0224,66,Female,No,No,92,83,99.3,None,Low
+P0225,54,Female,Yes,No,123,101,102.5,"Hypertension, Kidney_Disease",High
+P0226,7,Female,Yes,No,108,112,101.8,None,High
+P0227,90,Male,Yes,Yes,146,80,99.9,Hypertension,High
+P0228,53,Female,Yes,Yes,156,73,100.9,"Asthma, Hypertension, Kidney_Disease",High
+P0229,23,Female,No,No,176,109,103.1,Heart_Disease,High
+P0230,79,Female,Yes,Yes,125,95,99.1,"Heart_Disease, Kidney_Disease",High
+P0231,27,Female,No,No,134,95,103.5,"Heart_Disease, Kidney_Disease",High
+P0232,16,Female,No,No,108,78,97.3,"Diabetes, Heart_Disease, Hypertension",High
+P0233,84,Female,No,Yes,115,112,100.8,"Heart_Disease, Hypertension",High
+P0234,14,Male,Yes,Yes,175,117,100.7,Diabetes,High
+P0235,13,Female,No,No,102,103,102.4,None,High
+P0236,71,Male,No,No,151,101,98.4,"Asthma, Heart_Disease, Kidney_Disease",High
+P0237,8,Male,Yes,Yes,112,86,103.2,None,High
+P0238,5,Female,No,Yes,127,116,97.3,None,Medium
+P0239,78,Male,No,No,148,101,100.8,Hypertension,Medium
+P0240,65,Female,No,Yes,104,81,98.1,Heart_Disease,High
+P0241,24,Male,No,No,162,103,102.3,None,High
+P0242,82,Female,No,No,101,85,101.7,None,Low
+P0243,18,Female,No,Yes,90,76,99.7,Heart_Disease,High
+P0244,43,Female,Yes,No,173,83,101.8,None,High
+P0245,16,Female,No,Yes,141,103,100.5,"Diabetes, Heart_Disease",High
+P0246,82,Female,No,Yes,118,68,100.3,Kidney_Disease,High
+P0247,48,Female,No,Yes,121,103,102.3,"Asthma, Diabetes",High
+P0248,68,Female,Yes,Yes,97,113,100.8,Kidney_Disease,High
+P0249,69,Male,Yes,No,156,88,97.8,None,High
+P0250,75,Female,Yes,No,97,89,97.9,Kidney_Disease,High
+P0251,8,Female,No,Yes,140,76,102.7,Kidney_Disease,High
+P0252,10,Male,No,No,179,64,100.8,None,High
+P0253,9,Female,Yes,No,142,71,102.4,"Asthma, Heart_Disease",High
+P0254,49,Female,No,No,100,103,103.7,"Heart_Disease, Hypertension",High
+P0255,16,Male,No,Yes,118,113,97.0,None,Medium
+P0256,39,Female,No,No,119,75,100.2,None,Low
+P0257,25,Male,Yes,No,168,109,103.6,"Hypertension, Kidney_Disease",High
+P0258,9,Male,Yes,No,166,103,101.9,None,High
+P0259,6,Female,No,Yes,159,73,102.3,"Heart_Disease, Hypertension",High
+P0260,30,Female,No,Yes,128,116,98.0,Hypertension,Medium
+P0261,53,Female,No,Yes,161,120,101.1,Hypertension,High
+P0262,81,Female,No,Yes,134,120,101.5,None,Medium
+P0263,68,Female,No,No,109,79,99.6,"Asthma, Hypertension",Medium
+P0264,29,Female,Yes,No,97,95,99.9,Kidney_Disease,High
+P0265,18,Female,Yes,No,116,81,101.5,"Diabetes, Heart_Disease",High
+P0266,69,Male,Yes,No,138,103,101.2,None,High
+P0267,10,Male,Yes,No,116,115,103.3,None,High
+P0268,2,Male,Yes,Yes,151,118,98.7,Hypertension,High
+P0269,51,Male,No,No,138,89,100.7,None,Medium
+P0270,34,Female,No,No,102,111,103.9,Heart_Disease,High
+P0271,27,Female,No,No,95,96,103.0,Diabetes,High
+P0272,34,Female,No,Yes,115,81,98.6,Hypertension,Medium
+P0273,64,Female,No,No,172,107,100.4,None,High
+P0274,46,Male,Yes,No,113,118,103.2,"Asthma, Diabetes, Kidney_Disease",High
+P0275,86,Male,Yes,No,107,113,101.4,None,High
+P0276,20,Male,Yes,No,137,63,101.3,Kidney_Disease,High
+P0277,62,Female,Yes,Yes,158,95,99.9,None,High
+P0278,36,Female,Yes,No,112,66,103.4,Hypertension,High
+P0279,25,Female,No,No,140,65,99.6,Kidney_Disease,High
+P0280,32,Male,No,Yes,173,114,101.5,None,High
+P0281,52,Female,No,No,97,100,97.1,None,Low
+P0282,64,Female,No,Yes,157,118,97.3,None,High
+P0283,89,Female,No,Yes,99,103,103.5,"Diabetes, Kidney_Disease",High
+P0284,23,Female,Yes,Yes,165,69,102.3,Asthma,High
+P0285,10,Female,Yes,Yes,162,113,102.9,Kidney_Disease,High
+P0286,43,Female,Yes,Yes,154,107,103.8,None,High
+P0287,56,Male,Yes,No,167,109,101.3,Heart_Disease,High
+P0288,4,Female,No,No,119,82,100.9,None,Low
+P0289,24,Female,Yes,No,121,105,97.5,None,High
+P0290,49,Male,No,No,136,66,97.6,"Asthma, Heart_Disease",High
+P0291,35,Male,Yes,Yes,113,87,100.1,Asthma,High
+P0292,14,Male,Yes,No,160,65,101.2,"Asthma, Diabetes",High
+P0293,38,Female,No,Yes,161,117,103.9,None,High
+P0294,67,Male,No,Yes,107,77,99.1,Diabetes,Medium
+P0295,22,Female,No,No,128,90,102.5,None,High
+P0296,32,Female,Yes,No,103,68,99.1,"Asthma, Heart_Disease",High
+P0297,43,Female,No,No,173,98,98.0,None,High
+P0298,89,Male,No,No,112,85,103.8,None,High
+P0299,89,Female,Yes,No,138,77,102.7,None,High
+P0300,15,Male,Yes,Yes,149,120,102.0,Heart_Disease,High
+P0301,89,Male,No,No,107,100,99.1,None,Low
+P0302,20,Female,No,Yes,147,98,100.4,Kidney_Disease,High
+P0303,89,Female,Yes,No,179,117,102.7,Diabetes,High
+P0304,14,Male,No,Yes,172,99,97.3,"Asthma, Heart_Disease, Hypertension",High
+P0305,14,Male,Yes,No,118,92,102.2,Kidney_Disease,High
+P0306,29,Female,No,No,149,109,101.8,Hypertension,Medium
+P0307,45,Male,No,Yes,127,86,103.4,None,High
+P0308,19,Female,No,No,148,110,98.4,Asthma,Medium
+P0309,13,Female,No,No,98,79,97.3,Diabetes,Medium
+P0310,44,Male,Yes,Yes,156,71,100.9,None,High
+P0311,55,Female,Yes,No,170,71,98.3,Asthma,High
+P0312,4,Male,No,No,139,60,101.9,None,Medium
+P0313,9,Male,Yes,No,131,72,100.2,None,High
+P0314,63,Female,No,No,165,67,99.4,"Hypertension, Kidney_Disease",High
+P0315,87,Female,Yes,Yes,130,67,98.7,None,High
+P0316,48,Male,No,No,166,68,101.0,Asthma,High
+P0317,82,Male,Yes,No,126,68,98.3,"Diabetes, Kidney_Disease",High
+P0318,46,Male,No,Yes,114,112,99.7,Asthma,Medium
+P0319,53,Female,No,No,152,70,97.6,None,High
+P0320,29,Female,Yes,No,118,94,99.0,"Asthma, Kidney_Disease",High
+P0321,71,Male,Yes,No,159,112,103.9,Diabetes,High
+P0322,57,Male,No,Yes,173,108,98.7,"Asthma, Diabetes",High
+P0323,34,Female,Yes,No,105,109,102.7,None,High
+P0324,76,Female,No,Yes,168,68,102.5,"Diabetes, Heart_Disease",High
+P0325,69,Female,Yes,No,180,78,99.0,None,High
+P0326,66,Male,Yes,No,97,77,103.1,None,High
+P0327,17,Male,Yes,No,121,108,102.9,None,High
+P0328,19,Female,No,No,147,64,101.4,"Asthma, Diabetes",Medium
+P0329,66,Female,No,No,152,80,101.1,"Asthma, Diabetes",High
+P0330,82,Female,Yes,No,117,87,102.8,Heart_Disease,High
+P0331,37,Female,Yes,No,133,117,101.8,None,High
+P0332,13,Female,Yes,Yes,110,88,100.2,"Asthma, Heart_Disease, Hypertension",High
+P0333,17,Female,Yes,No,101,101,99.5,None,High
+P0334,86,Male,Yes,No,170,79,102.1,"Asthma, Diabetes",High
+P0335,13,Male,Yes,No,99,68,101.2,Asthma,High
+P0336,2,Male,No,Yes,144,104,97.9,None,Medium
+P0337,50,Male,Yes,Yes,130,83,103.2,None,High
+P0338,18,Male,Yes,Yes,168,101,98.1,None,High
+P0339,28,Male,No,No,117,65,103.3,None,High
+P0340,16,Female,No,No,130,110,98.0,None,Medium
+P0341,11,Male,No,Yes,174,116,99.1,Kidney_Disease,High
+P0342,25,Female,No,Yes,120,91,99.7,None,Medium
+P0343,82,Male,Yes,No,130,68,99.7,"Asthma, Heart_Disease",High
+P0344,70,Male,No,Yes,92,97,97.5,None,Medium
+P0345,6,Male,No,No,170,105,100.5,Asthma,High
+P0346,11,Male,No,Yes,129,65,100.6,None,Medium
+P0347,20,Female,No,Yes,129,104,100.1,"Asthma, Diabetes, Hypertension",Medium
+P0348,12,Female,Yes,No,168,98,97.4,Hypertension,High
+P0349,16,Male,Yes,Yes,110,91,103.7,Heart_Disease,High
+P0350,22,Female,Yes,No,105,109,103.3,None,High
+P0351,55,Female,Yes,No,163,100,97.5,Heart_Disease,High
+P0352,8,Female,Yes,No,110,76,102.4,"Diabetes, Hypertension",High
+P0353,66,Male,Yes,Yes,121,62,100.3,None,High
+P0354,20,Male,Yes,No,118,80,98.7,"Heart_Disease, Kidney_Disease",High
+P0355,10,Female,Yes,Yes,112,74,102.6,"Asthma, Diabetes, Hypertension",High
+P0356,37,Female,No,Yes,160,89,97.1,None,High
+P0357,73,Female,Yes,No,137,97,103.8,"Diabetes, Hypertension, Kidney_Disease",High
+P0358,1,Female,Yes,Yes,159,82,101.5,Diabetes,High
+P0359,43,Male,No,No,103,73,100.7,None,Low
+P0360,63,Male,Yes,No,101,62,103.4,"Asthma, Kidney_Disease",High
+P0361,90,Female,No,Yes,164,66,100.5,Asthma,High
+P0362,10,Male,No,Yes,120,78,98.8,None,Medium
+P0363,51,Female,No,No,124,74,97.5,None,Low
+P0364,75,Male,Yes,Yes,111,88,100.3,Kidney_Disease,High
+P0365,46,Male,No,No,149,76,103.0,None,High
+P0366,88,Female,Yes,Yes,131,69,97.6,None,High
+P0367,46,Female,Yes,No,123,112,103.9,None,High
+P0368,52,Female,Yes,Yes,149,66,102.6,None,High
+P0369,2,Male,Yes,Yes,115,112,99.8,Diabetes,High
+P0370,75,Female,Yes,Yes,98,72,103.3,Hypertension,High
+P0371,12,Female,Yes,Yes,149,63,98.2,Asthma,High
+P0372,64,Male,No,No,112,82,98.5,None,Low
+P0373,36,Female,Yes,Yes,168,99,101.3,Asthma,High
+P0374,53,Female,Yes,Yes,125,84,98.0,None,High
+P0375,68,Male,Yes,No,135,90,100.8,Kidney_Disease,High
+P0376,65,Female,No,No,113,61,99.2,None,Low
+P0377,36,Male,No,No,164,74,103.8,None,High
+P0378,85,Male,No,Yes,118,96,102.9,"Heart_Disease, Hypertension",High
+P0379,23,Male,No,No,165,61,101.9,None,High
+P0380,73,Male,Yes,No,159,79,98.2,None,High
+P0381,8,Male,Yes,Yes,157,90,97.0,"Hypertension, Kidney_Disease",High
+P0382,44,Male,No,Yes,92,69,101.1,"Diabetes, Heart_Disease",High
+P0383,10,Female,No,Yes,133,79,99.3,"Asthma, Heart_Disease, Kidney_Disease",High
+P0384,41,Male,No,Yes,175,97,102.7,None,High
+P0385,89,Female,Yes,Yes,90,120,101.9,Kidney_Disease,High
+P0386,5,Male,No,Yes,171,96,97.7,Heart_Disease,High
+P0387,10,Male,No,No,111,100,103.2,None,High
+P0388,86,Female,No,Yes,123,73,98.7,None,Medium
+P0389,33,Male,Yes,Yes,139,88,102.1,"Asthma, Hypertension, Kidney_Disease",High
+P0390,45,Female,Yes,No,163,101,102.3,None,High
+P0391,58,Male,Yes,No,92,80,98.8,None,High
+P0392,44,Male,No,Yes,99,95,103.6,"Asthma, Heart_Disease, Kidney_Disease",High
+P0393,4,Female,Yes,No,110,63,97.7,None,High
+P0394,25,Female,No,No,128,75,97.7,None,Low
+P0395,71,Female,Yes,Yes,136,60,100.0,None,High
+P0396,85,Female,Yes,Yes,93,73,98.2,None,High
+P0397,11,Female,Yes,No,140,90,100.4,Diabetes,High
+P0398,83,Female,Yes,No,138,83,98.3,None,High
+P0399,57,Female,No,Yes,124,96,97.4,"Diabetes, Kidney_Disease",High
+P0400,86,Female,No,Yes,160,63,102.9,"Asthma, Kidney_Disease",High
+P0401,74,Male,No,No,100,85,103.3,Kidney_Disease,High
+P0402,74,Male,Yes,No,112,120,103.9,"Diabetes, Hypertension, Kidney_Disease",High
+P0403,55,Male,No,Yes,170,69,102.8,None,High
+P0404,9,Male,No,No,160,80,103.0,Diabetes,High
+P0405,90,Female,Yes,No,109,69,101.0,Diabetes,High
+P0406,14,Male,No,No,142,76,99.7,Kidney_Disease,High
+P0407,61,Male,Yes,No,141,69,101.3,Asthma,High
+P0408,5,Female,No,Yes,96,107,100.3,None,Medium
+P0409,48,Male,No,No,129,77,102.9,"Diabetes, Hypertension",High
+P0410,18,Female,No,No,124,106,99.9,Hypertension,Medium
+P0411,57,Male,No,No,156,115,99.6,None,High
+P0412,21,Male,No,No,107,109,103.0,"Diabetes, Hypertension",High
+P0413,25,Male,Yes,Yes,94,89,97.4,None,High
+P0414,26,Female,No,No,154,85,101.4,None,High
+P0415,4,Male,No,No,166,88,98.2,"Heart_Disease, Kidney_Disease",High
+P0416,45,Male,No,Yes,126,61,99.7,None,Medium
+P0417,74,Male,Yes,Yes,176,73,98.9,Diabetes,High
+P0418,88,Male,No,Yes,172,71,101.2,None,High
+P0419,33,Female,No,No,138,114,99.4,None,Medium
+P0420,60,Female,No,Yes,90,92,104.0,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0421,88,Male,No,Yes,133,77,101.5,"Heart_Disease, Kidney_Disease",High
+P0422,25,Male,Yes,Yes,166,85,101.6,Diabetes,High
+P0423,84,Female,No,No,143,85,99.7,None,Medium
+P0424,74,Male,No,Yes,177,94,101.5,Heart_Disease,High
+P0425,65,Female,Yes,Yes,127,66,100.3,Kidney_Disease,High
+P0426,24,Female,Yes,Yes,135,74,102.2,None,High
+P0427,43,Female,No,No,149,114,97.8,None,Medium
+P0428,82,Male,No,Yes,154,67,103.1,None,High
+P0429,39,Female,Yes,Yes,107,72,99.4,"Asthma, Hypertension, Kidney_Disease",High
+P0430,24,Male,No,No,170,71,99.2,None,High
+P0431,58,Female,Yes,Yes,163,108,98.1,"Diabetes, Hypertension",High
+P0432,79,Female,No,No,144,90,99.7,None,Medium
+P0433,26,Female,Yes,No,157,72,97.1,None,High
+P0434,32,Male,No,No,106,66,99.7,Hypertension,Medium
+P0435,9,Male,No,No,148,106,100.6,Asthma,Medium
+P0436,88,Male,No,No,135,108,98.3,"Asthma, Diabetes",Medium
+P0437,30,Male,Yes,Yes,92,97,100.5,None,High
+P0438,84,Male,No,No,158,99,97.3,"Asthma, Diabetes, Kidney_Disease",High
+P0439,89,Male,No,No,138,67,100.8,Hypertension,Medium
+P0440,27,Male,No,No,174,66,101.6,None,High
+P0441,78,Male,No,Yes,155,106,101.3,None,High
+P0442,14,Female,Yes,Yes,123,113,100.7,None,High
+P0443,53,Female,Yes,Yes,160,91,103.4,Asthma,High
+P0444,43,Male,Yes,Yes,175,65,103.3,"Asthma, Hypertension",High
+P0445,12,Male,Yes,No,172,74,100.2,"Asthma, Diabetes, Heart_Disease",High
+P0446,13,Male,Yes,No,136,111,101.7,Diabetes,High
+P0447,13,Male,Yes,Yes,174,101,98.2,None,High
+P0448,57,Female,Yes,No,133,71,97.8,Asthma,High
+P0449,35,Female,No,No,173,116,102.6,None,High
+P0450,90,Male,Yes,Yes,143,118,101.1,"Asthma, Hypertension",High
+P0451,79,Female,No,Yes,177,116,102.9,"Asthma, Hypertension, Kidney_Disease",High
+P0452,15,Female,No,Yes,98,76,101.6,None,Medium
+P0453,87,Male,No,Yes,145,102,102.1,Asthma,High
+P0454,20,Male,Yes,Yes,154,114,100.3,Hypertension,High
+P0455,10,Female,No,Yes,132,77,97.4,None,Medium
+P0456,83,Female,No,Yes,100,89,100.1,Diabetes,Medium
+P0457,64,Female,No,Yes,153,107,101.6,None,High
+P0458,53,Male,Yes,Yes,167,99,101.5,"Hypertension, Kidney_Disease",High
+P0459,84,Female,No,No,96,112,98.6,Kidney_Disease,High
+P0460,80,Female,No,No,104,66,102.3,None,High
+P0461,44,Female,No,No,179,66,97.3,None,High
+P0462,18,Female,Yes,No,168,72,98.3,"Asthma, Hypertension",High
+P0463,59,Male,No,Yes,143,62,103.5,"Diabetes, Kidney_Disease",High
+P0464,58,Female,Yes,No,90,93,102.2,Asthma,High
+P0465,75,Female,Yes,Yes,106,66,99.7,Heart_Disease,High
+P0466,65,Female,No,Yes,125,85,103.7,"Asthma, Diabetes, Hypertension",High
+P0467,53,Female,No,Yes,115,73,101.4,None,Medium
+P0468,45,Male,Yes,No,180,67,102.3,Kidney_Disease,High
+P0469,74,Female,No,No,91,93,97.7,None,Low
+P0470,7,Male,Yes,No,110,78,101.8,None,High
+P0471,8,Female,Yes,Yes,135,112,100.2,Kidney_Disease,High
+P0472,29,Female,Yes,No,178,102,97.3,None,High
+P0473,54,Female,Yes,Yes,122,72,101.3,"Asthma, Hypertension",High
+P0474,82,Female,Yes,Yes,127,88,98.2,Hypertension,High
+P0475,23,Male,No,Yes,144,77,100.9,None,Medium
+P0476,75,Female,Yes,No,149,105,103.6,None,High
+P0477,42,Male,No,No,163,95,99.5,"Heart_Disease, Hypertension",High
+P0478,24,Male,Yes,No,159,94,99.8,None,High
+P0479,28,Female,No,No,127,73,103.7,Asthma,High
+P0480,72,Male,Yes,No,147,75,103.3,Kidney_Disease,High
+P0481,32,Male,No,No,104,84,98.8,Diabetes,Medium
+P0482,67,Female,No,No,95,78,103.3,None,High
+P0483,66,Male,Yes,Yes,158,94,97.1,None,High
+P0484,86,Male,No,Yes,116,94,102.8,"Asthma, Diabetes",High
+P0485,88,Male,Yes,No,132,62,97.6,None,High
+P0486,33,Male,Yes,No,142,84,100.2,Heart_Disease,High
+P0487,3,Female,Yes,Yes,172,106,101.3,"Diabetes, Kidney_Disease",High
+P0488,90,Male,No,Yes,127,110,101.8,Heart_Disease,High
+P0489,57,Female,No,Yes,150,70,100.7,None,Medium
+P0490,51,Female,Yes,No,176,116,103.4,"Diabetes, Heart_Disease",High
+P0491,71,Male,Yes,Yes,90,96,101.2,Diabetes,High
+P0492,40,Male,No,Yes,142,117,101.5,Hypertension,Medium
+P0493,24,Male,No,Yes,104,71,101.7,Diabetes,Medium
+P0494,71,Female,Yes,No,175,64,98.8,None,High
+P0495,75,Female,No,No,106,102,101.6,None,Low
+P0496,80,Male,Yes,No,152,88,99.3,Kidney_Disease,High
+P0497,20,Female,No,No,111,60,99.2,"Asthma, Heart_Disease",High
+P0498,47,Male,No,No,149,88,99.5,None,Medium
+P0499,71,Male,Yes,Yes,125,114,102.8,"Heart_Disease, Hypertension",High
+P0500,81,Male,Yes,Yes,154,100,97.2,Asthma,High
+P0501,76,Male,Yes,No,159,117,104.0,Hypertension,High
+P0502,47,Female,Yes,No,107,89,100.5,None,High
+P0503,47,Male,Yes,Yes,155,68,100.1,None,High
+P0504,73,Male,No,No,95,74,102.3,None,High
+P0505,34,Female,Yes,Yes,175,73,100.6,"Asthma, Kidney_Disease",High
+P0506,59,Male,Yes,No,103,105,103.8,Heart_Disease,High
+P0507,34,Male,No,No,136,97,101.6,"Heart_Disease, Kidney_Disease",High
+P0508,49,Male,No,No,134,91,102.5,"Diabetes, Hypertension",High
+P0509,57,Male,Yes,Yes,155,101,99.0,None,High
+P0510,21,Female,Yes,Yes,143,111,99.3,None,High
+P0511,87,Female,No,Yes,165,70,101.5,Hypertension,High
+P0512,6,Male,Yes,Yes,170,92,97.3,Diabetes,High
+P0513,22,Female,Yes,No,166,96,101.5,"Diabetes, Heart_Disease",High
+P0514,28,Female,No,No,111,74,102.8,Kidney_Disease,High
+P0515,24,Female,Yes,No,148,98,101.1,None,High
+P0516,50,Male,Yes,Yes,115,93,103.0,Asthma,High
+P0517,20,Male,Yes,No,168,98,97.3,"Diabetes, Kidney_Disease",High
+P0518,12,Female,Yes,Yes,176,101,100.0,Diabetes,High
+P0519,90,Female,Yes,No,138,82,101.1,Kidney_Disease,High
+P0520,13,Female,Yes,No,151,109,98.6,"Asthma, Heart_Disease",High
+P0521,33,Male,Yes,Yes,163,93,97.8,None,High
+P0522,84,Male,No,No,136,66,98.1,Heart_Disease,High
+P0523,34,Female,No,No,177,85,102.3,Kidney_Disease,High
+P0524,62,Male,No,No,122,79,101.0,"Asthma, Hypertension",Medium
+P0525,85,Male,Yes,No,179,120,98.1,None,High
+P0526,52,Female,Yes,Yes,139,100,97.0,None,High
+P0527,19,Female,No,Yes,98,76,98.6,None,Medium
+P0528,5,Female,No,No,166,63,103.6,"Asthma, Kidney_Disease",High
+P0529,2,Male,No,Yes,94,110,101.2,Hypertension,Medium
+P0530,79,Male,Yes,No,120,101,97.0,None,High
+P0531,36,Female,No,No,141,97,98.4,None,Medium
+P0532,9,Male,No,No,134,112,98.9,Hypertension,Medium
+P0533,59,Female,Yes,No,112,86,100.5,Kidney_Disease,High
+P0534,38,Female,Yes,No,158,112,102.6,None,High
+P0535,57,Female,No,Yes,133,109,100.2,Kidney_Disease,High
+P0536,4,Female,Yes,No,98,84,101.4,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0537,46,Male,No,Yes,126,65,99.8,Heart_Disease,High
+P0538,10,Male,No,No,135,73,103.3,None,High
+P0539,88,Male,No,Yes,120,107,98.7,None,Medium
+P0540,30,Male,Yes,No,109,109,97.7,"Asthma, Diabetes",High
+P0541,70,Male,No,No,169,80,100.4,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0542,24,Female,No,Yes,163,68,97.4,"Asthma, Diabetes",High
+P0543,65,Female,No,Yes,148,67,101.9,Diabetes,Medium
+P0544,2,Male,No,Yes,131,83,101.3,None,Medium
+P0545,71,Female,Yes,No,150,99,99.4,None,High
+P0546,55,Male,No,No,136,114,99.8,Kidney_Disease,High
+P0547,17,Male,Yes,No,120,95,100.0,None,High
+P0548,19,Male,No,Yes,112,86,100.5,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0549,39,Female,Yes,No,102,104,98.1,None,High
+P0550,33,Female,Yes,No,132,76,99.5,Heart_Disease,High
+P0551,45,Male,No,Yes,134,115,101.8,Kidney_Disease,High
+P0552,74,Male,No,No,131,103,100.6,"Asthma, Diabetes",Medium
+P0553,49,Female,No,Yes,111,100,102.7,None,High
+P0554,81,Female,Yes,Yes,110,81,98.6,None,High
+P0555,38,Female,No,No,146,109,103.0,None,High
+P0556,76,Female,No,Yes,113,114,97.2,Heart_Disease,High
+P0557,90,Male,Yes,Yes,140,66,97.7,"Asthma, Diabetes",High
+P0558,4,Female,Yes,Yes,123,99,98.1,Asthma,High
+P0559,40,Male,Yes,No,146,100,97.9,Hypertension,High
+P0560,4,Male,No,No,150,89,103.8,Heart_Disease,High
+P0561,71,Female,Yes,Yes,165,98,100.2,Kidney_Disease,High
+P0562,56,Female,No,No,159,74,102.6,Heart_Disease,High
+P0563,53,Female,Yes,No,91,60,100.7,"Heart_Disease, Hypertension",High
+P0564,37,Female,Yes,No,151,79,97.1,Heart_Disease,High
+P0565,77,Male,Yes,No,114,86,103.2,Hypertension,High
+P0566,21,Female,No,Yes,123,65,100.0,None,Medium
+P0567,79,Female,No,No,142,72,103.0,None,High
+P0568,38,Male,No,No,124,104,101.4,None,Low
+P0569,3,Male,Yes,Yes,113,66,99.0,None,High
+P0570,57,Male,Yes,Yes,109,60,100.5,None,High
+P0571,40,Female,No,No,179,110,97.2,None,High
+P0572,19,Male,No,No,99,94,100.3,None,Low
+P0573,33,Female,Yes,Yes,121,84,102.4,Diabetes,High
+P0574,26,Female,Yes,Yes,150,84,101.8,None,High
+P0575,42,Male,Yes,Yes,122,90,101.5,None,High
+P0576,7,Male,Yes,Yes,171,87,99.3,None,High
+P0577,36,Male,No,Yes,91,62,101.1,Kidney_Disease,High
+P0578,20,Female,Yes,Yes,110,91,97.6,Diabetes,High
+P0579,8,Female,Yes,Yes,106,91,98.6,"Asthma, Heart_Disease, Kidney_Disease",High
+P0580,25,Male,No,No,107,76,103.3,Asthma,High
+P0581,72,Female,No,Yes,162,71,100.8,None,High
+P0582,60,Female,Yes,Yes,157,69,100.1,"Heart_Disease, Kidney_Disease",High
+P0583,59,Male,No,Yes,92,99,103.0,"Heart_Disease, Hypertension",High
+P0584,9,Female,Yes,No,160,69,101.3,None,High
+P0585,83,Female,Yes,Yes,156,102,97.5,"Hypertension, Kidney_Disease",High
+P0586,5,Male,Yes,No,114,66,97.2,Asthma,High
+P0587,85,Female,No,Yes,136,74,101.2,None,Medium
+P0588,27,Female,Yes,No,171,63,99.5,Asthma,High
+P0589,48,Male,No,Yes,99,113,99.1,"Diabetes, Kidney_Disease",High
+P0590,13,Male,No,Yes,114,93,101.6,Hypertension,Medium
+P0591,72,Female,Yes,No,176,89,101.9,Diabetes,High
+P0592,22,Male,No,No,174,70,100.7,Heart_Disease,High
+P0593,41,Female,No,No,171,87,102.8,None,High
+P0594,31,Male,No,No,136,88,100.1,None,Medium
+P0595,5,Female,Yes,Yes,128,60,99.1,None,High
+P0596,41,Male,No,Yes,102,62,100.2,None,Medium
+P0597,34,Female,Yes,Yes,122,111,99.1,Kidney_Disease,High
+P0598,28,Male,No,No,112,91,102.8,Kidney_Disease,High
+P0599,13,Female,Yes,No,100,109,97.4,"Asthma, Heart_Disease",High
+P0600,54,Male,Yes,Yes,171,109,101.4,None,High
+P0601,68,Male,No,Yes,131,92,101.9,None,Medium
+P0602,87,Female,No,Yes,118,87,99.0,None,Medium
+P0603,17,Female,Yes,No,163,107,97.3,None,High
+P0604,11,Female,No,Yes,107,90,100.9,Kidney_Disease,High
+P0605,26,Male,Yes,Yes,124,109,100.0,Kidney_Disease,High
+P0606,12,Male,No,No,136,82,98.3,None,Medium
+P0607,84,Male,No,Yes,134,99,102.8,"Hypertension, Kidney_Disease",High
+P0608,57,Male,Yes,Yes,177,83,98.1,Diabetes,High
+P0609,15,Male,Yes,Yes,126,60,99.4,"Asthma, Heart_Disease",High
+P0610,61,Male,No,Yes,158,73,98.4,Heart_Disease,High
+P0611,71,Female,Yes,Yes,138,97,103.3,Heart_Disease,High
+P0612,22,Male,No,Yes,179,99,98.9,Diabetes,High
+P0613,9,Female,No,No,103,61,99.0,"Asthma, Hypertension",Medium
+P0614,49,Male,No,No,166,94,97.6,None,High
+P0615,59,Male,Yes,Yes,157,79,99.3,None,High
+P0616,21,Male,No,No,135,100,99.1,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0617,81,Female,No,Yes,161,120,99.0,None,High
+P0618,51,Male,Yes,No,156,103,101.3,Hypertension,High
+P0619,54,Male,Yes,No,129,118,101.2,Hypertension,High
+P0620,27,Male,Yes,Yes,129,104,101.9,Hypertension,High
+P0621,56,Male,Yes,No,98,95,100.7,Hypertension,High
+P0622,41,Male,Yes,No,142,86,99.1,Heart_Disease,High
+P0623,20,Male,Yes,Yes,113,61,102.3,Heart_Disease,High
+P0624,78,Male,Yes,Yes,177,61,99.5,Asthma,High
+P0625,18,Female,No,Yes,139,91,100.3,None,Medium
+P0626,29,Male,No,Yes,124,120,99.9,Hypertension,Medium
+P0627,27,Male,Yes,No,168,91,101.8,"Asthma, Hypertension",High
+P0628,52,Male,No,No,140,99,103.6,Kidney_Disease,High
+P0629,68,Male,Yes,No,148,112,103.1,"Asthma, Hypertension",High
+P0630,6,Female,Yes,Yes,127,88,99.8,None,High
+P0631,37,Female,Yes,No,127,99,103.4,Hypertension,High
+P0632,60,Female,Yes,Yes,113,109,101.1,"Hypertension, Kidney_Disease",High
+P0633,51,Female,No,No,93,71,100.2,"Asthma, Hypertension",Medium
+P0634,12,Female,No,Yes,105,65,97.8,Heart_Disease,High
+P0635,11,Female,Yes,No,160,84,97.3,None,High
+P0636,43,Male,Yes,Yes,112,109,102.0,Heart_Disease,High
+P0637,58,Female,Yes,Yes,106,72,97.0,"Asthma, Diabetes",High
+P0638,64,Female,Yes,No,120,73,101.1,Asthma,High
+P0639,57,Male,Yes,Yes,160,77,101.3,Hypertension,High
+P0640,7,Male,Yes,Yes,173,82,97.3,"Heart_Disease, Kidney_Disease",High
+P0641,43,Male,Yes,Yes,143,71,98.1,None,High
+P0642,85,Male,No,No,94,65,102.4,None,High
+P0643,49,Male,No,Yes,127,90,97.9,Heart_Disease,High
+P0644,43,Female,Yes,Yes,168,63,97.8,Kidney_Disease,High
+P0645,12,Female,No,No,167,114,99.2,Kidney_Disease,High
+P0646,46,Male,No,No,153,111,98.3,Heart_Disease,High
+P0647,25,Male,Yes,Yes,149,100,102.6,Hypertension,High
+P0648,79,Female,No,Yes,132,82,100.9,Diabetes,Medium
+P0649,82,Male,No,No,98,79,99.1,Diabetes,Medium
+P0650,15,Female,No,No,162,99,103.7,"Heart_Disease, Hypertension",High
+P0651,44,Female,No,Yes,172,68,100.4,Kidney_Disease,High
+P0652,43,Female,No,Yes,156,79,101.0,Kidney_Disease,High
+P0653,69,Male,Yes,No,135,64,103.8,None,High
+P0654,4,Female,No,Yes,163,98,99.7,Heart_Disease,High
+P0655,41,Male,No,No,101,91,103.1,None,High
+P0656,39,Male,No,Yes,104,83,102.5,"Asthma, Diabetes",High
+P0657,65,Male,No,Yes,114,81,103.5,Kidney_Disease,High
+P0658,40,Female,Yes,Yes,156,103,103.9,None,High
+P0659,5,Female,No,Yes,90,79,103.5,Kidney_Disease,High
+P0660,12,Female,No,Yes,103,93,102.4,Diabetes,High
+P0661,74,Female,Yes,No,115,72,99.0,Asthma,High
+P0662,86,Male,No,Yes,110,77,97.8,"Asthma, Diabetes, Kidney_Disease",High
+P0663,70,Female,No,No,108,120,101.9,None,Low
+P0664,32,Male,Yes,No,168,117,99.4,Hypertension,High
+P0665,4,Female,Yes,Yes,139,63,97.6,None,High
+P0666,77,Female,No,No,132,112,98.4,"Diabetes, Kidney_Disease",High
+P0667,60,Male,Yes,No,102,89,99.2,Asthma,High
+P0668,61,Male,Yes,Yes,168,76,103.4,None,High
+P0669,90,Female,No,No,152,61,97.5,None,High
+P0670,62,Female,Yes,No,134,98,101.0,Asthma,High
+P0671,14,Female,Yes,No,158,89,99.8,Kidney_Disease,High
+P0672,32,Male,No,No,98,81,98.5,Asthma,Medium
+P0673,56,Female,Yes,Yes,174,102,97.5,"Asthma, Kidney_Disease",High
+P0674,15,Female,No,Yes,146,71,99.2,Kidney_Disease,High
+P0675,14,Female,No,No,172,102,97.4,None,High
+P0676,18,Male,Yes,Yes,147,94,99.0,Asthma,High
+P0677,26,Male,No,No,162,110,103.4,None,High
+P0678,56,Female,Yes,Yes,168,92,99.8,None,High
+P0679,38,Male,No,Yes,90,105,100.9,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0680,31,Female,No,No,138,85,99.7,Hypertension,Medium
+P0681,61,Male,Yes,No,136,113,99.9,None,High
+P0682,86,Male,Yes,Yes,99,101,97.1,Asthma,High
+P0683,85,Female,Yes,Yes,107,101,102.6,"Asthma, Kidney_Disease",High
+P0684,80,Male,No,No,160,112,100.2,None,High
+P0685,24,Female,Yes,No,120,105,100.5,Kidney_Disease,High
+P0686,74,Female,Yes,Yes,162,90,101.9,None,High
+P0687,62,Male,Yes,No,149,93,97.5,"Diabetes, Hypertension",High
+P0688,61,Male,No,Yes,133,94,102.4,Kidney_Disease,High
+P0689,61,Female,No,No,127,78,98.2,Kidney_Disease,High
+P0690,39,Female,Yes,No,164,70,101.0,Heart_Disease,High
+P0691,80,Male,No,No,100,68,100.5,"Heart_Disease, Kidney_Disease",High
+P0692,17,Female,No,No,91,107,97.8,None,Low
+P0693,76,Male,No,No,112,76,102.5,None,High
+P0694,24,Male,No,Yes,108,98,103.5,None,High
+P0695,64,Female,No,Yes,174,88,102.1,None,High
+P0696,74,Female,Yes,No,104,63,98.2,None,High
+P0697,39,Female,Yes,No,177,105,99.7,None,High
+P0698,68,Female,Yes,No,147,84,101.7,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0699,82,Female,No,No,132,77,98.9,None,Medium
+P0700,84,Female,No,Yes,176,97,102.4,Hypertension,High
+P0701,41,Male,Yes,Yes,91,86,97.7,None,High
+P0702,58,Female,Yes,No,122,72,97.2,Diabetes,High
+P0703,77,Male,Yes,Yes,101,114,101.2,None,High
+P0704,83,Male,Yes,Yes,122,78,100.3,"Asthma, Heart_Disease",High
+P0705,55,Female,No,Yes,99,77,102.4,None,High
+P0706,43,Male,No,No,112,88,97.5,"Asthma, Diabetes, Hypertension",Medium
+P0707,83,Female,Yes,Yes,159,109,100.0,Diabetes,High
+P0708,57,Female,Yes,Yes,99,64,101.0,None,High
+P0709,58,Male,No,Yes,173,100,97.0,None,High
+P0710,50,Female,Yes,No,140,96,97.0,Asthma,High
+P0711,62,Female,No,Yes,159,74,97.0,"Asthma, Diabetes, Heart_Disease",High
+P0712,69,Female,No,No,141,63,101.4,"Asthma, Diabetes, Heart_Disease",High
+P0713,44,Male,No,No,172,72,98.2,None,High
+P0714,50,Male,No,No,103,100,101.8,Asthma,Medium
+P0715,25,Male,Yes,Yes,93,106,104.0,None,High
+P0716,50,Male,No,No,158,113,102.7,"Diabetes, Hypertension, Kidney_Disease",High
+P0717,8,Female,Yes,No,105,73,102.6,Asthma,High
+P0718,87,Male,Yes,Yes,94,107,98.0,Asthma,High
+P0719,80,Male,Yes,Yes,91,71,101.4,"Asthma, Diabetes",High
+P0720,79,Male,Yes,Yes,104,91,101.2,Diabetes,High
+P0721,26,Female,No,No,131,67,103.8,Hypertension,High
+P0722,42,Male,Yes,Yes,132,64,97.8,None,High
+P0723,54,Male,No,Yes,146,75,103.5,None,High
+P0724,13,Female,Yes,Yes,152,65,97.0,None,High
+P0725,12,Female,No,No,178,68,98.4,Kidney_Disease,High
+P0726,58,Female,Yes,Yes,168,104,97.3,None,High
+P0727,64,Male,No,No,143,60,100.9,None,Medium
+P0728,68,Male,No,Yes,149,109,101.4,None,Medium
+P0729,7,Male,Yes,Yes,177,114,103.8,Hypertension,High
+P0730,21,Male,Yes,No,126,73,100.0,None,High
+P0731,59,Male,Yes,Yes,158,71,98.1,None,High
+P0732,66,Male,Yes,Yes,146,97,101.1,Heart_Disease,High
+P0733,30,Male,No,Yes,102,75,102.2,"Asthma, Hypertension",High
+P0734,10,Female,No,Yes,145,69,98.5,Hypertension,Medium
+P0735,50,Female,Yes,No,114,100,99.5,None,High
+P0736,43,Male,Yes,Yes,125,68,97.8,Asthma,High
+P0737,22,Female,Yes,No,167,70,102.5,Kidney_Disease,High
+P0738,22,Male,Yes,No,156,91,103.0,None,High
+P0739,61,Female,No,Yes,144,107,103.1,None,High
+P0740,56,Male,Yes,Yes,143,62,97.3,Kidney_Disease,High
+P0741,5,Female,No,No,179,112,97.7,Diabetes,High
+P0742,72,Male,No,Yes,106,82,99.1,Diabetes,Medium
+P0743,3,Female,No,Yes,180,89,103.0,Diabetes,High
+P0744,59,Female,Yes,No,113,110,103.1,Diabetes,High
+P0745,81,Male,No,No,157,62,99.1,"Hypertension, Kidney_Disease",High
+P0746,88,Male,No,Yes,155,120,103.4,None,High
+P0747,7,Male,No,No,149,99,97.3,None,Medium
+P0748,83,Male,Yes,Yes,132,75,100.8,Kidney_Disease,High
+P0749,90,Male,Yes,No,135,117,98.9,Heart_Disease,High
+P0750,7,Male,No,No,147,91,100.5,"Asthma, Heart_Disease",High
+P0751,58,Female,Yes,Yes,148,65,97.6,"Diabetes, Heart_Disease",High
+P0752,14,Male,No,Yes,179,69,100.5,"Diabetes, Kidney_Disease",High
+P0753,38,Female,Yes,No,134,86,100.1,Heart_Disease,High
+P0754,25,Male,Yes,Yes,156,101,99.4,Heart_Disease,High
+P0755,63,Female,No,No,162,68,103.3,None,High
+P0756,34,Male,No,No,126,109,102.9,None,High
+P0757,37,Female,Yes,Yes,158,78,98.3,None,High
+P0758,89,Male,Yes,Yes,104,62,104.0,Asthma,High
+P0759,34,Female,Yes,Yes,161,105,97.2,None,High
+P0760,45,Male,No,No,159,70,100.7,None,High
+P0761,4,Female,No,Yes,148,119,99.2,None,Medium
+P0762,70,Female,No,No,127,120,102.3,"Asthma, Hypertension, Kidney_Disease",High
+P0763,89,Male,No,Yes,107,103,100.9,None,Medium
+P0764,52,Male,No,No,101,80,97.4,Kidney_Disease,High
+P0765,68,Male,No,Yes,92,65,100.8,Diabetes,Medium
+P0766,66,Female,Yes,No,130,98,101.2,"Asthma, Heart_Disease",High
+P0767,19,Female,No,No,137,60,99.0,None,Medium
+P0768,58,Male,Yes,No,143,111,100.1,None,High
+P0769,55,Female,Yes,Yes,108,73,99.1,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0770,76,Female,Yes,Yes,142,100,103.4,Kidney_Disease,High
+P0771,60,Male,Yes,Yes,138,78,100.9,None,High
+P0772,39,Female,No,No,118,61,102.5,None,High
+P0773,39,Female,Yes,No,143,71,100.4,Hypertension,High
+P0774,4,Male,No,No,98,98,102.2,Kidney_Disease,High
+P0775,56,Female,No,Yes,137,92,102.1,None,High
+P0776,34,Male,Yes,Yes,130,89,103.1,None,High
+P0777,21,Male,No,No,143,100,103.4,None,High
+P0778,38,Female,Yes,Yes,170,71,102.4,Hypertension,High
+P0779,70,Female,No,No,124,103,101.9,None,Low
+P0780,69,Female,Yes,Yes,107,93,99.0,"Asthma, Heart_Disease",High
+P0781,21,Male,Yes,Yes,154,74,102.8,"Diabetes, Kidney_Disease",High
+P0782,54,Female,Yes,Yes,106,119,97.1,None,High
+P0783,89,Female,Yes,No,166,93,102.3,None,High
+P0784,39,Male,Yes,Yes,106,114,101.9,Heart_Disease,High
+P0785,17,Male,Yes,Yes,144,104,102.3,None,High
+P0786,3,Female,No,Yes,115,66,97.2,Kidney_Disease,High
+P0787,8,Female,Yes,No,95,64,99.1,None,High
+P0788,13,Male,Yes,Yes,113,102,99.5,None,High
+P0789,36,Female,No,Yes,154,109,102.1,None,High
+P0790,73,Male,Yes,Yes,157,73,102.0,"Diabetes, Heart_Disease, Hypertension",High
+P0791,13,Male,No,No,179,97,98.3,Diabetes,High
+P0792,24,Female,No,No,117,92,98.6,None,Low
+P0793,41,Male,No,Yes,156,68,100.5,None,High
+P0794,37,Male,Yes,No,153,67,99.7,Heart_Disease,High
+P0795,88,Female,Yes,No,127,114,100.0,"Asthma, Heart_Disease",High
+P0796,23,Male,No,Yes,140,88,100.7,Diabetes,Medium
+P0797,19,Female,No,Yes,111,64,99.5,None,Medium
+P0798,26,Female,Yes,Yes,144,106,100.5,"Heart_Disease, Kidney_Disease",High
+P0799,83,Female,No,No,175,98,103.7,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0800,59,Male,Yes,No,152,91,98.6,"Diabetes, Kidney_Disease",High
+P0801,7,Male,No,Yes,112,84,101.2,None,Medium
+P0802,39,Male,Yes,No,149,72,99.1,Kidney_Disease,High
+P0803,34,Female,Yes,Yes,145,116,103.4,None,High
+P0804,41,Female,No,No,94,62,98.2,Heart_Disease,High
+P0805,22,Female,No,Yes,129,105,99.7,"Asthma, Kidney_Disease",High
+P0806,85,Female,No,Yes,154,63,99.7,Asthma,High
+P0807,79,Female,No,No,97,61,101.1,None,Low
+P0808,47,Female,Yes,No,138,66,100.0,"Asthma, Diabetes, Heart_Disease",High
+P0809,85,Male,Yes,Yes,172,79,101.1,"Diabetes, Heart_Disease",High
+P0810,15,Female,Yes,Yes,158,80,97.3,Asthma,High
+P0811,73,Female,No,Yes,179,90,101.1,"Asthma, Hypertension, Kidney_Disease",High
+P0812,74,Male,No,Yes,178,103,98.4,Heart_Disease,High
+P0813,22,Female,No,No,115,91,101.4,"Asthma, Diabetes, Hypertension",Medium
+P0814,34,Male,No,No,118,99,102.2,None,High
+P0815,75,Male,No,No,98,96,102.6,Hypertension,High
+P0816,45,Male,No,No,145,102,100.8,None,Medium
+P0817,52,Female,No,Yes,92,100,101.9,"Asthma, Kidney_Disease",High
+P0818,28,Female,No,No,162,106,101.4,Heart_Disease,High
+P0819,60,Male,Yes,Yes,177,108,99.1,Heart_Disease,High
+P0820,9,Male,No,No,126,101,98.1,Hypertension,Medium
+P0821,52,Male,Yes,Yes,114,61,98.7,"Asthma, Kidney_Disease",High
+P0822,72,Female,No,Yes,115,70,98.9,None,Medium
+P0823,36,Male,Yes,No,92,63,103.0,None,High
+P0824,78,Female,Yes,No,136,102,101.6,None,High
+P0825,18,Male,Yes,Yes,156,102,102.8,"Heart_Disease, Kidney_Disease",High
+P0826,64,Male,Yes,Yes,130,81,102.8,Hypertension,High
+P0827,55,Male,Yes,Yes,112,73,103.8,Heart_Disease,High
+P0828,76,Male,No,No,179,120,97.8,Asthma,High
+P0829,88,Male,No,Yes,136,90,102.0,"Diabetes, Kidney_Disease",High
+P0830,85,Male,Yes,No,160,84,99.2,"Diabetes, Heart_Disease, Kidney_Disease",High
+P0831,31,Female,No,Yes,140,119,103.8,None,High
+P0832,12,Male,No,Yes,110,118,100.1,None,Medium
+P0833,83,Female,Yes,No,100,112,102.5,Asthma,High
+P0834,43,Female,Yes,Yes,179,76,100.5,None,High
+P0835,78,Female,No,Yes,96,101,101.5,Hypertension,Medium
+P0836,1,Female,Yes,No,130,96,97.6,None,High
+P0837,67,Male,No,No,147,90,103.1,None,High
+P0838,23,Female,No,Yes,100,86,99.6,None,Medium
+P0839,49,Male,Yes,Yes,161,101,101.3,None,High
+P0840,12,Female,Yes,No,179,114,98.2,Asthma,High
+P0841,77,Female,Yes,Yes,137,70,103.6,None,High
+P0842,68,Female,No,No,105,74,102.0,None,Low
+P0843,35,Female,No,No,106,87,103.0,Heart_Disease,High
+P0844,87,Male,No,Yes,142,110,98.0,None,Medium
+P0845,34,Male,No,Yes,137,97,101.8,Diabetes,Medium
+P0846,61,Male,No,No,177,73,102.0,Kidney_Disease,High
+P0847,33,Male,Yes,Yes,96,81,103.5,Heart_Disease,High
+P0848,78,Male,Yes,No,154,99,99.7,"Heart_Disease, Hypertension, Kidney_Disease",High
+P0849,6,Male,No,Yes,154,91,103.5,"Diabetes, Hypertension",High
+P0850,41,Female,Yes,No,104,80,97.3,None,High
+P0851,36,Female,No,No,123,99,102.8,"Heart_Disease, Kidney_Disease",High
+P0852,56,Male,No,No,109,95,103.0,Asthma,High
+P0853,7,Male,Yes,Yes,119,71,97.3,None,High
+P0854,60,Female,Yes,No,95,88,99.5,Asthma,High
+P0855,59,Female,Yes,Yes,105,82,97.7,"Hypertension, Kidney_Disease",High
+P0856,66,Female,Yes,Yes,157,109,101.0,Diabetes,High
+P0857,32,Female,Yes,No,93,78,101.8,Asthma,High
+P0858,48,Male,No,Yes,93,65,100.2,Asthma,Medium
+P0859,59,Female,Yes,No,95,101,101.4,Kidney_Disease,High
+P0860,17,Male,Yes,No,131,111,97.4,None,High
+P0861,78,Female,Yes,No,122,71,98.7,"Asthma, Diabetes",High
+P0862,3,Male,Yes,No,141,78,101.5,"Diabetes, Hypertension, Kidney_Disease",High
+P0863,63,Female,No,Yes,135,102,97.7,None,Medium
+P0864,26,Female,No,No,150,77,100.9,Asthma,Medium
+P0865,48,Male,No,No,101,62,100.6,"Asthma, Hypertension, Kidney_Disease",High
+P0866,68,Male,No,No,145,65,103.4,Hypertension,High
+P0867,17,Female,Yes,No,127,96,97.3,None,High
+P0868,6,Male,No,No,102,89,101.6,Heart_Disease,High
+P0869,46,Female,Yes,Yes,104,107,101.6,None,High
+P0870,24,Female,Yes,Yes,143,116,101.9,None,High
+P0871,59,Female,No,No,113,73,98.3,Kidney_Disease,High
+P0872,34,Male,No,Yes,90,85,97.8,None,Medium
+P0873,62,Female,No,No,128,99,102.7,Asthma,High
+P0874,39,Male,Yes,Yes,91,72,97.8,None,High
+P0875,25,Male,Yes,No,173,69,101.5,Kidney_Disease,High
+P0876,25,Male,No,No,108,90,100.0,None,Low
+P0877,20,Female,No,No,92,115,100.1,None,Low
+P0878,38,Female,Yes,No,91,66,101.4,Asthma,High
+P0879,64,Female,Yes,No,141,91,100.6,Asthma,High
+P0880,30,Male,Yes,No,163,80,100.9,None,High
+P0881,83,Female,No,Yes,153,99,103.6,None,High
+P0882,90,Female,Yes,Yes,126,106,98.3,None,High
+P0883,30,Male,No,No,106,116,99.1,Asthma,Medium
+P0884,87,Female,No,Yes,169,73,99.0,Asthma,High
+P0885,17,Male,Yes,Yes,167,91,97.7,Asthma,High
+P0886,39,Male,Yes,Yes,92,82,103.2,None,High
+P0887,21,Male,Yes,Yes,133,87,97.8,None,High
+P0888,72,Male,No,No,133,110,99.5,None,Medium
+P0889,72,Female,Yes,Yes,180,63,103.5,Asthma,High
+P0890,15,Male,Yes,Yes,154,66,98.2,None,High
+P0891,27,Female,Yes,No,180,88,102.3,Diabetes,High
+P0892,20,Female,No,Yes,105,114,98.4,"Asthma, Diabetes, Hypertension",Medium
+P0893,44,Female,Yes,Yes,124,83,102.0,Hypertension,High
+P0894,20,Female,Yes,Yes,144,86,103.4,"Heart_Disease, Kidney_Disease",High
+P0895,4,Female,Yes,Yes,156,120,97.5,None,High
+P0896,52,Male,No,Yes,140,108,97.3,"Diabetes, Hypertension",Medium
+P0897,81,Female,No,No,177,104,100.9,None,High
+P0898,41,Female,Yes,No,157,99,103.4,Asthma,High
+P0899,83,Male,No,No,173,85,102.4,"Diabetes, Kidney_Disease",High
+P0900,69,Female,No,Yes,156,94,99.0,None,High
+P0901,71,Female,No,Yes,92,61,103.2,Heart_Disease,High
+P0902,31,Female,No,Yes,97,113,99.6,Heart_Disease,High
+P0903,16,Male,Yes,No,128,96,102.2,Hypertension,High
+P0904,75,Male,No,No,126,102,102.5,Hypertension,High
+P0905,49,Male,Yes,No,156,97,98.3,"Asthma, Diabetes",High
+P0906,19,Female,No,Yes,101,63,100.0,None,Medium
+P0907,28,Female,Yes,No,176,93,99.8,Asthma,High
+P0908,34,Female,No,No,178,119,103.6,Asthma,High
+P0909,21,Male,Yes,No,148,68,103.8,Kidney_Disease,High
+P0910,16,Male,No,No,94,107,98.1,Diabetes,Medium
+P0911,78,Female,Yes,Yes,137,96,99.0,Diabetes,High
+P0912,48,Female,No,No,127,91,97.2,None,Low
+P0913,76,Female,Yes,No,126,73,98.3,Diabetes,High
+P0914,16,Female,Yes,Yes,143,90,101.0,Heart_Disease,High
+P0915,49,Female,Yes,Yes,154,100,100.2,Asthma,High
+P0916,20,Female,Yes,No,139,74,103.3,None,High
+P0917,6,Female,No,Yes,111,105,97.2,Heart_Disease,High
+P0918,72,Male,Yes,Yes,169,94,101.0,None,High
+P0919,73,Male,No,Yes,105,102,103.6,None,High
+P0920,3,Female,Yes,Yes,180,113,103.2,Kidney_Disease,High
+P0921,78,Female,No,Yes,152,115,103.5,None,High
+P0922,24,Female,Yes,No,138,76,97.6,"Asthma, Hypertension, Kidney_Disease",High
+P0923,19,Male,No,Yes,109,79,103.7,Diabetes,High
+P0924,79,Female,Yes,Yes,97,79,99.7,None,High
+P0925,53,Female,No,No,105,63,98.4,"Hypertension, Kidney_Disease",High
+P0926,64,Female,Yes,No,97,80,100.3,Asthma,High
+P0927,4,Female,Yes,Yes,124,95,103.7,Hypertension,High
+P0928,72,Male,No,No,147,65,102.9,Hypertension,High
+P0929,48,Male,Yes,No,161,88,97.3,"Heart_Disease, Kidney_Disease",High
+P0930,84,Male,Yes,Yes,151,77,101.2,"Asthma, Heart_Disease",High
+P0931,81,Male,No,Yes,110,107,100.7,None,Medium
+P0932,12,Female,Yes,Yes,161,77,103.1,None,High
+P0933,65,Female,No,No,180,88,98.9,Heart_Disease,High
+P0934,44,Male,No,No,92,118,101.8,Diabetes,Medium
+P0935,78,Female,Yes,Yes,176,71,99.9,"Asthma, Kidney_Disease",High
+P0936,69,Male,Yes,Yes,175,88,101.7,None,High
+P0937,49,Female,No,Yes,179,60,97.9,None,High
+P0938,25,Female,Yes,Yes,92,108,99.0,"Heart_Disease, Hypertension",High
+P0939,12,Female,Yes,Yes,153,83,97.3,Kidney_Disease,High
+P0940,27,Male,Yes,No,104,115,98.9,Hypertension,High
+P0941,71,Male,Yes,Yes,165,68,102.2,None,High
+P0942,73,Male,No,Yes,176,61,103.9,Kidney_Disease,High
+P0943,79,Female,No,Yes,144,101,101.7,Heart_Disease,High
+P0944,56,Female,No,Yes,177,93,100.3,None,High
+P0945,6,Male,Yes,No,143,94,100.1,None,High
+P0946,25,Female,Yes,Yes,118,104,100.0,None,High
+P0947,32,Male,Yes,No,129,64,101.4,None,High
+P0948,62,Female,Yes,No,122,75,97.8,None,High
+P0949,44,Male,No,Yes,99,109,101.2,Diabetes,Medium
+P0950,81,Female,Yes,Yes,97,118,97.2,None,High
+P0951,89,Male,Yes,Yes,146,63,99.1,Diabetes,High
+P0952,14,Male,Yes,No,138,85,97.7,"Diabetes, Hypertension",High
+P0953,59,Female,No,No,169,99,97.7,Diabetes,High
+P0954,59,Female,Yes,Yes,103,60,101.2,None,High
+P0955,25,Male,No,No,143,90,102.1,Hypertension,High
+P0956,18,Male,Yes,Yes,129,97,100.1,"Asthma, Heart_Disease, Kidney_Disease",High
+P0957,70,Male,Yes,No,129,98,99.4,None,High
+P0958,2,Male,Yes,Yes,154,112,102.8,"Asthma, Heart_Disease",High
+P0959,26,Male,Yes,Yes,133,72,101.7,Asthma,High
+P0960,77,Female,No,No,143,81,98.1,Diabetes,Medium
+P0961,64,Male,Yes,Yes,178,74,100.3,None,High
+P0962,62,Female,No,Yes,141,71,102.8,None,High
+P0963,2,Male,No,Yes,161,67,98.0,Kidney_Disease,High
+P0964,47,Male,Yes,Yes,115,78,98.2,"Heart_Disease, Hypertension",High
+P0965,71,Male,Yes,Yes,92,71,102.9,"Diabetes, Hypertension",High
+P0966,49,Male,No,Yes,129,89,98.7,"Asthma, Hypertension",Medium
+P0967,9,Male,Yes,Yes,114,72,100.7,Heart_Disease,High
+P0968,77,Female,Yes,Yes,168,97,98.3,Hypertension,High
+P0969,42,Male,Yes,No,106,114,100.6,Asthma,High
+P0970,27,Male,No,Yes,111,92,99.7,"Heart_Disease, Kidney_Disease",High
+P0971,64,Female,Yes,No,137,93,101.9,Asthma,High
+P0972,61,Female,No,Yes,116,74,103.3,Hypertension,High
+P0973,51,Male,No,No,138,96,98.1,"Diabetes, Heart_Disease",High
+P0974,18,Male,No,No,156,82,98.6,None,High
+P0975,66,Female,No,No,149,87,99.9,"Heart_Disease, Kidney_Disease",High
+P0976,49,Male,Yes,No,119,76,101.5,None,High
+P0977,11,Female,Yes,No,119,66,97.8,None,High
+P0978,70,Male,No,Yes,176,81,98.8,Heart_Disease,High
+P0979,25,Male,No,Yes,128,78,102.8,"Asthma, Kidney_Disease",High
+P0980,75,Male,No,Yes,140,74,98.6,Asthma,Medium
+P0981,30,Female,No,No,100,80,102.9,Asthma,High
+P0982,27,Female,No,Yes,137,68,101.0,None,Medium
+P0983,2,Female,No,No,118,86,100.0,"Heart_Disease, Kidney_Disease",High
+P0984,42,Male,Yes,Yes,109,120,104.0,Kidney_Disease,High
+P0985,78,Female,No,Yes,140,64,100.7,None,Medium
+P0986,14,Female,No,No,101,70,97.7,Diabetes,Medium
+P0987,89,Female,Yes,Yes,115,64,103.4,None,High
+P0988,27,Male,No,Yes,148,63,99.6,None,Medium
+P0989,42,Female,No,Yes,104,68,100.8,Diabetes,Medium
+P0990,50,Male,Yes,Yes,129,87,102.7,Hypertension,High
+P0991,78,Female,Yes,No,125,72,97.1,None,High
+P0992,9,Female,Yes,No,162,116,100.4,Diabetes,High
+P0993,12,Female,No,No,179,113,102.0,None,High
+P0994,79,Male,No,Yes,112,117,101.3,Asthma,Medium
+P0995,85,Male,Yes,No,179,120,97.3,"Heart_Disease, Hypertension",High
+P0996,81,Female,Yes,Yes,153,86,103.9,Heart_Disease,High
+P0997,10,Male,No,No,147,70,98.8,Asthma,Medium
+P0998,4,Male,No,No,133,107,99.8,None,Medium
+P0999,5,Male,No,Yes,180,118,98.0,Asthma,High
+P1000,63,Female,Yes,Yes,160,102,98.7,"Asthma, Hypertension, Kidney_Disease",High
+P1001,21,Male,Yes,Yes,112,78,97.9,Hypertension,High
+P1002,10,Male,No,Yes,146,82,98.2,Kidney_Disease,High
+P1003,28,Female,Yes,Yes,139,104,99.2,None,High
+P1004,1,Male,No,Yes,121,83,103.4,None,High
+P1005,3,Female,Yes,Yes,133,112,98.3,Hypertension,High
+P1006,13,Male,Yes,Yes,143,92,97.8,None,High
+P1007,72,Male,Yes,No,144,67,98.6,None,High
+P1008,42,Male,Yes,No,173,80,97.1,None,High
+P1009,29,Male,No,No,95,64,103.2,Kidney_Disease,High
+P1010,64,Male,Yes,No,102,98,99.3,Asthma,High
+P1011,87,Male,No,Yes,171,108,103.2,None,High
+P1012,86,Female,Yes,No,92,98,103.4,Kidney_Disease,High
+P1013,82,Male,Yes,Yes,92,99,102.3,None,High
+P1014,31,Female,Yes,Yes,97,68,99.6,None,High
+P1015,20,Female,Yes,Yes,120,119,102.1,"Asthma, Diabetes, Heart_Disease",High
+P1016,36,Female,Yes,No,172,112,99.0,None,High
+P1017,43,Female,Yes,Yes,159,63,103.3,Hypertension,High
+P1018,88,Male,No,No,113,88,101.4,None,Low
+P1019,63,Male,Yes,Yes,171,69,103.6,None,High
+P1020,23,Male,Yes,Yes,144,106,100.3,None,High
+P1021,26,Male,No,Yes,167,75,99.1,Hypertension,High
+P1022,35,Female,Yes,No,140,84,98.2,Kidney_Disease,High
+P1023,79,Female,Yes,No,92,108,99.7,"Heart_Disease, Hypertension",High
+P1024,71,Male,No,No,149,79,100.2,None,Medium
+P1025,78,Female,Yes,No,107,105,100.3,None,High
+P1026,25,Male,Yes,No,152,85,103.5,"Asthma, Heart_Disease",High
+P1027,63,Female,Yes,No,94,118,97.9,"Hypertension, Kidney_Disease",High
+P1028,56,Female,No,No,171,104,99.6,None,High
+P1029,50,Female,Yes,Yes,151,62,103.5,None,High
+P1030,87,Male,Yes,No,167,89,103.6,None,High
+P1031,32,Male,Yes,Yes,101,101,102.0,None,High
+P1032,76,Male,Yes,No,111,113,100.0,Kidney_Disease,High
+P1033,69,Female,No,No,101,66,101.5,"Heart_Disease, Hypertension",High
+P1034,35,Male,No,No,90,70,102.7,None,High
+P1035,9,Female,No,No,145,70,98.2,None,Medium
+P1036,18,Male,No,Yes,154,120,97.8,Hypertension,High
+P1037,24,Male,Yes,Yes,114,76,103.9,"Asthma, Diabetes",High
+P1038,82,Male,Yes,No,100,84,97.9,None,High
+P1039,4,Male,No,No,176,108,97.7,None,High
+P1040,1,Male,Yes,Yes,156,110,97.1,Heart_Disease,High
+P1041,63,Female,No,No,133,83,101.8,None,Medium
+P1042,41,Male,No,No,138,99,97.4,None,Medium
+P1043,43,Male,Yes,No,179,85,102.1,"Diabetes, Hypertension",High
+P1044,78,Male,No,Yes,137,88,101.3,Asthma,Medium
+P1045,66,Female,Yes,Yes,171,120,102.7,None,High
+P1046,47,Male,No,No,119,98,100.4,Diabetes,Medium
+P1047,45,Female,No,Yes,139,78,101.3,Kidney_Disease,High
+P1048,74,Male,Yes,No,101,79,102.8,"Asthma, Hypertension, Kidney_Disease",High
+P1049,15,Female,Yes,Yes,117,70,102.3,Diabetes,High
+P1050,14,Female,Yes,Yes,131,117,99.7,None,High
+P1051,33,Female,Yes,Yes,158,100,102.1,None,High
+P1052,89,Female,Yes,Yes,172,81,99.6,Asthma,High
+P1053,84,Female,Yes,Yes,123,67,99.0,None,High
+P1054,44,Male,Yes,No,106,114,99.2,None,High
+P1055,1,Female,Yes,Yes,139,87,99.2,None,High
+P1056,87,Male,Yes,Yes,140,60,100.8,Hypertension,High
+P1057,38,Male,No,No,108,98,99.0,Diabetes,Medium
+P1058,77,Female,No,Yes,125,114,101.9,Hypertension,Medium
+P1059,64,Female,No,Yes,132,69,102.8,None,High
+P1060,29,Male,Yes,No,140,79,103.9,Hypertension,High
+P1061,3,Female,No,No,176,90,103.9,"Asthma, Diabetes",High
+P1062,68,Female,No,Yes,179,114,100.8,None,High
+P1063,42,Male,No,No,173,70,101.0,Asthma,High
+P1064,38,Male,Yes,Yes,115,107,101.6,None,High
+P1065,74,Male,Yes,No,144,103,102.9,"Diabetes, Heart_Disease",High
+P1066,61,Male,Yes,Yes,155,101,99.4,Hypertension,High
+P1067,81,Female,Yes,Yes,105,75,99.8,None,High
+P1068,77,Male,No,Yes,149,115,102.7,None,High
+P1069,81,Female,No,Yes,105,67,97.6,Kidney_Disease,High
+P1070,29,Male,No,No,178,107,97.7,Asthma,High
+P1071,62,Female,No,Yes,102,80,97.4,"Hypertension, Kidney_Disease",High
+P1072,52,Male,No,No,98,93,102.9,Diabetes,High
+P1073,27,Male,Yes,Yes,90,95,100.1,None,High
+P1074,6,Male,Yes,Yes,101,95,98.8,"Diabetes, Kidney_Disease",High
+P1075,65,Female,No,Yes,144,120,101.6,None,Medium
+P1076,6,Female,No,Yes,163,91,101.9,Heart_Disease,High
+P1077,78,Male,Yes,Yes,120,62,98.3,None,High
+P1078,28,Male,Yes,No,125,68,102.1,Kidney_Disease,High
+P1079,33,Female,No,Yes,141,89,97.6,None,Medium
+P1080,55,Male,Yes,Yes,170,106,98.9,Hypertension,High
+P1081,48,Male,No,Yes,130,110,100.0,None,Medium
+P1082,78,Male,Yes,No,105,94,97.8,Diabetes,High
+P1083,43,Male,No,No,124,69,103.1,None,High
+P1084,2,Male,No,Yes,138,120,97.7,"Heart_Disease, Hypertension",High
+P1085,76,Female,Yes,No,179,96,103.1,Kidney_Disease,High
+P1086,13,Male,Yes,No,139,71,99.4,Kidney_Disease,High
+P1087,71,Female,No,Yes,123,60,101.8,Hypertension,Medium
+P1088,19,Female,No,Yes,171,83,102.0,None,High
+P1089,78,Female,No,Yes,146,82,102.6,Heart_Disease,High
+P1090,55,Male,No,Yes,129,86,102.4,"Diabetes, Kidney_Disease",High
+P1091,31,Male,Yes,Yes,100,107,99.0,"Asthma, Diabetes",High
+P1092,87,Male,No,No,155,103,104.0,"Asthma, Diabetes",High
+P1093,2,Male,Yes,No,179,94,102.2,None,High
+P1094,85,Male,No,Yes,176,119,103.2,Hypertension,High
+P1095,23,Male,No,Yes,155,82,103.7,Asthma,High
+P1096,22,Female,Yes,No,176,75,102.8,"Diabetes, Heart_Disease",High
+P1097,39,Female,No,No,117,60,102.2,Hypertension,High
+P1098,40,Male,No,No,97,82,97.0,Heart_Disease,High
+P1099,46,Male,Yes,No,113,85,99.5,None,High
+P1100,63,Male,Yes,Yes,142,67,103.4,None,High
+P1101,85,Female,Yes,No,140,83,99.1,Hypertension,High
+P1102,69,Female,Yes,No,174,113,100.1,None,High
+P1103,56,Male,No,Yes,104,72,99.0,None,Medium
+P1104,54,Female,Yes,Yes,175,72,103.6,"Diabetes, Heart_Disease, Hypertension",High
+P1105,63,Female,Yes,No,141,92,102.1,Asthma,High
+P1106,17,Male,Yes,Yes,106,69,99.4,None,High
+P1107,88,Male,Yes,No,144,98,102.2,Heart_Disease,High
+P1108,37,Female,Yes,No,121,99,98.1,Hypertension,High
+P1109,36,Male,No,Yes,175,112,100.0,Diabetes,High
+P1110,90,Male,Yes,Yes,119,67,97.9,None,High
+P1111,25,Male,No,Yes,168,72,97.6,None,High
+P1112,53,Female,Yes,Yes,133,87,100.4,Diabetes,High
+P1113,39,Male,No,No,125,120,99.5,Heart_Disease,High
+P1114,7,Male,Yes,Yes,96,102,102.2,None,High
+P1115,61,Female,Yes,No,113,76,103.6,None,High
+P1116,39,Male,Yes,Yes,177,95,102.4,None,High
+P1117,47,Female,No,Yes,173,77,98.5,None,High
+P1118,14,Male,Yes,Yes,165,118,103.2,"Asthma, Hypertension",High
+P1119,13,Male,No,No,150,108,98.4,Diabetes,Medium
+P1120,17,Male,No,No,161,82,103.3,Diabetes,High
+P1121,56,Male,No,No,157,119,103.7,"Heart_Disease, Hypertension",High
+P1122,90,Male,No,Yes,162,63,102.6,Asthma,High
+P1123,64,Male,Yes,No,155,84,100.9,None,High
+P1124,78,Female,Yes,Yes,90,70,101.0,Diabetes,High
+P1125,66,Female,No,No,118,78,102.0,Hypertension,Medium
+P1126,29,Male,Yes,No,95,100,98.0,"Heart_Disease, Hypertension",High
+P1127,7,Male,Yes,Yes,90,101,99.4,Heart_Disease,High
+P1128,42,Male,No,Yes,142,117,101.3,None,Medium
+P1129,8,Male,No,Yes,125,71,98.8,None,Medium
+P1130,85,Male,No,No,170,100,101.2,None,High
+P1131,57,Male,No,No,116,97,101.4,"Asthma, Hypertension",Medium
+P1132,58,Male,No,No,108,117,100.4,Asthma,Medium
+P1133,24,Male,Yes,No,113,101,99.0,None,High
+P1134,23,Female,Yes,Yes,108,64,100.0,Asthma,High
+P1135,13,Male,Yes,Yes,138,84,97.1,"Diabetes, Hypertension",High
+P1136,32,Male,No,Yes,170,98,97.1,"Asthma, Diabetes, Heart_Disease",High
+P1137,11,Male,Yes,No,162,117,100.1,None,High
+P1138,43,Female,Yes,Yes,97,94,101.8,Diabetes,High
+P1139,3,Male,Yes,No,103,92,103.2,Diabetes,High
+P1140,29,Male,Yes,No,139,69,99.5,None,High
+P1141,88,Female,Yes,No,111,67,98.6,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1142,79,Female,Yes,No,100,117,97.3,None,High
+P1143,55,Female,Yes,No,109,117,101.7,None,High
+P1144,37,Female,Yes,No,153,102,99.6,None,High
+P1145,10,Male,Yes,Yes,130,69,99.7,Asthma,High
+P1146,9,Male,No,No,108,65,99.3,None,Low
+P1147,50,Female,No,No,144,90,101.9,Heart_Disease,High
+P1148,18,Male,No,No,160,91,100.8,Kidney_Disease,High
+P1149,30,Female,Yes,No,157,96,102.4,"Diabetes, Hypertension",High
+P1150,31,Female,Yes,Yes,92,83,100.9,"Diabetes, Hypertension, Kidney_Disease",High
+P1151,47,Male,No,No,108,113,103.0,"Asthma, Diabetes, Hypertension",High
+P1152,29,Male,Yes,Yes,179,105,98.0,Asthma,High
+P1153,48,Male,Yes,Yes,151,113,101.2,None,High
+P1154,19,Female,Yes,Yes,121,64,97.1,"Asthma, Hypertension",High
+P1155,24,Female,Yes,No,150,86,102.1,Diabetes,High
+P1156,37,Male,Yes,Yes,172,62,101.2,None,High
+P1157,21,Male,No,No,177,120,103.1,Heart_Disease,High
+P1158,74,Female,Yes,No,110,77,103.8,Hypertension,High
+P1159,28,Female,Yes,Yes,140,71,102.8,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1160,60,Female,No,No,138,70,97.4,None,Medium
+P1161,55,Male,No,Yes,103,64,99.5,"Diabetes, Heart_Disease",High
+P1162,31,Female,Yes,Yes,98,73,101.2,"Heart_Disease, Hypertension",High
+P1163,71,Male,Yes,Yes,124,65,103.8,Kidney_Disease,High
+P1164,62,Male,Yes,No,101,120,99.2,"Asthma, Heart_Disease, Kidney_Disease",High
+P1165,25,Female,No,No,106,104,101.7,None,Low
+P1166,65,Male,Yes,Yes,165,110,99.7,Diabetes,High
+P1167,38,Male,Yes,No,100,116,101.4,"Heart_Disease, Hypertension, Kidney_Disease",High
+P1168,84,Male,Yes,No,147,110,97.9,None,High
+P1169,80,Female,Yes,No,120,73,104.0,Hypertension,High
+P1170,73,Female,Yes,Yes,108,109,103.1,Diabetes,High
+P1171,64,Male,No,No,111,119,99.1,None,Low
+P1172,74,Female,No,Yes,99,71,102.0,Asthma,Medium
+P1173,33,Female,Yes,Yes,162,91,97.3,"Asthma, Kidney_Disease",High
+P1174,80,Male,No,No,155,114,101.4,None,High
+P1175,11,Female,No,No,177,62,101.3,Hypertension,High
+P1176,90,Male,Yes,Yes,127,84,98.1,None,High
+P1177,10,Male,No,No,175,65,99.4,Kidney_Disease,High
+P1178,60,Male,Yes,Yes,103,118,103.7,None,High
+P1179,56,Male,No,No,98,80,99.4,Hypertension,Medium
+P1180,90,Female,Yes,No,148,62,100.8,"Hypertension, Kidney_Disease",High
+P1181,41,Male,No,Yes,136,110,100.0,Diabetes,Medium
+P1182,28,Male,No,No,122,100,98.2,None,Low
+P1183,36,Female,Yes,No,147,115,99.9,None,High
+P1184,34,Male,Yes,Yes,144,81,103.7,None,High
+P1185,26,Female,No,No,150,94,101.8,None,Medium
+P1186,90,Female,No,No,91,95,102.5,Diabetes,High
+P1187,86,Male,No,No,91,69,103.3,"Asthma, Heart_Disease",High
+P1188,15,Female,No,Yes,147,120,102.8,None,High
+P1189,58,Male,Yes,Yes,114,86,101.9,"Asthma, Kidney_Disease",High
+P1190,28,Female,Yes,Yes,176,96,103.7,None,High
+P1191,47,Male,No,No,154,112,103.1,Asthma,High
+P1192,53,Female,No,No,159,87,100.7,"Diabetes, Hypertension",High
+P1193,59,Female,No,Yes,160,98,98.1,Heart_Disease,High
+P1194,85,Female,No,Yes,101,111,102.9,None,High
+P1195,3,Female,Yes,No,169,119,100.8,Kidney_Disease,High
+P1196,75,Male,No,No,117,74,102.4,Diabetes,High
+P1197,26,Female,Yes,No,149,86,103.4,Asthma,High
+P1198,1,Female,Yes,No,124,116,101.6,None,High
+P1199,54,Male,Yes,No,94,60,97.2,"Heart_Disease, Kidney_Disease",High
+P1200,43,Male,No,Yes,161,85,98.3,Diabetes,High
+P1201,74,Female,Yes,No,112,85,103.3,Asthma,High
+P1202,30,Male,Yes,Yes,170,96,102.5,"Heart_Disease, Hypertension",High
+P1203,42,Male,Yes,Yes,93,87,97.1,"Diabetes, Hypertension",High
+P1204,80,Male,No,Yes,106,89,101.4,"Hypertension, Kidney_Disease",High
+P1205,84,Male,No,Yes,158,113,98.7,"Asthma, Heart_Disease",High
+P1206,85,Male,No,Yes,108,100,97.2,"Diabetes, Hypertension, Kidney_Disease",High
+P1207,77,Male,Yes,Yes,126,76,103.3,None,High
+P1208,64,Female,Yes,No,102,91,102.6,Asthma,High
+P1209,81,Male,Yes,No,138,116,99.2,"Hypertension, Kidney_Disease",High
+P1210,39,Male,Yes,Yes,105,81,104.0,Kidney_Disease,High
+P1211,77,Male,Yes,No,105,72,101.2,Kidney_Disease,High
+P1212,66,Male,Yes,No,104,117,98.5,None,High
+P1213,29,Male,Yes,No,125,90,98.4,None,High
+P1214,71,Female,No,No,145,92,103.6,"Heart_Disease, Hypertension",High
+P1215,26,Female,No,Yes,164,110,102.4,None,High
+P1216,27,Female,No,No,144,98,102.2,"Diabetes, Kidney_Disease",High
+P1217,78,Female,No,Yes,162,82,99.6,Diabetes,High
+P1218,58,Male,Yes,No,165,86,99.1,"Heart_Disease, Kidney_Disease",High
+P1219,51,Male,Yes,Yes,131,87,102.5,None,High
+P1220,10,Male,No,No,108,109,99.2,None,Low
+P1221,89,Male,No,Yes,149,96,102.6,"Diabetes, Kidney_Disease",High
+P1222,50,Female,Yes,Yes,103,95,98.9,Diabetes,High
+P1223,74,Female,No,No,130,72,98.4,"Asthma, Diabetes",Medium
+P1224,36,Female,Yes,Yes,147,70,101.2,Hypertension,High
+P1225,74,Male,No,Yes,172,110,103.0,"Asthma, Diabetes, Heart_Disease",High
+P1226,52,Male,Yes,No,172,61,97.5,None,High
+P1227,54,Female,No,No,134,85,97.6,"Asthma, Diabetes",Medium
+P1228,51,Female,No,No,172,118,97.8,None,High
+P1229,80,Male,Yes,Yes,96,112,97.1,None,High
+P1230,42,Female,Yes,Yes,101,72,102.1,"Diabetes, Kidney_Disease",High
+P1231,89,Male,No,Yes,104,63,103.6,None,High
+P1232,43,Female,No,Yes,107,97,100.2,None,Medium
+P1233,19,Female,No,Yes,156,93,98.7,Asthma,High
+P1234,36,Female,No,Yes,101,76,102.4,Heart_Disease,High
+P1235,72,Male,Yes,Yes,99,91,97.4,None,High
+P1236,28,Female,No,Yes,152,66,99.4,"Heart_Disease, Kidney_Disease",High
+P1237,40,Female,Yes,Yes,106,74,103.4,None,High
+P1238,58,Male,No,Yes,98,77,100.0,Kidney_Disease,High
+P1239,83,Male,Yes,No,103,107,97.8,None,High
+P1240,59,Male,No,Yes,150,102,100.7,None,Medium
+P1241,16,Male,No,No,117,69,99.8,Heart_Disease,High
+P1242,7,Female,No,No,102,63,101.5,Asthma,Medium
+P1243,25,Female,Yes,No,112,98,98.9,Kidney_Disease,High
+P1244,56,Male,Yes,Yes,104,74,97.8,"Heart_Disease, Kidney_Disease",High
+P1245,31,Male,Yes,No,118,116,101.3,Asthma,High
+P1246,51,Male,Yes,No,153,73,98.2,None,High
+P1247,82,Female,No,Yes,102,71,100.5,Asthma,Medium
+P1248,40,Male,Yes,No,177,64,98.2,None,High
+P1249,59,Male,Yes,No,144,81,97.1,"Diabetes, Heart_Disease, Hypertension",High
+P1250,2,Female,No,Yes,152,115,98.7,None,High
+P1251,3,Female,Yes,Yes,108,109,97.7,None,High
+P1252,43,Female,No,No,159,76,101.6,None,High
+P1253,59,Male,No,No,180,81,103.2,"Asthma, Kidney_Disease",High
+P1254,15,Female,Yes,Yes,142,114,98.5,"Asthma, Diabetes, Heart_Disease",High
+P1255,32,Female,No,Yes,101,72,103.4,None,High
+P1256,14,Female,No,Yes,123,118,101.8,"Asthma, Kidney_Disease",High
+P1257,36,Female,Yes,Yes,164,93,101.9,"Asthma, Diabetes",High
+P1258,59,Female,No,Yes,91,91,103.5,None,High
+P1259,88,Male,No,Yes,128,91,99.0,"Asthma, Diabetes",Medium
+P1260,6,Male,No,Yes,96,91,99.1,Diabetes,Medium
+P1261,7,Female,Yes,No,126,110,103.0,Kidney_Disease,High
+P1262,20,Male,No,Yes,115,87,101.1,None,Medium
+P1263,29,Male,No,No,121,111,101.7,None,Low
+P1264,52,Male,No,No,166,79,98.2,Heart_Disease,High
+P1265,75,Male,Yes,No,107,86,100.9,None,High
+P1266,11,Female,No,Yes,138,110,103.1,Hypertension,High
+P1267,68,Female,No,No,149,82,100.0,Asthma,Medium
+P1268,60,Male,Yes,No,101,108,98.0,"Heart_Disease, Hypertension",High
+P1269,17,Female,Yes,No,106,85,101.7,Kidney_Disease,High
+P1270,59,Male,Yes,Yes,124,113,103.9,None,High
+P1271,77,Male,No,No,178,81,103.1,None,High
+P1272,75,Male,Yes,Yes,161,107,103.8,None,High
+P1273,87,Male,No,No,90,111,100.4,Diabetes,Medium
+P1274,9,Male,Yes,Yes,156,66,98.7,None,High
+P1275,4,Female,No,Yes,105,79,99.8,"Asthma, Heart_Disease, Hypertension",High
+P1276,88,Female,Yes,No,108,100,97.2,None,High
+P1277,85,Male,Yes,Yes,150,90,99.0,Kidney_Disease,High
+P1278,64,Female,No,No,139,104,102.6,Asthma,High
+P1279,19,Male,No,No,105,96,99.7,Diabetes,Medium
+P1280,83,Female,Yes,No,107,89,103.2,Diabetes,High
+P1281,21,Female,Yes,No,180,93,99.7,None,High
+P1282,84,Male,No,No,148,105,103.0,None,High
+P1283,85,Female,No,Yes,172,90,99.6,Hypertension,High
+P1284,74,Female,Yes,No,165,97,99.4,Asthma,High
+P1285,9,Male,Yes,Yes,119,66,101.7,Asthma,High
+P1286,42,Male,Yes,Yes,112,106,103.2,"Asthma, Diabetes",High
+P1287,8,Female,Yes,Yes,99,88,102.3,Diabetes,High
+P1288,23,Female,Yes,No,138,68,103.9,Hypertension,High
+P1289,26,Female,No,No,176,78,98.6,Asthma,High
+P1290,68,Male,Yes,Yes,170,102,97.7,None,High
+P1291,18,Male,No,No,162,94,103.1,None,High
+P1292,88,Female,Yes,Yes,163,112,100.3,None,High
+P1293,80,Male,Yes,No,144,100,99.6,None,High
+P1294,11,Male,No,Yes,105,91,98.6,Heart_Disease,High
+P1295,3,Male,No,No,139,105,99.5,"Heart_Disease, Hypertension",High
+P1296,10,Male,No,No,169,63,100.8,"Asthma, Kidney_Disease",High
+P1297,34,Male,Yes,No,143,76,98.4,"Diabetes, Hypertension",High
+P1298,27,Female,Yes,Yes,153,64,102.6,Kidney_Disease,High
+P1299,90,Male,No,Yes,143,98,102.2,"Asthma, Kidney_Disease",High
+P1300,17,Female,Yes,Yes,94,91,100.6,Asthma,High
+P1301,62,Female,Yes,Yes,97,61,102.4,"Asthma, Kidney_Disease",High
+P1302,88,Male,No,Yes,139,109,99.6,None,Medium
+P1303,90,Female,Yes,Yes,146,67,103.3,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1304,44,Female,Yes,Yes,119,65,101.1,None,High
+P1305,69,Male,Yes,Yes,97,64,97.4,Heart_Disease,High
+P1306,6,Female,No,Yes,127,68,101.2,Diabetes,Medium
+P1307,85,Male,Yes,No,159,73,100.5,Heart_Disease,High
+P1308,29,Female,No,No,160,78,103.1,None,High
+P1309,35,Female,Yes,Yes,134,117,99.9,"Asthma, Diabetes, Heart_Disease",High
+P1310,27,Male,Yes,No,160,73,97.9,Hypertension,High
+P1311,5,Male,No,No,104,61,100.5,None,Low
+P1312,36,Female,No,Yes,97,77,103.0,None,High
+P1313,3,Female,No,No,95,74,98.4,None,Low
+P1314,56,Male,No,Yes,159,108,99.4,None,High
+P1315,78,Female,No,Yes,93,81,102.1,Asthma,High
+P1316,8,Male,No,No,158,89,100.0,Kidney_Disease,High
+P1317,34,Male,No,No,120,68,103.4,None,High
+P1318,88,Female,Yes,Yes,159,78,99.4,None,High
+P1319,79,Female,No,No,174,76,102.5,"Diabetes, Kidney_Disease",High
+P1320,16,Female,No,No,112,88,100.2,Asthma,Medium
+P1321,5,Female,No,Yes,142,63,101.1,None,Medium
+P1322,79,Female,Yes,No,113,76,102.4,None,High
+P1323,64,Male,Yes,Yes,108,115,101.3,None,High
+P1324,15,Male,Yes,No,164,80,97.3,Diabetes,High
+P1325,34,Female,Yes,No,159,105,97.3,None,High
+P1326,14,Male,No,Yes,155,64,98.7,None,High
+P1327,48,Female,Yes,No,126,69,97.2,Heart_Disease,High
+P1328,43,Female,No,No,127,99,97.2,None,Low
+P1329,38,Male,Yes,Yes,167,73,102.7,Kidney_Disease,High
+P1330,75,Female,Yes,No,164,62,101.6,None,High
+P1331,84,Male,Yes,Yes,162,92,104.0,Asthma,High
+P1332,69,Male,Yes,No,174,93,100.6,None,High
+P1333,25,Female,Yes,No,121,111,102.4,None,High
+P1334,59,Female,Yes,Yes,146,106,103.7,Diabetes,High
+P1335,46,Male,No,No,167,74,100.1,Kidney_Disease,High
+P1336,17,Male,No,Yes,167,76,102.6,None,High
+P1337,16,Male,No,No,154,69,101.0,Hypertension,High
+P1338,24,Female,Yes,Yes,105,86,98.8,Asthma,High
+P1339,13,Male,Yes,No,93,104,98.2,None,High
+P1340,66,Female,No,No,106,85,101.9,None,Low
+P1341,38,Male,No,No,165,98,101.3,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1342,46,Female,No,No,145,78,102.3,Hypertension,High
+P1343,76,Male,Yes,Yes,165,97,99.6,Asthma,High
+P1344,42,Female,Yes,No,102,74,99.1,None,High
+P1345,73,Female,No,No,139,80,102.3,"Asthma, Diabetes, Hypertension",High
+P1346,67,Female,No,Yes,134,78,98.2,None,Medium
+P1347,63,Female,Yes,Yes,126,120,103.4,"Diabetes, Heart_Disease, Hypertension",High
+P1348,36,Male,Yes,Yes,160,113,100.6,None,High
+P1349,77,Male,Yes,Yes,152,113,102.8,None,High
+P1350,37,Female,No,Yes,148,78,103.4,Diabetes,High
+P1351,57,Female,No,No,101,115,98.0,None,Low
+P1352,86,Male,No,Yes,118,106,97.5,None,Medium
+P1353,43,Female,No,Yes,180,104,99.2,"Asthma, Diabetes",High
+P1354,67,Female,Yes,Yes,171,100,97.1,None,High
+P1355,49,Male,Yes,No,150,69,100.4,None,High
+P1356,64,Female,Yes,Yes,171,116,97.6,Hypertension,High
+P1357,1,Female,Yes,No,161,99,98.5,None,High
+P1358,54,Female,No,Yes,171,82,100.4,Hypertension,High
+P1359,39,Male,No,No,152,110,101.4,Kidney_Disease,High
+P1360,62,Female,Yes,Yes,104,116,103.3,"Asthma, Kidney_Disease",High
+P1361,42,Male,No,Yes,112,89,103.7,Heart_Disease,High
+P1362,90,Female,Yes,No,152,98,99.9,None,High
+P1363,38,Female,Yes,No,97,95,102.4,None,High
+P1364,41,Female,No,No,144,85,98.8,None,Medium
+P1365,63,Male,No,Yes,129,88,99.9,Hypertension,Medium
+P1366,69,Male,Yes,No,106,98,100.8,"Asthma, Diabetes, Kidney_Disease",High
+P1367,43,Female,Yes,Yes,156,73,99.5,None,High
+P1368,21,Female,Yes,No,110,118,99.6,Kidney_Disease,High
+P1369,32,Male,Yes,Yes,157,66,100.5,"Diabetes, Hypertension",High
+P1370,37,Female,Yes,Yes,170,109,101.8,None,High
+P1371,16,Female,No,Yes,124,115,97.6,None,Medium
+P1372,54,Male,Yes,Yes,102,107,101.1,None,High
+P1373,78,Female,No,No,155,107,97.2,None,High
+P1374,26,Male,No,No,138,78,100.0,None,Medium
+P1375,53,Female,No,No,179,94,100.5,None,High
+P1376,64,Female,No,Yes,147,74,101.0,None,Medium
+P1377,30,Female,No,No,162,66,101.5,None,High
+P1378,81,Male,Yes,Yes,116,115,103.6,Diabetes,High
+P1379,19,Female,No,Yes,97,109,100.5,Heart_Disease,High
+P1380,20,Male,No,No,90,77,101.8,"Asthma, Kidney_Disease",High
+P1381,41,Male,No,No,180,90,100.6,"Diabetes, Kidney_Disease",High
+P1382,55,Male,No,Yes,91,70,100.6,None,Medium
+P1383,26,Female,Yes,Yes,144,91,98.2,"Asthma, Hypertension",High
+P1384,71,Female,No,Yes,127,67,100.0,None,Medium
+P1385,87,Female,No,No,162,101,98.2,None,High
+P1386,88,Male,No,No,150,89,98.5,None,Medium
+P1387,18,Male,No,Yes,130,86,98.3,Diabetes,Medium
+P1388,40,Male,Yes,Yes,158,89,99.3,None,High
+P1389,60,Male,Yes,No,171,95,103.2,None,High
+P1390,2,Male,No,No,144,97,102.1,None,High
+P1391,52,Female,Yes,Yes,165,69,97.7,None,High
+P1392,23,Female,Yes,Yes,156,97,101.5,None,High
+P1393,74,Female,No,Yes,111,60,102.5,"Diabetes, Hypertension, Kidney_Disease",High
+P1394,22,Female,Yes,No,99,117,103.8,None,High
+P1395,57,Female,No,No,128,92,102.3,None,High
+P1396,51,Female,No,No,135,79,102.9,None,High
+P1397,11,Male,Yes,No,108,113,100.1,Heart_Disease,High
+P1398,88,Male,No,No,112,61,103.1,"Asthma, Heart_Disease",High
+P1399,28,Male,No,No,112,119,102.2,None,High
+P1400,57,Female,Yes,Yes,165,79,99.3,"Diabetes, Heart_Disease",High
+P1401,78,Female,Yes,No,172,90,99.8,"Asthma, Heart_Disease, Kidney_Disease",High
+P1402,8,Male,No,No,152,71,100.3,"Diabetes, Kidney_Disease",High
+P1403,5,Female,Yes,Yes,180,107,98.2,"Asthma, Diabetes",High
+P1404,16,Male,No,Yes,130,66,103.0,None,High
+P1405,25,Male,No,No,180,70,103.3,Heart_Disease,High
+P1406,67,Male,No,No,175,102,97.4,None,High
+P1407,65,Male,No,Yes,112,88,97.3,Kidney_Disease,High
+P1408,53,Male,Yes,No,125,95,99.5,None,High
+P1409,73,Male,No,Yes,104,118,97.6,Hypertension,Medium
+P1410,41,Male,Yes,Yes,117,100,99.6,None,High
+P1411,32,Female,Yes,Yes,129,63,99.7,None,High
+P1412,36,Male,No,No,118,113,98.3,"Heart_Disease, Hypertension",High
+P1413,34,Female,No,Yes,152,82,101.1,None,High
+P1414,83,Female,Yes,Yes,164,84,98.1,Asthma,High
+P1415,45,Female,Yes,No,179,92,100.9,Heart_Disease,High
+P1416,12,Male,No,Yes,149,76,97.2,None,Medium
+P1417,85,Male,No,Yes,149,97,99.3,Kidney_Disease,High
+P1418,5,Female,Yes,No,91,70,99.9,None,High
+P1419,83,Male,Yes,No,129,70,100.3,None,High
+P1420,3,Female,No,No,141,90,102.8,None,High
+P1421,48,Female,No,No,128,62,103.8,"Diabetes, Kidney_Disease",High
+P1422,54,Female,No,No,165,61,98.1,None,High
+P1423,39,Male,Yes,Yes,174,81,102.5,None,High
+P1424,12,Female,Yes,No,148,85,98.2,None,High
+P1425,19,Male,Yes,No,129,65,98.3,"Asthma, Diabetes",High
+P1426,32,Male,No,Yes,151,70,99.4,Asthma,High
+P1427,90,Male,No,No,149,105,98.7,"Asthma, Hypertension",Medium
+P1428,41,Male,No,No,126,112,101.7,"Asthma, Kidney_Disease",High
+P1429,69,Male,No,No,175,107,103.8,None,High
+P1430,78,Male,Yes,No,136,81,100.5,None,High
+P1431,77,Female,Yes,Yes,107,91,98.3,None,High
+P1432,56,Male,No,No,173,71,100.0,None,High
+P1433,50,Female,Yes,No,143,71,98.1,Diabetes,High
+P1434,60,Male,No,Yes,173,115,99.8,"Heart_Disease, Hypertension",High
+P1435,17,Female,No,Yes,152,101,103.7,Diabetes,High
+P1436,39,Female,No,Yes,167,111,102.6,Heart_Disease,High
+P1437,61,Female,No,Yes,112,87,100.7,None,Medium
+P1438,87,Male,Yes,Yes,133,120,103.5,Hypertension,High
+P1439,66,Female,No,Yes,149,78,97.3,"Asthma, Heart_Disease",High
+P1440,7,Female,No,No,133,103,99.1,"Heart_Disease, Kidney_Disease",High
+P1441,23,Female,No,No,92,88,99.3,Kidney_Disease,High
+P1442,15,Female,Yes,No,121,71,97.6,None,High
+P1443,19,Female,No,No,134,89,101.8,None,Medium
+P1444,68,Female,Yes,Yes,131,83,97.3,Diabetes,High
+P1445,49,Male,No,No,144,85,97.2,"Diabetes, Heart_Disease, Hypertension",High
+P1446,15,Male,No,No,168,92,100.8,"Diabetes, Heart_Disease",High
+P1447,74,Female,Yes,No,125,107,101.8,None,High
+P1448,65,Male,No,Yes,176,78,98.9,Diabetes,High
+P1449,54,Male,No,No,149,98,102.5,Diabetes,High
+P1450,29,Male,Yes,No,118,64,101.3,Kidney_Disease,High
+P1451,59,Female,No,No,150,119,100.9,None,Medium
+P1452,41,Female,No,Yes,149,114,102.2,None,High
+P1453,90,Male,No,No,141,62,101.6,Diabetes,Medium
+P1454,81,Female,No,Yes,116,107,103.9,None,High
+P1455,38,Female,No,No,93,69,101.4,None,Low
+P1456,46,Female,No,Yes,126,95,102.2,"Asthma, Hypertension, Kidney_Disease",High
+P1457,78,Male,Yes,No,117,73,103.9,Hypertension,High
+P1458,21,Female,No,No,117,86,103.3,None,High
+P1459,47,Male,No,No,118,114,99.8,"Asthma, Heart_Disease",High
+P1460,21,Male,No,No,90,94,102.8,"Diabetes, Hypertension",High
+P1461,50,Female,No,No,114,100,97.2,None,Low
+P1462,79,Male,No,Yes,131,99,98.7,Asthma,Medium
+P1463,88,Male,No,Yes,166,116,102.5,None,High
+P1464,66,Male,Yes,No,137,106,103.1,None,High
+P1465,26,Female,Yes,No,98,117,97.2,Asthma,High
+P1466,32,Female,Yes,Yes,149,92,101.5,"Heart_Disease, Hypertension",High
+P1467,32,Female,Yes,Yes,94,103,101.7,"Asthma, Kidney_Disease",High
+P1468,10,Female,No,Yes,167,101,103.9,Asthma,High
+P1469,62,Male,No,No,95,83,99.8,"Asthma, Kidney_Disease",High
+P1470,16,Male,Yes,No,164,108,102.5,Heart_Disease,High
+P1471,53,Female,Yes,Yes,151,73,98.9,None,High
+P1472,89,Male,No,No,121,108,98.8,None,Low
+P1473,57,Female,No,No,162,77,101.2,"Heart_Disease, Hypertension",High
+P1474,4,Male,No,No,127,79,103.6,None,High
+P1475,82,Female,No,No,176,78,98.1,"Hypertension, Kidney_Disease",High
+P1476,78,Female,No,No,171,74,97.2,None,High
+P1477,39,Male,Yes,No,136,106,100.6,"Asthma, Kidney_Disease",High
+P1478,62,Male,No,Yes,165,114,100.5,Asthma,High
+P1479,63,Male,No,Yes,151,117,99.7,Diabetes,High
+P1480,44,Male,No,Yes,118,69,98.9,"Diabetes, Hypertension",Medium
+P1481,46,Female,No,Yes,157,117,98.6,None,High
+P1482,86,Male,No,Yes,132,92,97.5,Kidney_Disease,High
+P1483,69,Male,Yes,No,162,93,98.7,None,High
+P1484,24,Male,Yes,No,112,62,103.9,None,High
+P1485,36,Male,Yes,Yes,106,93,99.1,None,High
+P1486,32,Female,No,Yes,158,116,102.5,None,High
+P1487,82,Male,Yes,No,104,88,97.6,None,High
+P1488,70,Male,No,No,162,60,101.1,"Asthma, Diabetes",High
+P1489,83,Male,No,Yes,122,108,99.9,None,Medium
+P1490,81,Male,No,No,155,78,103.7,None,High
+P1491,69,Male,No,No,176,95,100.5,Diabetes,High
+P1492,24,Female,Yes,No,155,90,100.5,None,High
+P1493,56,Female,Yes,No,133,100,101.8,"Diabetes, Hypertension",High
+P1494,30,Male,No,No,130,109,100.7,None,Medium
+P1495,39,Male,Yes,No,110,72,102.4,"Hypertension, Kidney_Disease",High
+P1496,42,Female,No,No,119,119,98.8,"Heart_Disease, Kidney_Disease",High
+P1497,19,Female,No,No,130,88,99.2,Asthma,Medium
+P1498,1,Female,Yes,No,135,101,102.6,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1499,26,Male,No,No,137,61,99.3,"Heart_Disease, Hypertension",High
+P1500,28,Female,No,Yes,99,75,98.1,Kidney_Disease,High
+P1501,61,Male,No,No,121,77,103.9,Diabetes,High
+P1502,13,Male,No,No,158,83,100.1,None,High
+P1503,61,Male,Yes,No,142,112,98.1,None,High
+P1504,39,Male,Yes,No,121,80,101.0,"Heart_Disease, Kidney_Disease",High
+P1505,89,Male,Yes,Yes,179,105,102.2,"Asthma, Heart_Disease, Kidney_Disease",High
+P1506,28,Male,No,No,119,89,99.5,None,Low
+P1507,34,Female,Yes,Yes,105,101,99.9,None,High
+P1508,63,Male,Yes,No,92,96,100.1,None,High
+P1509,65,Female,No,No,163,81,101.4,Kidney_Disease,High
+P1510,12,Male,Yes,Yes,163,119,100.3,Hypertension,High
+P1511,10,Female,No,No,147,116,103.2,Heart_Disease,High
+P1512,10,Male,No,No,157,109,101.8,"Asthma, Diabetes",High
+P1513,52,Female,Yes,No,92,60,98.6,Heart_Disease,High
+P1514,29,Female,No,Yes,163,119,99.5,"Hypertension, Kidney_Disease",High
+P1515,25,Male,Yes,No,113,66,97.2,Diabetes,High
+P1516,17,Female,Yes,No,130,119,98.6,None,High
+P1517,39,Male,No,No,119,119,103.4,"Diabetes, Hypertension",High
+P1518,57,Male,No,Yes,146,115,102.2,Asthma,High
+P1519,7,Female,No,No,115,73,102.4,Diabetes,High
+P1520,12,Male,Yes,Yes,116,67,103.6,Heart_Disease,High
+P1521,41,Female,Yes,Yes,101,111,100.5,Kidney_Disease,High
+P1522,15,Female,Yes,Yes,138,111,99.9,"Diabetes, Heart_Disease, Hypertension",High
+P1523,40,Male,No,No,119,104,97.6,Asthma,Medium
+P1524,61,Male,No,No,95,69,102.9,None,High
+P1525,2,Male,Yes,Yes,178,90,102.3,None,High
+P1526,27,Female,No,No,110,86,98.2,"Hypertension, Kidney_Disease",High
+P1527,47,Male,Yes,Yes,153,73,99.1,Heart_Disease,High
+P1528,80,Female,Yes,Yes,132,61,103.2,None,High
+P1529,19,Female,Yes,No,166,106,100.7,None,High
+P1530,2,Female,Yes,Yes,143,64,97.8,Asthma,High
+P1531,69,Female,Yes,Yes,129,90,100.3,"Heart_Disease, Hypertension",High
+P1532,85,Female,Yes,No,153,107,102.8,Hypertension,High
+P1533,29,Male,Yes,Yes,174,65,102.2,Heart_Disease,High
+P1534,79,Male,Yes,Yes,122,71,102.1,None,High
+P1535,60,Female,Yes,No,144,83,101.6,Diabetes,High
+P1536,50,Male,Yes,Yes,91,69,101.4,"Hypertension, Kidney_Disease",High
+P1537,51,Female,Yes,No,151,114,99.4,Kidney_Disease,High
+P1538,52,Female,Yes,No,169,76,100.8,None,High
+P1539,36,Female,No,Yes,122,81,102.6,Kidney_Disease,High
+P1540,59,Male,No,No,98,110,99.6,Kidney_Disease,High
+P1541,17,Male,Yes,No,104,67,100.9,None,High
+P1542,45,Female,No,No,160,120,97.6,"Hypertension, Kidney_Disease",High
+P1543,51,Male,Yes,Yes,92,72,102.1,None,High
+P1544,77,Male,Yes,No,159,74,101.9,"Diabetes, Heart_Disease, Hypertension",High
+P1545,13,Male,Yes,Yes,159,120,103.7,Hypertension,High
+P1546,36,Male,No,No,139,117,100.7,Asthma,Medium
+P1547,60,Female,Yes,No,90,64,98.8,Heart_Disease,High
+P1548,27,Male,Yes,No,107,69,100.4,None,High
+P1549,32,Female,Yes,No,140,97,98.4,"Diabetes, Hypertension",High
+P1550,36,Male,No,Yes,164,120,101.7,None,High
+P1551,19,Female,No,Yes,171,67,100.6,Kidney_Disease,High
+P1552,61,Male,No,No,105,94,102.2,Diabetes,High
+P1553,44,Female,Yes,No,122,67,101.4,Hypertension,High
+P1554,89,Female,No,Yes,156,66,97.6,Kidney_Disease,High
+P1555,47,Male,No,No,143,63,101.5,"Heart_Disease, Kidney_Disease",High
+P1556,33,Female,No,No,135,65,97.1,Asthma,Medium
+P1557,32,Female,Yes,No,175,77,97.7,"Asthma, Kidney_Disease",High
+P1558,78,Female,Yes,Yes,165,113,102.6,"Asthma, Diabetes, Kidney_Disease",High
+P1559,31,Female,No,No,95,82,101.5,Asthma,Medium
+P1560,74,Male,No,No,175,118,97.2,Diabetes,High
+P1561,81,Female,Yes,No,142,111,97.2,Heart_Disease,High
+P1562,46,Female,No,Yes,125,88,102.5,None,High
+P1563,90,Female,Yes,Yes,161,109,103.0,Asthma,High
+P1564,45,Male,No,Yes,132,82,101.3,Hypertension,Medium
+P1565,41,Female,Yes,Yes,171,85,99.2,Hypertension,High
+P1566,49,Male,No,No,134,81,102.6,"Hypertension, Kidney_Disease",High
+P1567,42,Male,Yes,Yes,164,79,103.4,Kidney_Disease,High
+P1568,38,Male,No,Yes,115,65,97.6,Asthma,Medium
+P1569,34,Male,No,No,140,68,103.4,None,High
+P1570,38,Male,No,Yes,146,112,97.3,Heart_Disease,High
+P1571,4,Female,Yes,Yes,121,116,98.6,Hypertension,High
+P1572,19,Male,No,Yes,92,114,101.3,"Asthma, Hypertension",Medium
+P1573,53,Male,No,No,123,105,102.6,None,High
+P1574,34,Female,No,No,120,80,100.8,None,Low
+P1575,89,Male,No,Yes,158,97,97.9,"Asthma, Heart_Disease, Kidney_Disease",High
+P1576,41,Male,Yes,No,179,101,103.8,"Asthma, Hypertension",High
+P1577,35,Male,No,No,153,97,100.1,"Diabetes, Heart_Disease, Hypertension",High
+P1578,58,Male,No,No,180,69,97.4,None,High
+P1579,36,Female,Yes,No,145,105,102.4,None,High
+P1580,51,Male,No,No,158,104,101.7,None,High
+P1581,73,Female,Yes,No,90,99,97.4,"Diabetes, Kidney_Disease",High
+P1582,10,Male,No,Yes,114,75,103.9,"Hypertension, Kidney_Disease",High
+P1583,4,Female,Yes,No,101,66,103.6,Asthma,High
+P1584,53,Female,No,Yes,133,71,97.7,None,Medium
+P1585,56,Female,No,Yes,113,76,99.8,None,Medium
+P1586,83,Male,No,No,102,93,98.8,"Diabetes, Kidney_Disease",High
+P1587,88,Female,Yes,Yes,90,93,97.1,None,High
+P1588,40,Male,No,Yes,112,72,101.5,Kidney_Disease,High
+P1589,28,Female,Yes,Yes,166,83,101.0,"Hypertension, Kidney_Disease",High
+P1590,57,Male,Yes,Yes,129,119,99.0,None,High
+P1591,24,Male,Yes,No,114,98,98.1,Heart_Disease,High
+P1592,59,Female,No,Yes,175,95,97.5,None,High
+P1593,19,Male,No,Yes,141,62,99.5,"Asthma, Diabetes",Medium
+P1594,67,Male,No,No,159,101,98.4,None,High
+P1595,58,Male,No,No,141,87,99.6,Asthma,Medium
+P1596,14,Female,No,No,129,91,103.9,"Diabetes, Kidney_Disease",High
+P1597,25,Male,No,Yes,172,80,102.2,Diabetes,High
+P1598,39,Female,Yes,No,158,63,102.8,Asthma,High
+P1599,66,Male,No,Yes,117,66,100.2,None,Medium
+P1600,29,Female,Yes,Yes,153,73,101.0,Diabetes,High
+P1601,49,Male,Yes,No,90,117,98.7,"Heart_Disease, Hypertension",High
+P1602,50,Male,No,No,95,69,98.0,None,Low
+P1603,86,Female,No,No,116,120,103.2,Heart_Disease,High
+P1604,53,Male,No,No,138,77,102.9,None,High
+P1605,63,Female,Yes,No,95,104,102.4,None,High
+P1606,89,Male,Yes,Yes,104,70,103.3,Hypertension,High
+P1607,69,Female,Yes,No,177,105,103.5,None,High
+P1608,69,Female,No,No,103,108,97.8,"Diabetes, Hypertension",Medium
+P1609,72,Female,Yes,Yes,156,62,100.3,None,High
+P1610,30,Male,No,Yes,100,108,101.9,None,Medium
+P1611,56,Female,No,Yes,146,98,102.4,Kidney_Disease,High
+P1612,25,Male,No,Yes,162,60,103.6,None,High
+P1613,33,Male,No,No,115,117,101.5,None,Low
+P1614,20,Female,Yes,Yes,113,100,98.4,Asthma,High
+P1615,4,Female,Yes,Yes,167,93,99.0,None,High
+P1616,71,Female,Yes,Yes,177,64,99.9,Kidney_Disease,High
+P1617,22,Female,No,Yes,108,117,97.7,None,Medium
+P1618,49,Male,Yes,No,162,67,103.0,"Diabetes, Kidney_Disease",High
+P1619,3,Female,No,No,177,99,99.7,"Asthma, Hypertension",High
+P1620,79,Female,No,No,151,118,103.3,Heart_Disease,High
+P1621,29,Male,No,Yes,139,76,103.2,None,High
+P1622,3,Female,No,Yes,95,89,99.9,"Asthma, Hypertension",Medium
+P1623,17,Female,Yes,No,143,116,99.9,Asthma,High
+P1624,50,Female,No,No,131,102,99.8,Hypertension,Medium
+P1625,32,Male,Yes,Yes,174,110,101.3,"Asthma, Kidney_Disease",High
+P1626,48,Female,Yes,No,108,90,97.8,Heart_Disease,High
+P1627,80,Female,Yes,Yes,117,81,100.9,None,High
+P1628,50,Female,Yes,No,93,104,98.4,Hypertension,High
+P1629,35,Male,No,Yes,109,86,99.2,None,Medium
+P1630,17,Female,No,Yes,176,66,102.5,None,High
+P1631,2,Male,No,Yes,130,119,103.3,None,High
+P1632,20,Male,No,Yes,136,99,103.4,Asthma,High
+P1633,61,Female,Yes,No,128,66,102.6,None,High
+P1634,20,Male,No,Yes,158,118,101.3,None,High
+P1635,71,Female,No,Yes,104,102,103.6,"Diabetes, Kidney_Disease",High
+P1636,18,Female,No,No,151,70,102.4,Heart_Disease,High
+P1637,57,Male,No,Yes,152,120,101.7,None,High
+P1638,44,Male,No,Yes,112,68,101.4,Hypertension,Medium
+P1639,15,Male,No,No,100,82,101.2,"Asthma, Diabetes",Medium
+P1640,22,Female,No,Yes,155,77,103.9,"Asthma, Diabetes",High
+P1641,41,Male,Yes,Yes,179,79,98.8,"Diabetes, Heart_Disease, Hypertension",High
+P1642,85,Female,Yes,No,160,62,97.9,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1643,74,Male,No,No,115,117,100.3,None,Low
+P1644,89,Female,No,No,136,111,100.6,"Asthma, Heart_Disease, Kidney_Disease",High
+P1645,44,Male,No,No,160,72,100.4,None,High
+P1646,58,Male,No,Yes,92,111,97.9,"Diabetes, Hypertension",Medium
+P1647,23,Female,Yes,Yes,163,111,98.7,None,High
+P1648,10,Male,Yes,No,169,64,98.1,Asthma,High
+P1649,81,Female,Yes,Yes,97,105,98.0,"Diabetes, Hypertension",High
+P1650,12,Male,Yes,No,177,74,98.5,Asthma,High
+P1651,42,Male,No,Yes,180,91,101.2,None,High
+P1652,37,Male,No,Yes,154,60,97.6,"Heart_Disease, Hypertension, Kidney_Disease",High
+P1653,74,Male,Yes,Yes,114,71,102.9,"Hypertension, Kidney_Disease",High
+P1654,51,Female,No,No,117,87,98.8,None,Low
+P1655,31,Male,No,No,110,64,97.4,Diabetes,Medium
+P1656,80,Female,Yes,No,91,107,101.7,None,High
+P1657,47,Male,No,No,147,82,102.2,Asthma,High
+P1658,39,Female,No,Yes,119,97,98.2,Asthma,Medium
+P1659,60,Female,No,No,149,115,103.3,Hypertension,High
+P1660,50,Female,Yes,Yes,130,84,103.9,Asthma,High
+P1661,47,Male,No,Yes,109,97,103.6,None,High
+P1662,3,Female,No,Yes,124,81,98.4,Hypertension,Medium
+P1663,39,Female,Yes,Yes,152,98,102.1,Hypertension,High
+P1664,63,Male,No,Yes,98,120,99.3,Heart_Disease,High
+P1665,19,Male,No,Yes,143,91,97.1,None,Medium
+P1666,21,Female,No,No,168,67,101.2,Heart_Disease,High
+P1667,48,Male,No,No,98,61,100.1,Hypertension,Medium
+P1668,42,Male,No,No,125,95,99.4,"Hypertension, Kidney_Disease",High
+P1669,42,Male,Yes,Yes,152,96,100.3,None,High
+P1670,66,Male,No,Yes,169,80,97.6,Kidney_Disease,High
+P1671,35,Male,No,No,114,110,102.4,Heart_Disease,High
+P1672,8,Female,Yes,Yes,171,60,99.3,"Asthma, Hypertension",High
+P1673,35,Female,No,No,167,116,100.8,"Diabetes, Hypertension",High
+P1674,38,Male,Yes,No,121,110,99.6,Diabetes,High
+P1675,39,Female,Yes,Yes,127,61,97.2,Asthma,High
+P1676,11,Female,No,Yes,147,100,99.7,None,Medium
+P1677,57,Female,Yes,No,148,77,98.4,Heart_Disease,High
+P1678,21,Male,No,Yes,105,63,103.1,Heart_Disease,High
+P1679,19,Female,No,Yes,170,87,101.5,None,High
+P1680,42,Male,No,No,162,108,101.0,"Diabetes, Hypertension",High
+P1681,64,Male,Yes,Yes,109,66,100.7,"Diabetes, Hypertension",High
+P1682,47,Female,No,Yes,142,81,102.3,Kidney_Disease,High
+P1683,8,Female,No,Yes,160,112,97.6,None,High
+P1684,21,Male,No,Yes,120,63,101.5,Diabetes,Medium
+P1685,83,Male,No,Yes,95,74,102.3,"Heart_Disease, Hypertension",High
+P1686,42,Female,No,Yes,155,108,99.0,None,High
+P1687,90,Female,Yes,Yes,115,97,97.3,None,High
+P1688,63,Male,No,Yes,164,116,99.6,"Asthma, Hypertension",High
+P1689,28,Male,Yes,No,124,95,99.6,None,High
+P1690,26,Female,No,Yes,131,117,98.8,None,Medium
+P1691,37,Female,Yes,No,167,101,101.7,"Hypertension, Kidney_Disease",High
+P1692,15,Male,No,Yes,116,72,102.3,Heart_Disease,High
+P1693,89,Male,No,No,149,63,101.5,None,Medium
+P1694,33,Male,Yes,No,91,73,102.8,"Asthma, Hypertension",High
+P1695,50,Female,No,No,167,108,98.2,Kidney_Disease,High
+P1696,77,Female,Yes,Yes,168,66,103.2,"Diabetes, Kidney_Disease",High
+P1697,2,Female,Yes,No,146,84,102.1,"Diabetes, Hypertension, Kidney_Disease",High
+P1698,28,Male,No,No,99,77,99.9,None,Low
+P1699,5,Male,No,Yes,123,89,103.5,"Diabetes, Hypertension",High
+P1700,82,Male,No,Yes,91,67,97.6,None,Medium
+P1701,75,Female,No,Yes,179,96,100.4,Hypertension,High
+P1702,28,Male,No,No,93,62,100.5,"Asthma, Hypertension",Medium
+P1703,2,Male,Yes,No,180,78,102.0,None,High
+P1704,35,Male,No,Yes,120,104,100.1,None,Medium
+P1705,84,Male,No,No,119,105,102.9,None,High
+P1706,47,Male,No,No,150,94,98.1,Heart_Disease,High
+P1707,71,Male,No,No,142,71,101.1,None,Medium
+P1708,45,Female,Yes,No,176,94,99.9,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1709,43,Female,No,No,159,115,101.8,"Heart_Disease, Hypertension",High
+P1710,77,Female,Yes,Yes,116,112,101.9,None,High
+P1711,54,Male,Yes,Yes,163,60,98.8,Hypertension,High
+P1712,30,Female,No,Yes,131,106,102.9,None,High
+P1713,51,Female,Yes,No,142,104,102.3,None,High
+P1714,82,Female,Yes,Yes,90,117,102.6,Diabetes,High
+P1715,64,Male,Yes,No,120,108,99.8,"Diabetes, Kidney_Disease",High
+P1716,25,Male,Yes,Yes,127,67,98.4,"Diabetes, Kidney_Disease",High
+P1717,33,Female,Yes,No,135,102,99.8,Heart_Disease,High
+P1718,44,Female,No,Yes,128,87,101.3,"Diabetes, Kidney_Disease",High
+P1719,87,Female,Yes,No,130,82,97.2,Asthma,High
+P1720,69,Male,No,No,177,91,104.0,None,High
+P1721,63,Male,No,No,159,65,97.6,Diabetes,High
+P1722,59,Female,No,Yes,167,90,97.2,None,High
+P1723,58,Male,No,Yes,91,103,97.9,"Asthma, Diabetes",Medium
+P1724,9,Male,No,No,179,96,99.7,"Diabetes, Heart_Disease",High
+P1725,75,Male,No,Yes,147,78,103.0,None,High
+P1726,77,Female,No,Yes,177,69,103.8,None,High
+P1727,62,Female,Yes,Yes,139,109,102.2,Hypertension,High
+P1728,49,Male,No,Yes,118,81,103.1,Asthma,High
+P1729,30,Female,Yes,Yes,111,68,97.9,"Diabetes, Hypertension, Kidney_Disease",High
+P1730,64,Female,No,Yes,180,93,103.3,None,High
+P1731,70,Male,No,No,94,77,100.1,Diabetes,Medium
+P1732,9,Male,No,No,150,85,100.5,None,Medium
+P1733,18,Male,Yes,Yes,101,96,98.3,None,High
+P1734,85,Female,No,No,98,110,101.6,Diabetes,Medium
+P1735,72,Male,Yes,Yes,108,79,97.9,Diabetes,High
+P1736,48,Male,Yes,Yes,157,102,98.9,Heart_Disease,High
+P1737,18,Female,Yes,No,117,72,101.6,Hypertension,High
+P1738,13,Male,No,Yes,108,102,97.9,Diabetes,Medium
+P1739,62,Male,Yes,Yes,170,108,99.9,Hypertension,High
+P1740,34,Female,Yes,No,95,115,99.2,None,High
+P1741,25,Female,No,No,167,113,103.1,Hypertension,High
+P1742,62,Female,Yes,Yes,166,93,99.0,"Asthma, Diabetes",High
+P1743,54,Male,Yes,Yes,172,62,99.6,None,High
+P1744,60,Female,No,No,129,114,103.6,Asthma,High
+P1745,89,Male,No,No,101,104,100.4,None,Low
+P1746,67,Male,No,No,124,115,99.0,Heart_Disease,High
+P1747,42,Male,Yes,No,129,72,102.8,Asthma,High
+P1748,36,Female,No,Yes,168,116,102.5,"Heart_Disease, Hypertension",High
+P1749,88,Female,No,Yes,149,97,100.6,None,Medium
+P1750,38,Male,Yes,No,113,116,101.5,Hypertension,High
+P1751,51,Female,No,No,158,81,98.0,Heart_Disease,High
+P1752,16,Female,No,Yes,98,72,102.7,None,High
+P1753,64,Female,No,No,115,77,97.4,Asthma,Medium
+P1754,77,Male,No,No,139,80,97.8,None,Medium
+P1755,47,Male,Yes,Yes,125,66,100.8,None,High
+P1756,13,Female,Yes,Yes,174,96,97.4,None,High
+P1757,80,Female,No,No,120,74,98.5,Heart_Disease,High
+P1758,71,Female,Yes,Yes,92,95,101.1,"Asthma, Hypertension",High
+P1759,27,Male,Yes,Yes,163,107,101.3,"Asthma, Diabetes, Kidney_Disease",High
+P1760,32,Female,Yes,Yes,148,99,98.2,None,High
+P1761,29,Female,Yes,Yes,120,102,99.2,Kidney_Disease,High
+P1762,50,Female,Yes,Yes,102,114,97.6,Asthma,High
+P1763,20,Female,No,Yes,159,108,98.9,"Asthma, Kidney_Disease",High
+P1764,68,Female,No,Yes,153,92,101.3,"Hypertension, Kidney_Disease",High
+P1765,48,Male,Yes,No,111,110,99.8,None,High
+P1766,46,Female,No,Yes,127,117,98.6,Asthma,Medium
+P1767,4,Male,Yes,No,92,84,101.0,None,High
+P1768,3,Female,No,No,144,65,100.1,None,Medium
+P1769,35,Female,No,No,110,70,98.5,Kidney_Disease,High
+P1770,77,Male,Yes,No,136,63,102.3,None,High
+P1771,21,Male,Yes,No,100,93,103.5,Heart_Disease,High
+P1772,19,Female,No,Yes,119,86,99.2,Hypertension,Medium
+P1773,12,Male,Yes,No,160,90,103.6,"Diabetes, Hypertension",High
+P1774,26,Male,Yes,Yes,124,112,102.5,Asthma,High
+P1775,71,Female,Yes,Yes,158,119,98.3,"Heart_Disease, Hypertension",High
+P1776,35,Male,Yes,No,107,70,97.3,None,High
+P1777,17,Male,No,No,149,75,100.2,Hypertension,Medium
+P1778,21,Male,Yes,No,107,60,99.0,Asthma,High
+P1779,87,Female,No,No,172,120,100.6,"Asthma, Kidney_Disease",High
+P1780,33,Female,Yes,No,106,111,97.3,None,High
+P1781,48,Female,Yes,No,138,84,99.1,None,High
+P1782,63,Male,Yes,Yes,145,109,101.5,None,High
+P1783,76,Male,No,No,121,69,97.1,None,Low
+P1784,57,Female,No,No,149,105,100.3,"Asthma, Hypertension",Medium
+P1785,54,Male,Yes,Yes,171,119,97.7,None,High
+P1786,45,Female,No,No,99,98,99.1,"Asthma, Kidney_Disease",High
+P1787,6,Female,Yes,No,132,72,99.2,Diabetes,High
+P1788,13,Male,No,Yes,93,92,98.5,Diabetes,Medium
+P1789,58,Female,No,No,134,99,99.3,None,Medium
+P1790,67,Male,No,No,145,108,100.6,Kidney_Disease,High
+P1791,73,Male,Yes,No,132,102,102.0,Heart_Disease,High
+P1792,19,Male,Yes,Yes,168,84,98.9,None,High
+P1793,6,Female,Yes,Yes,114,86,101.0,Hypertension,High
+P1794,55,Female,Yes,Yes,98,70,103.0,None,High
+P1795,62,Male,Yes,No,111,119,101.7,None,High
+P1796,86,Female,No,No,150,76,101.0,Heart_Disease,High
+P1797,81,Female,Yes,No,166,109,103.3,None,High
+P1798,3,Female,No,No,132,120,100.6,Asthma,Medium
+P1799,7,Female,No,Yes,108,95,98.6,"Asthma, Hypertension",Medium
+P1800,20,Male,No,No,141,86,101.0,None,Medium
+P1801,32,Male,No,Yes,130,119,103.2,Asthma,High
+P1802,20,Female,No,Yes,132,120,99.6,None,Medium
+P1803,63,Female,No,Yes,141,87,102.9,None,High
+P1804,79,Male,No,Yes,166,80,101.2,"Diabetes, Kidney_Disease",High
+P1805,11,Male,Yes,No,153,117,97.6,"Asthma, Diabetes, Hypertension",High
+P1806,61,Male,Yes,Yes,127,113,99.6,Heart_Disease,High
+P1807,86,Male,Yes,Yes,129,81,97.7,"Diabetes, Heart_Disease, Kidney_Disease",High
+P1808,1,Male,Yes,No,152,66,98.9,None,High
+P1809,68,Male,No,Yes,98,89,101.2,None,Medium
+P1810,83,Male,No,Yes,178,78,97.2,"Asthma, Hypertension",High
+P1811,58,Female,No,No,173,105,102.7,Hypertension,High
+P1812,40,Female,Yes,Yes,149,69,101.9,None,High
+P1813,8,Male,Yes,Yes,147,68,98.0,None,High
+P1814,43,Female,Yes,No,145,86,97.9,Kidney_Disease,High
+P1815,76,Female,Yes,No,173,62,99.5,None,High
+P1816,45,Male,Yes,Yes,122,84,98.3,Asthma,High
+P1817,42,Female,Yes,No,180,87,101.6,"Diabetes, Hypertension, Kidney_Disease",High
+P1818,22,Female,No,Yes,152,116,103.9,None,High
+P1819,18,Male,No,No,115,106,98.3,None,Low
+P1820,2,Female,No,No,133,60,97.7,"Hypertension, Kidney_Disease",High
+P1821,28,Male,No,No,157,85,103.2,"Asthma, Hypertension, Kidney_Disease",High
+P1822,6,Female,No,No,95,78,99.3,Diabetes,Medium
+P1823,61,Female,No,Yes,130,113,101.1,Heart_Disease,High
+P1824,84,Male,Yes,No,140,76,97.0,None,High
+P1825,29,Female,Yes,No,90,87,97.3,None,High
+P1826,36,Female,Yes,No,166,102,97.4,"Diabetes, Heart_Disease, Hypertension",High
+P1827,31,Female,No,Yes,159,101,98.4,Diabetes,High
+P1828,43,Male,No,Yes,102,68,103.5,Hypertension,High
+P1829,85,Female,No,No,110,117,100.0,Heart_Disease,High
+P1830,13,Female,No,Yes,99,69,103.1,"Diabetes, Hypertension",High
+P1831,9,Female,Yes,Yes,147,81,97.9,"Asthma, Kidney_Disease",High
+P1832,66,Male,No,No,100,82,102.5,None,High
+P1833,50,Male,No,Yes,169,111,103.8,"Diabetes, Hypertension",High
+P1834,19,Female,Yes,Yes,151,119,102.3,None,High
+P1835,44,Female,No,Yes,155,109,102.7,None,High
+P1836,25,Female,Yes,Yes,174,119,103.4,Asthma,High
+P1837,50,Female,No,Yes,95,62,100.2,None,Medium
+P1838,46,Male,No,No,143,107,102.9,"Asthma, Diabetes, Kidney_Disease",High
+P1839,13,Male,Yes,No,153,95,104.0,Heart_Disease,High
+P1840,16,Male,No,Yes,129,94,102.8,None,High
+P1841,14,Male,No,Yes,179,76,102.7,"Heart_Disease, Hypertension, Kidney_Disease",High
+P1842,10,Female,Yes,No,129,107,99.1,None,High
+P1843,37,Female,Yes,Yes,107,119,100.7,Diabetes,High
+P1844,47,Male,Yes,No,132,80,103.2,None,High
+P1845,28,Male,Yes,Yes,125,79,102.9,Kidney_Disease,High
+P1846,11,Female,No,Yes,141,108,103.5,None,High
+P1847,54,Male,No,No,96,68,97.5,"Diabetes, Kidney_Disease",High
+P1848,14,Female,Yes,No,136,85,100.8,None,High
+P1849,76,Male,Yes,No,111,71,101.5,Diabetes,High
+P1850,81,Male,No,Yes,180,68,98.2,"Asthma, Hypertension, Kidney_Disease",High
+P1851,1,Female,Yes,No,160,75,97.4,None,High
+P1852,86,Female,Yes,No,134,68,99.8,Kidney_Disease,High
+P1853,37,Female,Yes,Yes,180,86,98.8,Diabetes,High
+P1854,15,Female,Yes,No,178,68,101.0,"Diabetes, Kidney_Disease",High
+P1855,86,Male,Yes,Yes,119,75,102.2,Asthma,High
+P1856,18,Male,No,Yes,163,60,101.6,Diabetes,High
+P1857,53,Male,No,Yes,147,69,98.0,Diabetes,Medium
+P1858,48,Female,No,No,174,93,101.8,Hypertension,High
+P1859,82,Male,Yes,No,135,72,103.1,"Asthma, Hypertension",High
+P1860,63,Female,No,Yes,122,60,100.0,None,Medium
+P1861,8,Female,No,Yes,142,67,103.2,None,High
+P1862,36,Male,No,Yes,150,110,102.3,None,High
+P1863,59,Female,No,Yes,147,72,101.8,None,Medium
+P1864,62,Female,No,Yes,151,74,100.1,None,High
+P1865,31,Female,No,Yes,160,92,101.5,None,High
+P1866,35,Female,No,Yes,124,115,101.6,"Asthma, Diabetes",Medium
+P1867,9,Male,Yes,No,122,111,98.7,"Heart_Disease, Hypertension, Kidney_Disease",High
+P1868,64,Male,Yes,Yes,131,109,101.8,Kidney_Disease,High
+P1869,44,Male,No,Yes,113,66,102.1,Asthma,High
+P1870,33,Female,Yes,No,175,113,103.7,Heart_Disease,High
+P1871,13,Female,No,Yes,121,80,97.3,None,Medium
+P1872,61,Male,No,No,119,87,103.7,None,High
+P1873,10,Male,Yes,Yes,142,115,97.3,Kidney_Disease,High
+P1874,10,Male,No,Yes,118,107,98.5,None,Medium
+P1875,5,Female,Yes,No,105,77,101.5,"Diabetes, Hypertension",High
+P1876,44,Male,Yes,Yes,122,110,101.2,Hypertension,High
+P1877,6,Female,No,Yes,174,108,101.9,None,High
+P1878,63,Male,No,No,102,65,100.5,None,Low
+P1879,74,Female,Yes,No,179,82,103.5,"Hypertension, Kidney_Disease",High
+P1880,4,Male,Yes,No,114,71,102.8,None,High
+P1881,6,Male,Yes,Yes,115,68,99.1,None,High
+P1882,58,Male,Yes,Yes,105,106,103.4,None,High
+P1883,81,Female,No,Yes,178,64,102.8,None,High
+P1884,49,Male,Yes,No,94,94,98.2,"Asthma, Diabetes",High
+P1885,11,Male,Yes,Yes,109,86,97.8,None,High
+P1886,22,Female,No,No,110,113,104.0,Kidney_Disease,High
+P1887,28,Female,No,Yes,168,113,102.6,None,High
+P1888,34,Male,Yes,Yes,141,78,99.6,Diabetes,High
+P1889,75,Male,Yes,Yes,119,107,101.9,"Asthma, Diabetes",High
+P1890,51,Male,Yes,Yes,158,116,98.6,None,High
+P1891,7,Male,Yes,Yes,133,93,100.8,None,High
+P1892,43,Male,Yes,Yes,144,91,103.0,None,High
+P1893,29,Male,Yes,No,99,87,102.0,Heart_Disease,High
+P1894,59,Male,No,No,93,62,102.4,"Diabetes, Kidney_Disease",High
+P1895,11,Female,Yes,Yes,100,104,98.3,"Asthma, Diabetes, Heart_Disease",High
+P1896,83,Female,Yes,Yes,109,82,99.2,Kidney_Disease,High
+P1897,83,Female,No,No,110,65,100.8,None,Low
+P1898,86,Female,No,No,156,118,102.4,None,High
+P1899,37,Male,No,No,150,62,100.6,Diabetes,Medium
+P1900,77,Male,Yes,No,121,84,99.4,None,High
+P1901,47,Female,Yes,No,138,96,97.9,Heart_Disease,High
+P1902,66,Male,No,No,174,63,99.6,"Asthma, Kidney_Disease",High
+P1903,6,Male,No,Yes,142,73,98.7,Kidney_Disease,High
+P1904,72,Female,No,Yes,169,109,101.5,"Hypertension, Kidney_Disease",High
+P1905,17,Male,Yes,No,96,119,97.9,None,High
+P1906,68,Male,Yes,No,170,106,98.8,"Asthma, Hypertension",High
+P1907,64,Male,Yes,No,114,93,101.5,None,High
+P1908,32,Male,Yes,Yes,179,85,101.3,None,High
+P1909,22,Female,No,No,110,61,98.7,Hypertension,Medium
+P1910,48,Female,Yes,Yes,129,109,98.8,Diabetes,High
+P1911,50,Female,No,Yes,135,120,102.3,"Diabetes, Hypertension",High
+P1912,52,Male,No,No,159,103,98.3,None,High
+P1913,3,Male,No,No,129,86,102.5,"Diabetes, Kidney_Disease",High
+P1914,29,Male,No,Yes,161,104,100.5,None,High
+P1915,36,Female,Yes,No,168,113,101.9,Heart_Disease,High
+P1916,5,Female,Yes,No,120,73,103.4,None,High
+P1917,46,Male,No,No,180,67,99.8,None,High
+P1918,19,Male,Yes,Yes,166,89,100.7,Diabetes,High
+P1919,70,Male,Yes,Yes,165,65,101.4,None,High
+P1920,28,Male,No,No,118,62,103.2,"Diabetes, Kidney_Disease",High
+P1921,79,Female,No,No,102,89,103.7,"Diabetes, Kidney_Disease",High
+P1922,2,Male,Yes,Yes,93,97,97.7,"Diabetes, Hypertension",High
+P1923,77,Male,Yes,No,132,90,101.5,Heart_Disease,High
+P1924,77,Male,No,Yes,169,103,98.5,None,High
+P1925,45,Male,Yes,Yes,129,98,97.5,None,High
+P1926,68,Female,Yes,No,118,74,99.8,Diabetes,High
+P1927,76,Male,No,Yes,111,112,102.1,"Hypertension, Kidney_Disease",High
+P1928,10,Male,No,No,132,81,99.9,None,Medium
+P1929,5,Female,Yes,No,95,113,99.6,None,High
+P1930,44,Male,No,No,144,87,103.8,Kidney_Disease,High
+P1931,89,Male,Yes,Yes,144,109,102.9,"Diabetes, Hypertension",High
+P1932,67,Male,No,No,140,116,101.3,"Asthma, Diabetes",Medium
+P1933,20,Female,Yes,No,117,66,103.7,"Heart_Disease, Kidney_Disease",High
+P1934,46,Male,No,Yes,145,96,97.8,Asthma,Medium
+P1935,55,Male,Yes,No,127,107,103.7,None,High
+P1936,39,Male,No,Yes,133,79,98.7,"Hypertension, Kidney_Disease",High
+P1937,53,Male,Yes,Yes,172,83,101.3,None,High
+P1938,14,Female,No,Yes,167,112,97.3,None,High
+P1939,73,Male,No,No,163,71,103.5,Asthma,High
+P1940,33,Male,No,No,169,96,102.7,"Asthma, Heart_Disease",High
+P1941,12,Female,Yes,No,164,84,101.5,Hypertension,High
+P1942,43,Male,No,Yes,154,116,99.2,Hypertension,High
+P1943,23,Male,Yes,Yes,118,78,102.5,"Asthma, Kidney_Disease",High
+P1944,73,Male,No,Yes,161,90,98.1,Asthma,High
+P1945,54,Male,No,Yes,117,79,100.9,"Asthma, Hypertension, Kidney_Disease",High
+P1946,86,Female,Yes,Yes,174,117,100.9,None,High
+P1947,37,Male,No,No,174,67,103.9,"Asthma, Kidney_Disease",High
+P1948,44,Male,Yes,No,165,108,99.5,Asthma,High
+P1949,85,Female,Yes,No,163,84,99.4,Hypertension,High
+P1950,2,Female,No,Yes,176,113,101.8,None,High
+P1951,25,Female,No,Yes,122,113,98.3,None,Medium
+P1952,70,Male,Yes,No,155,77,101.4,None,High
+P1953,4,Male,No,Yes,90,60,101.7,Kidney_Disease,High
+P1954,51,Female,Yes,Yes,104,113,103.9,None,High
+P1955,26,Male,Yes,Yes,168,81,102.8,"Diabetes, Kidney_Disease",High
+P1956,9,Female,Yes,No,100,78,101.4,None,High
+P1957,42,Male,No,No,112,115,101.4,None,Low
+P1958,75,Female,No,Yes,96,106,99.6,Heart_Disease,High
+P1959,3,Female,No,No,166,78,99.7,None,High
+P1960,58,Male,No,No,175,68,101.2,None,High
+P1961,72,Male,No,No,139,119,97.3,None,Medium
+P1962,90,Male,No,Yes,140,119,100.7,Diabetes,Medium
+P1963,25,Male,Yes,No,119,65,103.6,"Asthma, Heart_Disease, Kidney_Disease",High
+P1964,22,Male,No,No,103,89,100.8,None,Low
+P1965,2,Male,Yes,Yes,100,98,98.1,None,High
+P1966,29,Female,Yes,No,106,89,100.5,Heart_Disease,High
+P1967,49,Male,Yes,Yes,147,64,103.2,Heart_Disease,High
+P1968,34,Male,Yes,No,96,69,103.0,None,High
+P1969,6,Male,No,No,126,63,98.7,None,Low
+P1970,33,Male,No,No,158,66,103.5,"Asthma, Hypertension",High
+P1971,24,Male,Yes,Yes,171,65,103.1,"Hypertension, Kidney_Disease",High
+P1972,14,Male,No,No,111,96,100.8,Asthma,Medium
+P1973,88,Female,Yes,No,119,115,102.8,None,High
+P1974,15,Male,No,No,93,81,98.6,"Asthma, Diabetes",Medium
+P1975,90,Female,No,Yes,148,90,101.9,Asthma,Medium
+P1976,31,Female,Yes,Yes,136,108,97.0,Diabetes,High
+P1977,85,Male,Yes,Yes,170,82,99.3,None,High
+P1978,51,Female,Yes,No,159,88,103.6,Asthma,High
+P1979,73,Male,Yes,Yes,99,96,98.0,Asthma,High
+P1980,77,Male,No,Yes,145,99,101.3,None,Medium
+P1981,70,Male,Yes,Yes,94,114,99.3,None,High
+P1982,78,Male,No,No,154,78,101.5,None,High
+P1983,78,Female,Yes,Yes,126,82,100.2,Asthma,High
+P1984,5,Female,Yes,No,112,75,103.3,Asthma,High
+P1985,62,Male,Yes,Yes,168,88,98.9,"Diabetes, Kidney_Disease",High
+P1986,81,Female,No,No,139,94,98.0,Asthma,Medium
+P1987,65,Female,Yes,Yes,130,93,101.0,Diabetes,High
+P1988,83,Female,Yes,No,172,71,101.8,"Diabetes, Heart_Disease",High
+P1989,90,Female,Yes,No,139,84,102.1,None,High
+P1990,59,Male,Yes,Yes,111,77,103.3,None,High
+P1991,44,Female,No,No,113,119,100.7,Asthma,Medium
+P1992,26,Male,No,No,113,100,98.7,"Heart_Disease, Hypertension, Kidney_Disease",High
+P1993,29,Male,Yes,No,141,70,98.8,Heart_Disease,High
+P1994,24,Female,No,Yes,133,84,98.2,Asthma,Medium
+P1995,76,Male,Yes,No,157,98,102.5,None,High
+P1996,29,Male,No,No,136,61,103.7,Heart_Disease,High
+P1997,50,Female,Yes,No,152,109,101.8,"Diabetes, Hypertension",High
+P1998,25,Female,Yes,Yes,104,118,100.4,Diabetes,High
+P1999,26,Female,Yes,No,94,65,102.9,None,High
+P2000,40,Male,No,No,148,66,99.3,None,Medium
+P2001,14,Male,Yes,No,169,116,98.5,Kidney_Disease,High
+P2002,13,Male,No,No,130,62,97.1,Hypertension,Medium
+P2003,90,Male,No,Yes,94,109,99.5,Kidney_Disease,High
+P2004,68,Male,No,Yes,167,106,102.8,"Diabetes, Heart_Disease",High
+P2005,47,Male,Yes,No,141,70,103.2,"Asthma, Kidney_Disease",High
+P2006,54,Male,No,No,147,94,100.1,None,Medium
+P2007,22,Male,No,No,155,81,103.9,"Heart_Disease, Kidney_Disease",High
+P2008,76,Female,No,No,168,78,98.2,None,High
+P2009,79,Male,Yes,No,132,61,98.0,"Diabetes, Kidney_Disease",High
+P2010,20,Female,No,Yes,165,101,103.1,None,High
+P2011,31,Male,Yes,No,130,64,98.5,None,High
+P2012,62,Male,Yes,No,161,107,98.3,None,High
+P2013,39,Female,No,No,165,99,104.0,Asthma,High
+P2014,89,Male,No,No,171,110,100.1,"Asthma, Hypertension",High
+P2015,1,Male,No,Yes,137,78,98.5,"Diabetes, Hypertension, Kidney_Disease",High
+P2016,70,Male,Yes,Yes,98,68,98.4,None,High
+P2017,83,Male,No,Yes,97,84,102.2,"Hypertension, Kidney_Disease",High
+P2018,54,Female,No,Yes,116,105,100.9,None,Medium
+P2019,69,Male,No,No,156,105,97.6,Hypertension,High
+P2020,45,Female,No,No,123,107,103.8,Heart_Disease,High
+P2021,62,Male,No,Yes,163,120,97.2,None,High
+P2022,12,Female,No,Yes,103,85,97.4,"Asthma, Diabetes",Medium
+P2023,83,Female,Yes,Yes,148,103,98.5,Hypertension,High
+P2024,73,Male,Yes,No,113,71,98.1,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2025,53,Male,Yes,No,131,102,103.0,None,High
+P2026,39,Male,Yes,Yes,111,80,101.6,Hypertension,High
+P2027,74,Male,No,No,124,86,97.9,Asthma,Medium
+P2028,64,Male,Yes,No,127,75,103.6,Heart_Disease,High
+P2029,33,Female,Yes,Yes,147,98,102.8,"Asthma, Diabetes",High
+P2030,24,Male,No,Yes,110,63,99.3,Kidney_Disease,High
+P2031,60,Female,Yes,Yes,152,105,103.3,None,High
+P2032,75,Male,Yes,Yes,93,111,101.7,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2033,7,Male,Yes,Yes,95,76,102.3,Asthma,High
+P2034,67,Female,No,Yes,178,107,102.1,"Heart_Disease, Kidney_Disease",High
+P2035,24,Male,No,Yes,95,72,97.1,"Asthma, Heart_Disease, Hypertension",High
+P2036,11,Female,Yes,No,98,82,102.8,None,High
+P2037,27,Male,Yes,Yes,172,96,98.2,"Heart_Disease, Kidney_Disease",High
+P2038,85,Male,Yes,No,115,90,98.9,"Hypertension, Kidney_Disease",High
+P2039,8,Male,Yes,No,150,65,98.5,Diabetes,High
+P2040,78,Male,Yes,No,96,100,98.1,None,High
+P2041,27,Male,Yes,No,142,89,102.3,None,High
+P2042,15,Male,Yes,Yes,138,85,97.7,"Diabetes, Kidney_Disease",High
+P2043,80,Male,No,Yes,133,102,102.2,Asthma,High
+P2044,32,Male,Yes,Yes,127,96,98.3,None,High
+P2045,27,Male,Yes,No,173,116,101.7,None,High
+P2046,67,Male,Yes,No,112,66,97.6,None,High
+P2047,72,Female,Yes,No,91,96,101.7,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2048,17,Male,Yes,No,134,106,99.7,"Diabetes, Hypertension",High
+P2049,86,Female,Yes,No,92,109,97.7,"Asthma, Diabetes, Hypertension",High
+P2050,25,Female,No,No,159,83,99.7,"Hypertension, Kidney_Disease",High
+P2051,4,Female,Yes,Yes,93,69,103.9,"Asthma, Diabetes",High
+P2052,47,Male,No,Yes,161,91,98.9,None,High
+P2053,80,Male,No,Yes,145,87,103.0,None,High
+P2054,30,Male,Yes,No,157,101,103.6,None,High
+P2055,41,Female,Yes,Yes,118,104,102.0,None,High
+P2056,32,Male,Yes,Yes,168,83,103.4,Asthma,High
+P2057,73,Female,No,No,129,99,97.5,Heart_Disease,High
+P2058,48,Female,No,Yes,121,76,100.4,None,Medium
+P2059,33,Female,No,Yes,104,62,100.9,"Diabetes, Kidney_Disease",High
+P2060,5,Male,Yes,No,160,74,97.7,None,High
+P2061,12,Female,Yes,No,156,62,100.8,Heart_Disease,High
+P2062,58,Male,Yes,Yes,103,81,101.9,Hypertension,High
+P2063,66,Male,No,No,103,75,97.4,Heart_Disease,High
+P2064,11,Male,No,No,157,77,100.4,None,High
+P2065,52,Male,Yes,Yes,93,61,101.0,None,High
+P2066,69,Female,No,No,180,87,101.2,Hypertension,High
+P2067,16,Male,No,Yes,175,111,103.1,None,High
+P2068,52,Male,No,No,145,116,99.8,"Diabetes, Heart_Disease",High
+P2069,75,Male,Yes,Yes,179,114,100.3,None,High
+P2070,35,Female,No,No,102,79,103.8,Diabetes,High
+P2071,9,Male,Yes,No,165,91,101.7,None,High
+P2072,33,Male,Yes,No,164,75,100.8,"Diabetes, Heart_Disease",High
+P2073,74,Male,No,Yes,175,105,97.5,"Diabetes, Heart_Disease",High
+P2074,79,Male,No,No,140,110,101.2,"Asthma, Diabetes, Hypertension",Medium
+P2075,60,Female,Yes,No,138,98,100.9,None,High
+P2076,53,Female,Yes,Yes,117,91,99.0,None,High
+P2077,62,Female,Yes,Yes,112,108,99.3,None,High
+P2078,89,Female,Yes,No,91,64,102.0,"Asthma, Hypertension",High
+P2079,85,Male,Yes,Yes,149,63,100.6,"Hypertension, Kidney_Disease",High
+P2080,14,Male,No,Yes,110,102,101.7,None,Medium
+P2081,85,Female,Yes,Yes,120,83,101.8,"Asthma, Kidney_Disease",High
+P2082,19,Male,Yes,No,92,106,102.9,Kidney_Disease,High
+P2083,38,Male,Yes,No,123,79,100.7,None,High
+P2084,16,Female,No,Yes,163,88,103.8,None,High
+P2085,2,Male,Yes,Yes,123,94,97.3,Asthma,High
+P2086,86,Male,Yes,Yes,138,96,97.6,Diabetes,High
+P2087,83,Male,Yes,No,176,112,101.1,"Asthma, Kidney_Disease",High
+P2088,72,Male,No,No,164,120,104.0,"Asthma, Diabetes",High
+P2089,35,Male,No,Yes,105,76,103.3,None,High
+P2090,75,Female,Yes,No,144,62,100.5,Hypertension,High
+P2091,23,Female,No,Yes,132,106,99.6,None,Medium
+P2092,59,Female,Yes,No,171,62,103.2,"Asthma, Heart_Disease",High
+P2093,50,Male,No,No,93,77,100.2,None,Low
+P2094,9,Female,Yes,Yes,161,81,97.7,None,High
+P2095,46,Male,No,No,159,94,97.9,Kidney_Disease,High
+P2096,29,Female,No,Yes,168,62,103.2,None,High
+P2097,34,Female,No,Yes,157,88,101.2,None,High
+P2098,3,Male,Yes,No,99,73,104.0,None,High
+P2099,32,Female,Yes,Yes,142,66,98.6,Asthma,High
+P2100,1,Female,Yes,Yes,95,118,98.8,Diabetes,High
+P2101,52,Female,Yes,Yes,136,118,103.7,"Asthma, Hypertension",High
+P2102,34,Male,Yes,No,130,101,97.2,None,High
+P2103,38,Female,Yes,No,141,114,97.4,"Asthma, Diabetes",High
+P2104,67,Male,No,Yes,159,94,103.7,Asthma,High
+P2105,60,Male,Yes,No,100,88,98.9,Diabetes,High
+P2106,29,Female,Yes,No,170,84,103.6,Kidney_Disease,High
+P2107,85,Male,No,No,129,119,100.5,Diabetes,Medium
+P2108,42,Female,No,No,174,63,97.8,Kidney_Disease,High
+P2109,87,Male,Yes,No,136,75,101.9,None,High
+P2110,89,Male,No,Yes,99,90,97.6,Diabetes,Medium
+P2111,30,Female,Yes,No,130,75,99.9,Hypertension,High
+P2112,13,Female,No,No,166,63,99.7,None,High
+P2113,4,Female,Yes,No,157,97,98.8,None,High
+P2114,49,Female,No,No,145,91,99.9,None,Medium
+P2115,56,Female,Yes,Yes,129,80,100.0,None,High
+P2116,57,Female,Yes,No,129,109,99.2,None,High
+P2117,65,Male,No,Yes,121,114,102.5,None,High
+P2118,52,Female,Yes,Yes,143,81,101.9,None,High
+P2119,51,Female,No,Yes,96,60,101.9,Hypertension,Medium
+P2120,24,Male,Yes,Yes,127,71,103.7,"Asthma, Kidney_Disease",High
+P2121,89,Female,No,No,107,108,99.2,None,Low
+P2122,4,Male,Yes,Yes,125,105,103.9,None,High
+P2123,65,Female,No,Yes,90,108,103.3,Diabetes,High
+P2124,61,Female,No,No,161,68,98.4,None,High
+P2125,74,Female,No,Yes,124,88,97.9,Heart_Disease,High
+P2126,22,Female,Yes,Yes,104,118,98.2,None,High
+P2127,33,Male,No,No,119,87,99.4,Asthma,Medium
+P2128,69,Male,No,No,171,70,99.6,None,High
+P2129,66,Male,No,Yes,105,102,100.9,"Heart_Disease, Kidney_Disease",High
+P2130,33,Female,No,Yes,94,103,103.6,None,High
+P2131,84,Female,No,No,133,107,98.0,None,Medium
+P2132,10,Male,Yes,Yes,109,119,102.0,Kidney_Disease,High
+P2133,79,Female,Yes,No,146,117,102.4,"Heart_Disease, Hypertension",High
+P2134,83,Male,No,Yes,93,72,103.1,Asthma,High
+P2135,88,Male,Yes,No,135,105,97.1,Diabetes,High
+P2136,78,Female,Yes,Yes,122,81,102.0,None,High
+P2137,50,Male,No,Yes,124,99,103.3,None,High
+P2138,30,Female,Yes,Yes,179,110,101.4,None,High
+P2139,9,Female,No,No,154,78,100.6,None,High
+P2140,55,Female,Yes,No,122,76,103.4,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2141,7,Male,No,Yes,150,98,101.3,Kidney_Disease,High
+P2142,14,Male,No,Yes,172,98,97.9,Kidney_Disease,High
+P2143,66,Female,No,No,165,93,100.6,None,High
+P2144,89,Male,No,No,151,97,101.9,"Diabetes, Heart_Disease",High
+P2145,58,Male,No,No,119,62,102.7,"Asthma, Kidney_Disease",High
+P2146,33,Male,No,Yes,116,113,100.9,None,Medium
+P2147,58,Male,Yes,Yes,162,110,97.7,"Asthma, Diabetes, Kidney_Disease",High
+P2148,51,Male,Yes,Yes,156,115,100.6,None,High
+P2149,74,Male,Yes,Yes,105,62,102.7,None,High
+P2150,30,Male,Yes,Yes,98,104,100.7,Asthma,High
+P2151,15,Male,Yes,No,139,67,97.1,None,High
+P2152,38,Male,No,No,101,78,97.4,Kidney_Disease,High
+P2153,38,Female,Yes,Yes,165,92,102.3,"Asthma, Heart_Disease",High
+P2154,71,Male,Yes,No,129,86,103.1,Diabetes,High
+P2155,5,Male,Yes,Yes,148,113,102.3,"Diabetes, Heart_Disease",High
+P2156,36,Female,No,No,99,81,97.1,Asthma,Medium
+P2157,56,Female,No,No,101,64,97.1,Heart_Disease,High
+P2158,39,Male,Yes,Yes,126,60,102.7,Diabetes,High
+P2159,52,Female,No,Yes,156,99,97.1,"Asthma, Hypertension",High
+P2160,54,Male,No,Yes,138,94,102.1,Asthma,High
+P2161,21,Female,No,Yes,157,74,100.8,Kidney_Disease,High
+P2162,82,Male,No,No,168,64,99.5,None,High
+P2163,76,Female,Yes,No,148,114,97.5,Asthma,High
+P2164,3,Male,Yes,Yes,101,68,100.0,Heart_Disease,High
+P2165,59,Male,No,Yes,128,65,100.9,None,Medium
+P2166,74,Female,Yes,Yes,149,83,99.3,None,High
+P2167,16,Female,No,No,127,105,97.6,Asthma,Medium
+P2168,38,Female,Yes,Yes,102,94,101.7,"Hypertension, Kidney_Disease",High
+P2169,36,Male,No,Yes,145,77,98.2,None,Medium
+P2170,62,Female,Yes,No,96,111,101.9,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2171,17,Male,No,No,137,91,102.8,None,High
+P2172,56,Male,Yes,Yes,106,114,103.1,Diabetes,High
+P2173,74,Male,Yes,Yes,170,85,98.5,Heart_Disease,High
+P2174,53,Female,Yes,No,111,73,102.8,None,High
+P2175,61,Male,Yes,No,125,60,97.4,Kidney_Disease,High
+P2176,24,Male,No,No,120,65,98.0,Asthma,Medium
+P2177,70,Female,Yes,No,98,63,102.5,"Diabetes, Kidney_Disease",High
+P2178,15,Female,Yes,Yes,149,116,102.7,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2179,55,Male,Yes,No,119,120,102.7,"Diabetes, Hypertension",High
+P2180,26,Male,Yes,No,99,111,100.0,None,High
+P2181,2,Male,No,No,179,113,103.9,None,High
+P2182,65,Female,No,No,119,111,101.5,"Asthma, Kidney_Disease",High
+P2183,53,Male,No,No,106,98,98.8,"Asthma, Diabetes, Heart_Disease",High
+P2184,12,Male,No,Yes,129,111,100.8,None,Medium
+P2185,10,Male,No,No,95,69,99.5,Kidney_Disease,High
+P2186,52,Male,Yes,Yes,149,117,99.1,"Asthma, Heart_Disease, Hypertension",High
+P2187,68,Male,No,Yes,143,93,97.4,"Asthma, Kidney_Disease",High
+P2188,5,Female,No,Yes,165,95,98.5,Heart_Disease,High
+P2189,39,Male,No,Yes,130,111,98.6,"Asthma, Heart_Disease",High
+P2190,18,Male,No,No,96,88,102.7,"Asthma, Diabetes",High
+P2191,47,Female,No,No,100,83,103.7,None,High
+P2192,73,Male,Yes,Yes,159,119,99.3,"Diabetes, Kidney_Disease",High
+P2193,64,Female,Yes,Yes,119,66,103.7,"Asthma, Diabetes, Kidney_Disease",High
+P2194,77,Male,Yes,No,127,105,103.6,Diabetes,High
+P2195,88,Male,Yes,Yes,141,105,101.3,"Heart_Disease, Kidney_Disease",High
+P2196,90,Male,Yes,Yes,100,102,97.9,Heart_Disease,High
+P2197,73,Female,Yes,Yes,110,115,99.9,"Diabetes, Kidney_Disease",High
+P2198,41,Male,No,Yes,113,118,103.1,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2199,82,Female,Yes,No,126,62,103.7,Asthma,High
+P2200,25,Male,No,Yes,135,105,102.2,Diabetes,High
+P2201,30,Male,Yes,Yes,140,78,103.7,Heart_Disease,High
+P2202,2,Male,Yes,Yes,125,82,97.9,None,High
+P2203,28,Female,Yes,No,98,64,100.8,Diabetes,High
+P2204,29,Female,Yes,No,134,108,102.3,"Heart_Disease, Kidney_Disease",High
+P2205,19,Male,No,No,99,62,97.4,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2206,3,Female,No,Yes,99,94,99.7,Heart_Disease,High
+P2207,6,Male,No,No,178,103,97.9,"Hypertension, Kidney_Disease",High
+P2208,73,Female,No,No,118,61,97.0,Asthma,Medium
+P2209,21,Female,No,Yes,117,70,101.4,"Asthma, Diabetes",Medium
+P2210,28,Female,No,No,106,117,99.7,None,Low
+P2211,59,Female,Yes,Yes,170,71,101.6,Hypertension,High
+P2212,29,Male,No,No,102,64,97.1,"Diabetes, Kidney_Disease",High
+P2213,83,Female,Yes,No,121,60,101.5,"Asthma, Heart_Disease, Kidney_Disease",High
+P2214,33,Male,Yes,Yes,104,65,99.7,Hypertension,High
+P2215,79,Male,No,No,148,81,102.3,"Asthma, Hypertension, Kidney_Disease",High
+P2216,73,Male,Yes,Yes,165,107,101.2,Hypertension,High
+P2217,51,Male,Yes,Yes,143,102,102.6,None,High
+P2218,2,Male,No,No,135,93,98.3,None,Medium
+P2219,60,Male,Yes,Yes,146,67,97.6,None,High
+P2220,21,Male,Yes,Yes,114,87,101.9,None,High
+P2221,83,Male,Yes,No,157,110,97.9,Asthma,High
+P2222,1,Female,Yes,No,103,109,97.8,Kidney_Disease,High
+P2223,48,Female,Yes,No,162,107,100.2,"Diabetes, Hypertension, Kidney_Disease",High
+P2224,72,Male,Yes,No,120,90,100.7,"Hypertension, Kidney_Disease",High
+P2225,9,Female,Yes,No,112,111,100.6,None,High
+P2226,40,Male,Yes,Yes,111,106,102.3,None,High
+P2227,7,Male,Yes,No,158,68,101.4,"Hypertension, Kidney_Disease",High
+P2228,85,Male,Yes,No,101,77,99.0,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2229,68,Male,Yes,No,136,96,101.2,None,High
+P2230,2,Male,Yes,Yes,94,100,98.5,None,High
+P2231,90,Male,Yes,Yes,106,105,100.1,None,High
+P2232,17,Male,Yes,No,114,62,103.3,"Diabetes, Kidney_Disease",High
+P2233,54,Female,Yes,No,122,85,98.4,Diabetes,High
+P2234,45,Male,No,No,148,82,99.8,Kidney_Disease,High
+P2235,69,Male,Yes,Yes,177,61,101.6,"Asthma, Diabetes, Heart_Disease",High
+P2236,88,Male,No,No,138,115,101.3,"Hypertension, Kidney_Disease",High
+P2237,16,Male,No,Yes,159,112,98.9,Asthma,High
+P2238,21,Male,Yes,Yes,105,86,100.4,Heart_Disease,High
+P2239,52,Female,No,No,148,108,103.1,None,High
+P2240,30,Female,Yes,Yes,163,92,102.6,None,High
+P2241,8,Female,No,No,128,101,97.3,"Asthma, Heart_Disease, Hypertension",High
+P2242,40,Male,Yes,No,134,60,99.1,Hypertension,High
+P2243,59,Male,Yes,Yes,139,68,100.0,"Diabetes, Heart_Disease",High
+P2244,19,Female,Yes,No,175,68,103.4,Kidney_Disease,High
+P2245,90,Female,No,Yes,102,103,100.6,Diabetes,Medium
+P2246,69,Female,Yes,No,108,100,98.7,None,High
+P2247,11,Female,No,Yes,115,95,99.4,None,Medium
+P2248,18,Female,No,Yes,136,102,97.4,Hypertension,Medium
+P2249,32,Female,Yes,Yes,178,75,97.5,Heart_Disease,High
+P2250,86,Female,No,Yes,137,106,98.9,"Asthma, Heart_Disease",High
+P2251,64,Female,No,No,165,105,103.3,"Heart_Disease, Kidney_Disease",High
+P2252,26,Female,Yes,No,137,96,100.3,"Asthma, Kidney_Disease",High
+P2253,77,Female,Yes,No,116,117,99.0,None,High
+P2254,44,Female,No,Yes,158,104,103.4,Kidney_Disease,High
+P2255,40,Male,No,Yes,141,98,98.0,"Asthma, Heart_Disease",High
+P2256,51,Female,No,Yes,104,114,103.5,None,High
+P2257,36,Male,Yes,No,165,67,98.9,None,High
+P2258,37,Male,No,Yes,121,110,103.3,"Diabetes, Heart_Disease",High
+P2259,41,Female,Yes,Yes,147,96,99.9,Asthma,High
+P2260,29,Male,Yes,Yes,158,101,101.8,None,High
+P2261,68,Female,Yes,Yes,105,65,99.6,Diabetes,High
+P2262,72,Female,No,Yes,116,83,102.7,Hypertension,High
+P2263,56,Female,No,No,177,101,103.2,Diabetes,High
+P2264,64,Male,Yes,Yes,178,93,99.9,None,High
+P2265,19,Male,No,No,147,68,101.0,Heart_Disease,High
+P2266,53,Male,Yes,No,90,67,99.0,None,High
+P2267,6,Female,Yes,No,158,64,97.2,"Diabetes, Heart_Disease",High
+P2268,5,Male,Yes,No,177,71,102.1,None,High
+P2269,24,Female,No,Yes,105,87,97.2,None,Medium
+P2270,74,Male,Yes,No,157,111,101.4,None,High
+P2271,22,Male,Yes,Yes,115,84,101.4,None,High
+P2272,20,Female,Yes,Yes,166,101,98.3,Asthma,High
+P2273,32,Female,Yes,No,168,82,102.8,"Hypertension, Kidney_Disease",High
+P2274,19,Male,Yes,No,119,104,101.3,"Hypertension, Kidney_Disease",High
+P2275,1,Female,No,No,178,104,102.8,"Heart_Disease, Hypertension",High
+P2276,29,Male,Yes,No,144,65,100.6,"Asthma, Diabetes, Kidney_Disease",High
+P2277,7,Female,Yes,Yes,139,98,100.5,"Diabetes, Hypertension, Kidney_Disease",High
+P2278,49,Male,Yes,Yes,152,67,98.1,None,High
+P2279,83,Male,Yes,Yes,153,102,102.6,Heart_Disease,High
+P2280,69,Female,No,No,115,80,100.1,None,Low
+P2281,19,Male,Yes,Yes,108,120,98.1,Diabetes,High
+P2282,82,Male,No,No,109,82,100.9,Kidney_Disease,High
+P2283,20,Male,Yes,No,141,63,99.6,"Heart_Disease, Kidney_Disease",High
+P2284,28,Female,Yes,No,121,113,103.3,"Asthma, Hypertension",High
+P2285,9,Male,Yes,No,140,103,102.6,None,High
+P2286,31,Male,No,No,119,114,100.9,None,Low
+P2287,16,Female,Yes,Yes,174,64,98.5,None,High
+P2288,52,Male,No,No,119,96,102.8,Heart_Disease,High
+P2289,50,Male,No,No,150,62,99.5,None,Medium
+P2290,10,Male,Yes,No,101,87,103.8,None,High
+P2291,10,Female,No,No,124,61,101.0,Kidney_Disease,High
+P2292,49,Male,No,No,160,91,99.5,None,High
+P2293,62,Male,Yes,Yes,122,70,100.0,None,High
+P2294,2,Male,No,Yes,107,106,101.6,None,Medium
+P2295,10,Male,Yes,No,169,85,100.2,Asthma,High
+P2296,52,Male,No,Yes,99,70,100.0,"Diabetes, Hypertension",Medium
+P2297,78,Male,Yes,No,173,84,101.7,None,High
+P2298,44,Female,No,No,120,113,101.5,None,Low
+P2299,81,Female,Yes,Yes,167,65,101.4,None,High
+P2300,40,Male,Yes,No,113,74,97.9,None,High
+P2301,16,Male,No,Yes,134,91,102.7,None,High
+P2302,37,Female,No,No,90,105,97.3,None,Low
+P2303,72,Female,No,No,129,94,101.7,Asthma,Medium
+P2304,39,Female,No,No,101,86,102.7,None,High
+P2305,45,Female,Yes,No,132,62,97.2,None,High
+P2306,41,Male,No,Yes,94,97,102.2,"Asthma, Heart_Disease, Kidney_Disease",High
+P2307,24,Female,No,Yes,104,116,101.4,Hypertension,Medium
+P2308,73,Female,Yes,No,116,63,101.9,Diabetes,High
+P2309,23,Female,No,Yes,110,93,98.1,Hypertension,Medium
+P2310,55,Female,Yes,Yes,130,99,99.0,Kidney_Disease,High
+P2311,73,Female,No,No,126,86,101.6,None,Low
+P2312,43,Female,No,Yes,129,105,98.8,None,Medium
+P2313,40,Male,No,Yes,167,75,102.8,"Heart_Disease, Kidney_Disease",High
+P2314,75,Female,No,Yes,163,116,98.9,Diabetes,High
+P2315,68,Male,Yes,Yes,96,97,99.3,Kidney_Disease,High
+P2316,62,Male,No,Yes,121,70,97.7,None,Medium
+P2317,74,Female,Yes,Yes,178,71,97.8,Diabetes,High
+P2318,62,Female,No,No,114,78,101.4,"Heart_Disease, Kidney_Disease",High
+P2319,61,Male,Yes,Yes,121,60,97.3,None,High
+P2320,56,Female,No,Yes,108,106,101.3,Diabetes,Medium
+P2321,19,Female,Yes,Yes,104,73,102.1,Asthma,High
+P2322,46,Female,Yes,No,164,81,101.4,"Asthma, Diabetes",High
+P2323,11,Male,Yes,No,180,83,100.9,None,High
+P2324,90,Female,No,No,118,65,97.5,"Heart_Disease, Kidney_Disease",High
+P2325,7,Male,No,Yes,114,113,99.9,"Diabetes, Hypertension",Medium
+P2326,32,Male,No,No,127,71,98.9,None,Low
+P2327,14,Male,No,Yes,174,88,102.0,Asthma,High
+P2328,70,Male,Yes,No,180,105,103.3,Heart_Disease,High
+P2329,49,Male,Yes,Yes,172,102,103.8,Heart_Disease,High
+P2330,9,Female,No,Yes,94,79,98.5,None,Medium
+P2331,20,Male,No,Yes,110,70,102.7,Heart_Disease,High
+P2332,55,Female,No,Yes,147,108,99.4,"Hypertension, Kidney_Disease",High
+P2333,26,Male,Yes,Yes,91,68,97.1,None,High
+P2334,74,Male,Yes,Yes,91,74,97.2,None,High
+P2335,53,Female,No,Yes,178,67,101.7,Asthma,High
+P2336,47,Male,No,No,108,109,100.3,Heart_Disease,High
+P2337,32,Male,Yes,No,172,83,98.5,None,High
+P2338,23,Male,No,No,111,75,97.2,None,Low
+P2339,17,Male,Yes,No,148,64,103.6,"Diabetes, Kidney_Disease",High
+P2340,59,Male,Yes,Yes,127,63,103.2,None,High
+P2341,53,Female,No,Yes,150,101,101.5,Heart_Disease,High
+P2342,53,Male,Yes,No,96,84,99.5,Kidney_Disease,High
+P2343,57,Male,No,Yes,133,92,103.1,None,High
+P2344,20,Female,Yes,No,139,85,102.3,None,High
+P2345,33,Male,Yes,No,121,100,98.3,Diabetes,High
+P2346,24,Male,Yes,Yes,101,63,97.8,Kidney_Disease,High
+P2347,6,Male,No,No,168,63,101.7,"Asthma, Diabetes",High
+P2348,7,Female,No,Yes,170,119,98.6,None,High
+P2349,14,Female,No,Yes,166,80,102.1,"Asthma, Diabetes",High
+P2350,14,Male,Yes,Yes,153,120,99.7,None,High
+P2351,29,Female,Yes,Yes,92,83,103.0,None,High
+P2352,15,Female,Yes,No,176,80,101.8,None,High
+P2353,83,Female,Yes,Yes,90,104,100.8,None,High
+P2354,38,Female,No,No,92,79,100.5,Kidney_Disease,High
+P2355,77,Female,Yes,No,149,61,102.6,None,High
+P2356,48,Female,No,Yes,168,109,103.1,None,High
+P2357,88,Female,No,No,169,104,103.3,None,High
+P2358,82,Male,Yes,No,143,74,98.9,Asthma,High
+P2359,61,Female,Yes,Yes,135,96,98.1,Asthma,High
+P2360,45,Male,Yes,Yes,93,101,99.6,Hypertension,High
+P2361,20,Female,Yes,Yes,131,119,103.1,"Asthma, Hypertension",High
+P2362,6,Male,No,No,175,104,101.1,None,High
+P2363,32,Female,Yes,No,112,112,101.4,None,High
+P2364,24,Male,No,No,99,81,101.6,Diabetes,Medium
+P2365,83,Female,Yes,Yes,116,106,97.7,Diabetes,High
+P2366,6,Female,Yes,Yes,98,112,101.5,None,High
+P2367,20,Male,Yes,Yes,137,107,99.1,Diabetes,High
+P2368,48,Male,No,No,158,91,103.9,None,High
+P2369,2,Male,Yes,No,123,95,100.8,None,High
+P2370,40,Male,Yes,Yes,139,71,101.0,Asthma,High
+P2371,57,Female,Yes,No,156,80,102.4,"Asthma, Heart_Disease, Hypertension",High
+P2372,40,Male,No,Yes,117,78,101.6,None,Medium
+P2373,19,Female,Yes,Yes,99,72,98.3,None,High
+P2374,9,Male,No,Yes,168,76,100.7,"Diabetes, Heart_Disease",High
+P2375,63,Male,Yes,No,168,88,98.1,"Heart_Disease, Kidney_Disease",High
+P2376,74,Male,Yes,Yes,104,107,100.8,None,High
+P2377,56,Female,No,Yes,178,107,98.2,None,High
+P2378,1,Female,Yes,Yes,159,81,98.4,None,High
+P2379,13,Male,No,Yes,131,111,98.3,None,Medium
+P2380,68,Male,Yes,No,160,104,98.1,Kidney_Disease,High
+P2381,22,Male,Yes,No,140,94,101.9,None,High
+P2382,59,Female,Yes,Yes,112,114,100.9,"Asthma, Kidney_Disease",High
+P2383,87,Male,Yes,No,142,117,102.2,Diabetes,High
+P2384,81,Female,Yes,No,148,66,98.7,Diabetes,High
+P2385,1,Male,Yes,Yes,174,92,102.5,None,High
+P2386,29,Male,Yes,Yes,134,117,98.3,Diabetes,High
+P2387,68,Female,No,Yes,141,120,103.3,Diabetes,High
+P2388,84,Male,No,No,164,70,97.0,"Diabetes, Kidney_Disease",High
+P2389,84,Female,Yes,Yes,169,68,100.3,Asthma,High
+P2390,15,Female,Yes,No,165,86,101.1,Hypertension,High
+P2391,70,Female,No,No,112,107,101.7,"Asthma, Hypertension, Kidney_Disease",High
+P2392,48,Female,No,Yes,168,115,99.5,"Heart_Disease, Hypertension",High
+P2393,58,Male,No,Yes,133,80,98.6,None,Medium
+P2394,56,Male,No,No,107,97,103.0,None,High
+P2395,35,Female,Yes,No,144,97,103.9,None,High
+P2396,57,Female,No,Yes,161,60,100.9,Heart_Disease,High
+P2397,88,Female,No,No,177,99,103.0,None,High
+P2398,36,Male,Yes,No,104,86,100.2,None,High
+P2399,59,Female,Yes,No,164,94,102.7,None,High
+P2400,49,Female,Yes,No,127,80,97.1,Kidney_Disease,High
+P2401,51,Male,No,Yes,105,113,103.2,None,High
+P2402,52,Male,No,Yes,140,85,99.0,Diabetes,Medium
+P2403,3,Male,No,No,135,93,97.7,None,Medium
+P2404,72,Male,Yes,No,151,79,101.7,Hypertension,High
+P2405,80,Female,No,Yes,160,82,99.9,"Diabetes, Hypertension",High
+P2406,58,Female,Yes,Yes,90,73,97.3,None,High
+P2407,50,Female,Yes,No,172,73,97.1,"Asthma, Heart_Disease, Hypertension",High
+P2408,13,Female,Yes,No,159,102,102.9,"Asthma, Heart_Disease, Kidney_Disease",High
+P2409,7,Female,Yes,Yes,157,90,98.1,"Diabetes, Kidney_Disease",High
+P2410,15,Male,No,No,178,67,97.3,None,High
+P2411,38,Female,No,Yes,166,98,103.6,None,High
+P2412,36,Female,No,No,137,70,99.1,None,Medium
+P2413,19,Male,Yes,No,134,99,101.2,"Heart_Disease, Hypertension",High
+P2414,55,Male,Yes,Yes,105,98,97.1,None,High
+P2415,82,Female,No,Yes,123,91,99.2,"Heart_Disease, Kidney_Disease",High
+P2416,88,Female,No,Yes,166,87,99.3,None,High
+P2417,30,Male,No,Yes,152,113,97.6,None,High
+P2418,43,Female,Yes,Yes,111,104,102.8,"Diabetes, Kidney_Disease",High
+P2419,32,Female,Yes,Yes,101,119,103.1,"Asthma, Hypertension",High
+P2420,82,Male,No,No,110,87,102.4,Kidney_Disease,High
+P2421,32,Female,No,No,160,80,98.2,Heart_Disease,High
+P2422,22,Female,Yes,No,102,85,97.8,Asthma,High
+P2423,48,Male,No,Yes,97,81,103.4,Diabetes,High
+P2424,47,Female,Yes,No,147,89,99.2,Heart_Disease,High
+P2425,82,Male,No,Yes,128,88,103.1,Heart_Disease,High
+P2426,15,Female,Yes,No,164,79,101.9,"Asthma, Hypertension, Kidney_Disease",High
+P2427,38,Male,Yes,No,119,91,100.6,None,High
+P2428,25,Male,Yes,No,100,115,102.5,Hypertension,High
+P2429,83,Male,No,Yes,155,90,100.5,"Diabetes, Kidney_Disease",High
+P2430,46,Male,No,No,115,60,99.0,Hypertension,Medium
+P2431,41,Male,No,Yes,105,88,101.8,Hypertension,Medium
+P2432,42,Male,No,Yes,102,92,101.0,None,Medium
+P2433,55,Female,Yes,No,125,115,99.7,None,High
+P2434,62,Female,No,Yes,165,111,99.8,"Heart_Disease, Hypertension",High
+P2435,27,Female,Yes,No,138,100,102.6,None,High
+P2436,44,Male,Yes,Yes,104,63,100.7,Asthma,High
+P2437,30,Male,Yes,No,110,66,101.9,Asthma,High
+P2438,85,Female,No,Yes,173,78,99.7,Kidney_Disease,High
+P2439,67,Female,No,No,146,70,100.9,"Asthma, Heart_Disease",High
+P2440,82,Female,Yes,Yes,165,63,98.3,None,High
+P2441,75,Female,Yes,Yes,128,93,100.8,Asthma,High
+P2442,11,Female,Yes,No,164,93,99.1,"Diabetes, Heart_Disease, Hypertension",High
+P2443,27,Female,No,Yes,156,85,103.9,None,High
+P2444,24,Male,Yes,Yes,157,92,99.4,Kidney_Disease,High
+P2445,15,Male,Yes,No,158,65,98.9,"Diabetes, Kidney_Disease",High
+P2446,3,Male,Yes,No,149,96,97.3,None,High
+P2447,72,Female,No,Yes,118,112,102.5,None,High
+P2448,85,Female,Yes,No,91,109,102.9,None,High
+P2449,17,Female,Yes,Yes,105,96,98.7,Diabetes,High
+P2450,32,Male,No,No,107,101,103.1,None,High
+P2451,32,Female,Yes,Yes,178,93,99.3,Diabetes,High
+P2452,65,Male,Yes,No,131,63,103.2,None,High
+P2453,60,Male,No,Yes,133,119,101.9,"Asthma, Hypertension",Medium
+P2454,49,Female,Yes,No,100,73,101.8,Kidney_Disease,High
+P2455,52,Male,Yes,No,120,111,101.3,Heart_Disease,High
+P2456,70,Female,No,Yes,136,100,103.7,Hypertension,High
+P2457,12,Female,No,No,120,97,100.4,None,Low
+P2458,45,Male,Yes,No,127,75,99.8,Diabetes,High
+P2459,85,Male,Yes,No,152,71,100.2,"Asthma, Kidney_Disease",High
+P2460,84,Female,No,Yes,133,118,98.7,None,Medium
+P2461,11,Female,No,No,98,112,101.9,Diabetes,Medium
+P2462,14,Female,No,Yes,132,94,103.1,Heart_Disease,High
+P2463,53,Female,Yes,No,105,62,98.3,Diabetes,High
+P2464,18,Female,Yes,Yes,123,69,100.4,None,High
+P2465,18,Male,No,No,176,77,100.2,Kidney_Disease,High
+P2466,30,Female,Yes,Yes,163,86,101.0,None,High
+P2467,64,Female,No,Yes,162,71,98.2,Heart_Disease,High
+P2468,79,Female,No,No,134,67,103.0,None,High
+P2469,43,Female,Yes,No,105,89,98.9,None,High
+P2470,83,Female,Yes,Yes,139,113,102.8,None,High
+P2471,5,Male,No,Yes,165,92,102.3,"Asthma, Kidney_Disease",High
+P2472,27,Female,No,No,155,74,102.1,None,High
+P2473,37,Female,No,Yes,122,66,98.6,None,Medium
+P2474,2,Male,No,Yes,155,112,101.5,Diabetes,High
+P2475,24,Male,No,Yes,134,76,102.5,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2476,22,Male,Yes,Yes,173,82,100.2,None,High
+P2477,35,Female,Yes,Yes,97,105,101.8,Heart_Disease,High
+P2478,13,Male,Yes,No,137,109,98.7,Diabetes,High
+P2479,8,Female,No,Yes,171,119,98.0,"Asthma, Kidney_Disease",High
+P2480,4,Female,Yes,No,122,115,103.5,Hypertension,High
+P2481,23,Female,Yes,No,128,110,98.0,None,High
+P2482,34,Male,Yes,No,102,66,100.7,Diabetes,High
+P2483,25,Female,No,No,102,104,99.7,None,Low
+P2484,2,Male,No,No,178,101,98.2,"Diabetes, Hypertension",High
+P2485,5,Female,Yes,No,143,106,97.9,Hypertension,High
+P2486,53,Male,Yes,No,149,90,101.2,None,High
+P2487,13,Female,Yes,Yes,132,111,100.9,None,High
+P2488,60,Male,No,Yes,114,108,102.5,Hypertension,High
+P2489,21,Male,Yes,Yes,159,112,99.7,None,High
+P2490,66,Female,Yes,No,153,69,98.3,None,High
+P2491,33,Female,No,No,104,91,97.8,None,Low
+P2492,9,Female,Yes,No,122,79,98.7,None,High
+P2493,19,Male,No,No,106,71,99.5,None,Low
+P2494,51,Male,Yes,No,113,73,103.4,None,High
+P2495,11,Male,Yes,No,129,107,102.8,"Asthma, Hypertension",High
+P2496,49,Male,Yes,Yes,143,101,101.4,None,High
+P2497,29,Male,No,No,100,101,100.3,"Diabetes, Kidney_Disease",High
+P2498,87,Male,No,No,178,82,101.1,None,High
+P2499,49,Male,Yes,Yes,103,96,101.7,None,High
+P2500,69,Male,Yes,No,159,116,99.8,"Asthma, Heart_Disease",High
+P2501,33,Female,No,No,106,73,100.2,"Diabetes, Heart_Disease, Hypertension",High
+P2502,59,Female,Yes,Yes,146,112,101.6,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2503,5,Female,No,Yes,100,87,99.1,None,Medium
+P2504,74,Male,No,Yes,115,110,99.3,None,Medium
+P2505,70,Female,No,No,147,120,103.7,Diabetes,High
+P2506,29,Female,No,No,145,71,98.0,"Diabetes, Hypertension",Medium
+P2507,22,Male,No,Yes,91,82,103.3,None,High
+P2508,27,Male,Yes,Yes,92,61,100.8,None,High
+P2509,38,Female,No,Yes,165,67,101.3,None,High
+P2510,67,Male,Yes,No,105,85,102.6,None,High
+P2511,12,Female,Yes,Yes,107,103,100.5,"Asthma, Kidney_Disease",High
+P2512,80,Male,No,Yes,159,110,102.1,None,High
+P2513,11,Female,No,No,139,75,97.3,None,Medium
+P2514,77,Female,Yes,Yes,145,67,103.2,Hypertension,High
+P2515,58,Male,Yes,Yes,130,65,101.6,Heart_Disease,High
+P2516,89,Female,No,Yes,163,111,99.2,"Asthma, Heart_Disease, Hypertension",High
+P2517,2,Male,No,Yes,131,108,98.7,Diabetes,Medium
+P2518,58,Female,No,No,126,97,103.2,None,High
+P2519,52,Female,No,Yes,96,66,97.4,None,Medium
+P2520,83,Male,Yes,Yes,178,92,98.1,None,High
+P2521,29,Female,No,Yes,109,117,99.7,None,Medium
+P2522,45,Male,No,No,178,80,103.3,Heart_Disease,High
+P2523,82,Male,No,No,110,120,103.5,None,High
+P2524,59,Male,Yes,No,101,70,101.3,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2525,90,Female,Yes,Yes,177,86,103.6,Heart_Disease,High
+P2526,45,Male,No,No,104,116,97.2,Hypertension,Medium
+P2527,29,Male,No,No,142,61,97.4,None,Medium
+P2528,32,Male,No,Yes,93,65,102.1,Hypertension,High
+P2529,26,Male,No,Yes,134,65,97.9,Heart_Disease,High
+P2530,69,Female,Yes,No,144,87,102.3,None,High
+P2531,34,Female,No,Yes,129,101,98.2,None,Medium
+P2532,57,Female,Yes,No,139,112,103.8,None,High
+P2533,12,Female,Yes,Yes,136,91,102.0,"Heart_Disease, Hypertension",High
+P2534,63,Male,No,Yes,134,95,103.7,None,High
+P2535,53,Male,Yes,No,102,107,101.8,"Asthma, Hypertension",High
+P2536,58,Male,No,No,180,111,99.7,None,High
+P2537,90,Female,Yes,Yes,125,64,103.7,Asthma,High
+P2538,53,Female,No,No,150,89,102.8,Kidney_Disease,High
+P2539,8,Male,No,Yes,94,86,103.8,None,High
+P2540,66,Female,No,No,108,68,98.6,"Heart_Disease, Hypertension",High
+P2541,7,Female,No,No,160,69,103.6,None,High
+P2542,44,Female,No,No,110,82,98.8,"Asthma, Diabetes",Medium
+P2543,85,Female,No,Yes,105,66,101.7,Hypertension,Medium
+P2544,70,Male,Yes,No,121,60,103.0,Heart_Disease,High
+P2545,29,Female,No,Yes,98,93,100.6,Asthma,Medium
+P2546,69,Male,No,No,123,115,102.4,None,High
+P2547,13,Male,Yes,Yes,101,70,102.7,None,High
+P2548,26,Female,Yes,Yes,121,115,97.2,Diabetes,High
+P2549,40,Female,Yes,Yes,153,69,97.7,Kidney_Disease,High
+P2550,50,Male,Yes,Yes,110,63,104.0,None,High
+P2551,77,Female,Yes,Yes,101,111,98.9,"Heart_Disease, Hypertension",High
+P2552,61,Male,Yes,Yes,178,91,102.2,Asthma,High
+P2553,84,Female,Yes,Yes,170,108,99.7,"Diabetes, Heart_Disease",High
+P2554,65,Female,Yes,No,171,89,102.8,None,High
+P2555,47,Male,Yes,Yes,116,88,99.4,None,High
+P2556,22,Male,Yes,No,111,95,100.7,"Asthma, Diabetes",High
+P2557,61,Male,No,Yes,119,89,97.8,Asthma,Medium
+P2558,4,Male,No,Yes,106,117,98.4,Kidney_Disease,High
+P2559,82,Female,No,No,152,109,97.8,None,High
+P2560,44,Male,Yes,No,143,95,103.0,"Diabetes, Hypertension",High
+P2561,37,Male,No,No,149,115,103.8,None,High
+P2562,22,Female,No,Yes,107,73,103.1,"Diabetes, Hypertension, Kidney_Disease",High
+P2563,75,Male,No,No,160,82,102.9,None,High
+P2564,86,Female,Yes,No,146,103,101.8,None,High
+P2565,80,Male,Yes,No,179,107,103.6,"Diabetes, Heart_Disease",High
+P2566,8,Male,No,No,108,84,97.5,Diabetes,Medium
+P2567,28,Male,No,Yes,173,93,102.4,"Heart_Disease, Hypertension",High
+P2568,28,Male,Yes,Yes,126,94,103.0,Hypertension,High
+P2569,4,Male,No,Yes,144,98,102.7,None,High
+P2570,2,Female,Yes,Yes,108,66,99.6,None,High
+P2571,61,Female,No,No,141,105,102.6,None,High
+P2572,79,Female,Yes,No,160,65,97.7,None,High
+P2573,16,Female,No,No,123,109,104.0,Kidney_Disease,High
+P2574,55,Male,No,No,121,95,99.4,Diabetes,Medium
+P2575,18,Male,No,No,132,111,97.7,None,Medium
+P2576,48,Female,Yes,No,136,76,98.1,"Asthma, Diabetes",High
+P2577,21,Male,No,Yes,109,78,102.5,Heart_Disease,High
+P2578,36,Female,No,No,108,62,99.5,Diabetes,Medium
+P2579,59,Male,Yes,No,105,83,99.7,None,High
+P2580,84,Female,Yes,No,175,106,97.4,None,High
+P2581,41,Female,Yes,Yes,113,116,100.1,"Heart_Disease, Kidney_Disease",High
+P2582,59,Male,No,Yes,110,96,98.2,None,Medium
+P2583,51,Female,Yes,No,113,95,100.6,None,High
+P2584,6,Female,No,No,122,68,97.1,Asthma,Medium
+P2585,88,Male,Yes,No,98,115,102.8,None,High
+P2586,44,Male,No,No,143,104,98.0,Hypertension,Medium
+P2587,68,Female,No,Yes,142,117,101.7,None,Medium
+P2588,34,Female,Yes,Yes,97,104,99.3,None,High
+P2589,31,Female,Yes,No,93,103,100.7,"Asthma, Hypertension",High
+P2590,26,Female,Yes,No,166,114,100.1,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2591,88,Female,No,No,97,107,100.3,Asthma,Medium
+P2592,64,Female,No,No,110,87,103.0,Diabetes,High
+P2593,31,Female,Yes,Yes,151,73,103.0,Hypertension,High
+P2594,59,Male,Yes,Yes,180,71,98.2,Asthma,High
+P2595,14,Male,Yes,No,137,101,103.2,Diabetes,High
+P2596,63,Male,No,Yes,97,109,99.1,Kidney_Disease,High
+P2597,48,Male,No,No,160,85,101.0,None,High
+P2598,48,Male,Yes,No,164,60,98.5,"Hypertension, Kidney_Disease",High
+P2599,4,Male,No,Yes,102,116,98.9,Heart_Disease,High
+P2600,64,Male,Yes,No,159,61,103.1,Diabetes,High
+P2601,28,Male,No,Yes,147,116,102.4,"Diabetes, Kidney_Disease",High
+P2602,38,Male,Yes,Yes,142,113,100.2,None,High
+P2603,36,Female,Yes,Yes,146,70,100.9,"Asthma, Hypertension",High
+P2604,72,Male,Yes,Yes,140,108,103.5,None,High
+P2605,21,Female,No,Yes,179,98,98.5,Hypertension,High
+P2606,60,Male,No,Yes,159,115,97.6,"Asthma, Diabetes",High
+P2607,29,Female,Yes,No,162,112,100.0,None,High
+P2608,56,Female,No,No,172,81,102.8,Hypertension,High
+P2609,71,Female,No,Yes,165,91,98.9,Kidney_Disease,High
+P2610,48,Male,No,Yes,154,114,100.8,None,High
+P2611,1,Female,No,No,142,114,103.1,None,High
+P2612,70,Male,Yes,Yes,166,62,98.2,"Heart_Disease, Kidney_Disease",High
+P2613,31,Male,No,No,159,96,103.4,Hypertension,High
+P2614,21,Female,Yes,Yes,116,71,97.0,None,High
+P2615,46,Male,Yes,Yes,137,117,101.6,None,High
+P2616,8,Male,Yes,No,126,81,102.6,Diabetes,High
+P2617,29,Female,No,Yes,169,72,102.3,None,High
+P2618,21,Female,Yes,No,110,97,100.0,None,High
+P2619,69,Male,No,Yes,105,68,102.8,"Diabetes, Heart_Disease",High
+P2620,21,Male,No,No,166,85,99.2,"Hypertension, Kidney_Disease",High
+P2621,8,Male,Yes,Yes,153,85,98.4,Heart_Disease,High
+P2622,76,Female,No,Yes,98,118,97.1,None,Medium
+P2623,35,Male,Yes,No,133,99,103.9,None,High
+P2624,17,Male,No,No,99,104,98.6,Hypertension,Medium
+P2625,52,Male,No,No,150,80,98.1,"Asthma, Heart_Disease",High
+P2626,50,Male,Yes,Yes,169,87,97.8,"Diabetes, Hypertension",High
+P2627,1,Male,No,No,107,77,97.4,None,Low
+P2628,14,Male,No,Yes,132,82,97.1,None,Medium
+P2629,27,Male,Yes,Yes,128,75,101.7,None,High
+P2630,57,Female,No,Yes,123,89,101.2,None,Medium
+P2631,89,Female,Yes,Yes,101,92,100.8,Heart_Disease,High
+P2632,81,Female,Yes,Yes,90,79,102.4,Diabetes,High
+P2633,56,Female,No,Yes,116,116,98.6,None,Medium
+P2634,76,Female,No,Yes,135,115,101.3,None,Medium
+P2635,44,Female,No,No,125,63,103.2,None,High
+P2636,65,Female,Yes,Yes,131,104,100.1,"Asthma, Hypertension",High
+P2637,23,Male,No,No,151,68,101.6,"Heart_Disease, Kidney_Disease",High
+P2638,28,Female,No,Yes,164,85,98.2,None,High
+P2639,24,Female,Yes,Yes,158,71,99.5,"Asthma, Hypertension",High
+P2640,39,Female,Yes,No,114,97,102.3,"Diabetes, Kidney_Disease",High
+P2641,22,Male,Yes,No,101,78,101.0,None,High
+P2642,2,Male,No,No,111,113,101.9,None,Low
+P2643,53,Female,Yes,No,133,112,102.9,"Asthma, Diabetes, Heart_Disease",High
+P2644,24,Male,No,No,172,62,97.1,None,High
+P2645,10,Male,Yes,Yes,121,83,102.3,Hypertension,High
+P2646,18,Male,No,No,101,65,103.6,None,High
+P2647,1,Male,No,Yes,157,69,100.2,Heart_Disease,High
+P2648,52,Female,No,Yes,177,107,99.9,"Asthma, Kidney_Disease",High
+P2649,17,Female,No,Yes,180,93,102.0,None,High
+P2650,2,Female,Yes,No,112,72,98.9,None,High
+P2651,55,Male,Yes,Yes,116,115,103.2,"Diabetes, Kidney_Disease",High
+P2652,83,Female,No,Yes,145,79,98.0,None,Medium
+P2653,13,Female,No,No,126,67,103.4,None,High
+P2654,23,Female,No,No,156,83,100.3,Diabetes,High
+P2655,55,Male,No,No,113,99,103.8,"Asthma, Diabetes",High
+P2656,61,Female,No,Yes,155,95,100.1,"Asthma, Diabetes, Hypertension",High
+P2657,39,Male,Yes,Yes,126,95,98.5,None,High
+P2658,35,Male,No,Yes,118,77,99.4,"Asthma, Hypertension",Medium
+P2659,74,Female,No,Yes,111,82,103.1,"Heart_Disease, Hypertension",High
+P2660,49,Male,No,Yes,125,104,100.3,None,Medium
+P2661,56,Female,Yes,Yes,90,98,99.4,Heart_Disease,High
+P2662,81,Female,No,No,112,65,99.7,None,Low
+P2663,42,Male,Yes,Yes,151,94,97.5,Diabetes,High
+P2664,40,Female,No,Yes,127,74,100.2,"Heart_Disease, Hypertension, Kidney_Disease",High
+P2665,28,Female,Yes,No,138,65,100.8,Heart_Disease,High
+P2666,54,Female,No,No,106,103,103.1,"Asthma, Diabetes",High
+P2667,48,Female,Yes,No,156,107,101.3,None,High
+P2668,8,Male,No,No,179,70,101.0,None,High
+P2669,67,Female,No,Yes,179,89,101.5,"Asthma, Diabetes",High
+P2670,38,Male,No,No,144,62,99.4,None,Medium
+P2671,32,Female,No,No,165,92,98.7,None,High
+P2672,62,Female,Yes,Yes,141,90,101.9,"Diabetes, Hypertension",High
+P2673,24,Male,No,No,150,118,101.0,None,Medium
+P2674,11,Male,No,No,132,73,100.5,None,Medium
+P2675,77,Male,No,No,116,96,99.9,None,Low
+P2676,22,Female,No,Yes,130,111,104.0,None,High
+P2677,3,Female,Yes,Yes,105,104,100.2,None,High
+P2678,72,Female,Yes,No,177,106,100.1,Hypertension,High
+P2679,24,Male,Yes,No,110,96,103.5,Diabetes,High
+P2680,61,Male,Yes,Yes,176,96,102.7,"Asthma, Diabetes",High
+P2681,72,Male,No,No,116,109,102.6,Asthma,High
+P2682,1,Female,No,No,111,85,101.1,None,Low
+P2683,27,Male,Yes,Yes,131,79,101.8,Diabetes,High
+P2684,15,Female,No,No,147,61,104.0,Diabetes,High
+P2685,79,Female,No,Yes,90,83,98.8,Hypertension,Medium
+P2686,35,Male,No,Yes,96,104,98.0,"Asthma, Diabetes",Medium
+P2687,69,Male,No,No,154,115,103.5,None,High
+P2688,49,Female,Yes,Yes,133,116,101.5,Diabetes,High
+P2689,14,Female,No,Yes,173,92,97.7,None,High
+P2690,58,Male,Yes,No,96,119,101.2,None,High
+P2691,81,Female,Yes,No,96,73,97.2,Diabetes,High
+P2692,67,Male,No,Yes,141,69,100.7,Asthma,Medium
+P2693,71,Male,No,No,157,80,102.3,None,High
+P2694,3,Female,Yes,No,162,71,101.5,Heart_Disease,High
+P2695,12,Male,No,Yes,144,119,101.1,None,Medium
+P2696,77,Female,Yes,Yes,150,85,99.7,None,High
+P2697,5,Male,Yes,Yes,169,67,100.2,Hypertension,High
+P2698,54,Male,No,No,124,73,99.3,Hypertension,Medium
+P2699,83,Female,No,No,90,65,98.3,Heart_Disease,High
+P2700,85,Male,No,Yes,174,116,99.6,Diabetes,High
+P2701,75,Male,Yes,Yes,148,83,98.7,None,High
+P2702,35,Female,No,Yes,121,99,99.6,"Diabetes, Hypertension",Medium
+P2703,38,Male,No,No,107,114,102.4,Diabetes,High
+P2704,46,Female,Yes,No,122,92,102.3,Asthma,High
+P2705,48,Female,Yes,Yes,141,112,101.9,"Hypertension, Kidney_Disease",High
+P2706,16,Female,No,No,121,93,99.6,"Asthma, Kidney_Disease",High
+P2707,20,Male,Yes,Yes,144,62,99.7,"Asthma, Kidney_Disease",High
+P2708,37,Male,Yes,No,164,79,101.0,Hypertension,High
+P2709,18,Male,No,Yes,167,93,99.7,None,High
+P2710,53,Male,Yes,No,143,85,97.5,Kidney_Disease,High
+P2711,75,Female,Yes,Yes,134,84,101.3,Kidney_Disease,High
+P2712,85,Male,Yes,Yes,131,108,100.9,Asthma,High
+P2713,72,Female,No,No,168,71,99.6,"Diabetes, Heart_Disease",High
+P2714,16,Male,No,Yes,96,93,103.6,"Hypertension, Kidney_Disease",High
+P2715,13,Female,Yes,Yes,166,65,98.1,None,High
+P2716,2,Male,Yes,Yes,127,79,97.3,"Asthma, Diabetes, Kidney_Disease",High
+P2717,79,Male,No,Yes,94,115,99.0,"Diabetes, Hypertension",Medium
+P2718,39,Male,Yes,Yes,156,111,101.0,None,High
+P2719,82,Female,Yes,Yes,165,99,100.8,Asthma,High
+P2720,39,Male,Yes,No,91,81,101.3,Hypertension,High
+P2721,8,Male,Yes,No,119,61,101.0,Asthma,High
+P2722,55,Male,No,No,106,118,103.6,"Diabetes, Kidney_Disease",High
+P2723,84,Female,No,Yes,90,65,100.3,None,Medium
+P2724,81,Male,No,No,142,66,103.6,Heart_Disease,High
+P2725,62,Male,No,Yes,129,75,102.6,None,High
+P2726,33,Male,Yes,No,118,64,101.6,Kidney_Disease,High
+P2727,41,Female,Yes,Yes,96,91,100.4,None,High
+P2728,22,Male,No,No,97,74,99.9,"Diabetes, Hypertension",Medium
+P2729,19,Female,Yes,Yes,156,90,98.4,Hypertension,High
+P2730,39,Male,No,No,125,114,100.1,Diabetes,Medium
+P2731,35,Female,No,Yes,146,107,103.7,Hypertension,High
+P2732,29,Female,Yes,Yes,178,113,100.3,None,High
+P2733,78,Male,No,Yes,178,95,103.0,"Asthma, Diabetes, Heart_Disease",High
+P2734,31,Male,No,Yes,124,82,99.7,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2735,46,Male,No,No,159,107,97.6,Diabetes,High
+P2736,42,Female,No,No,169,85,101.7,None,High
+P2737,86,Male,No,Yes,172,91,102.7,None,High
+P2738,37,Male,Yes,Yes,129,80,103.2,None,High
+P2739,36,Male,Yes,Yes,112,65,102.6,None,High
+P2740,27,Female,No,Yes,95,75,100.6,"Asthma, Kidney_Disease",High
+P2741,88,Female,Yes,No,158,94,97.1,None,High
+P2742,21,Female,Yes,No,126,104,100.1,Hypertension,High
+P2743,31,Female,No,Yes,115,63,103.5,Asthma,High
+P2744,39,Female,Yes,Yes,145,91,97.3,Kidney_Disease,High
+P2745,72,Female,Yes,Yes,95,103,102.0,Kidney_Disease,High
+P2746,12,Female,Yes,Yes,101,72,101.8,"Asthma, Kidney_Disease",High
+P2747,13,Male,No,No,160,81,100.9,None,High
+P2748,52,Male,Yes,Yes,104,98,101.6,None,High
+P2749,59,Male,Yes,Yes,130,74,101.2,Diabetes,High
+P2750,61,Female,No,No,125,78,100.4,Diabetes,Medium
+P2751,69,Male,Yes,Yes,146,108,97.4,None,High
+P2752,10,Female,Yes,No,143,116,102.5,"Asthma, Hypertension",High
+P2753,53,Male,Yes,No,179,108,101.0,"Heart_Disease, Hypertension",High
+P2754,2,Male,No,Yes,158,79,97.1,None,High
+P2755,72,Female,Yes,Yes,139,93,99.8,None,High
+P2756,7,Female,Yes,Yes,140,85,98.7,"Diabetes, Heart_Disease",High
+P2757,17,Male,No,No,91,99,100.8,None,Low
+P2758,28,Male,Yes,Yes,97,111,102.2,Hypertension,High
+P2759,47,Male,Yes,No,133,70,101.8,"Asthma, Heart_Disease",High
+P2760,73,Female,No,Yes,104,96,101.5,None,Medium
+P2761,51,Male,Yes,No,95,68,103.0,Asthma,High
+P2762,38,Female,No,No,170,97,103.7,None,High
+P2763,37,Female,No,No,118,92,97.6,Kidney_Disease,High
+P2764,16,Female,No,No,157,73,99.0,"Heart_Disease, Kidney_Disease",High
+P2765,51,Female,Yes,Yes,166,110,101.8,None,High
+P2766,64,Female,Yes,No,179,86,99.7,None,High
+P2767,53,Male,No,Yes,129,94,100.0,Heart_Disease,High
+P2768,58,Male,No,No,92,68,98.4,"Diabetes, Heart_Disease",High
+P2769,65,Female,Yes,Yes,137,72,101.8,None,High
+P2770,30,Male,No,No,102,80,100.0,None,Low
+P2771,57,Male,No,Yes,112,76,99.1,None,Medium
+P2772,76,Female,No,No,162,76,97.4,None,High
+P2773,34,Female,Yes,Yes,177,111,99.2,"Asthma, Diabetes",High
+P2774,41,Female,Yes,Yes,172,119,100.7,Asthma,High
+P2775,56,Female,No,Yes,144,81,99.7,None,Medium
+P2776,31,Male,No,No,123,100,101.7,Kidney_Disease,High
+P2777,1,Female,No,Yes,113,75,104.0,Asthma,High
+P2778,12,Female,Yes,Yes,172,66,100.9,None,High
+P2779,78,Female,No,No,120,73,98.3,"Asthma, Kidney_Disease",High
+P2780,28,Male,Yes,No,127,76,97.3,"Heart_Disease, Hypertension",High
+P2781,31,Male,No,No,138,99,103.0,Heart_Disease,High
+P2782,22,Female,No,Yes,169,119,102.0,None,High
+P2783,69,Female,Yes,Yes,107,75,101.8,None,High
+P2784,13,Female,Yes,Yes,144,99,98.3,"Heart_Disease, Hypertension",High
+P2785,38,Male,Yes,No,153,102,97.5,Hypertension,High
+P2786,78,Male,No,No,131,115,97.6,"Heart_Disease, Hypertension",High
+P2787,50,Male,No,No,145,96,101.8,Hypertension,Medium
+P2788,71,Male,Yes,Yes,90,105,102.8,"Hypertension, Kidney_Disease",High
+P2789,87,Male,Yes,No,170,106,102.5,"Asthma, Kidney_Disease",High
+P2790,60,Female,Yes,Yes,99,86,103.2,Diabetes,High
+P2791,51,Female,No,No,93,119,102.6,None,High
+P2792,72,Female,Yes,Yes,138,111,97.2,Hypertension,High
+P2793,80,Female,Yes,No,100,106,102.8,Heart_Disease,High
+P2794,7,Male,No,No,92,103,101.5,Heart_Disease,High
+P2795,65,Male,No,No,143,68,99.6,"Asthma, Hypertension",Medium
+P2796,2,Male,Yes,No,114,111,100.6,"Asthma, Heart_Disease, Hypertension",High
+P2797,10,Female,No,No,130,98,100.4,Diabetes,Medium
+P2798,67,Male,No,No,166,110,97.5,Kidney_Disease,High
+P2799,55,Male,No,No,91,115,99.0,Hypertension,Medium
+P2800,19,Female,No,No,117,68,97.9,None,Low
+P2801,76,Female,No,Yes,106,66,98.1,Kidney_Disease,High
+P2802,84,Male,Yes,No,168,78,100.9,None,High
+P2803,33,Male,Yes,Yes,113,103,100.2,Hypertension,High
+P2804,18,Male,No,No,128,71,102.8,"Heart_Disease, Hypertension",High
+P2805,51,Female,No,Yes,155,109,100.5,None,High
+P2806,17,Male,No,No,97,81,101.6,"Diabetes, Heart_Disease, Hypertension",High
+P2807,67,Male,No,Yes,115,104,102.1,Heart_Disease,High
+P2808,52,Female,No,No,140,61,102.3,None,High
+P2809,55,Female,No,No,114,116,101.7,None,Low
+P2810,1,Female,Yes,Yes,140,111,97.8,"Diabetes, Hypertension",High
+P2811,54,Male,No,No,106,60,97.7,None,Low
+P2812,41,Female,No,No,132,91,101.7,Asthma,Medium
+P2813,42,Female,No,No,135,66,103.9,None,High
+P2814,61,Female,No,Yes,90,63,99.7,Kidney_Disease,High
+P2815,54,Male,No,Yes,135,64,99.9,None,Medium
+P2816,42,Male,Yes,Yes,122,115,99.1,None,High
+P2817,66,Female,No,Yes,108,111,102.9,None,High
+P2818,68,Female,No,Yes,155,109,98.6,None,High
+P2819,61,Male,Yes,No,92,75,99.9,None,High
+P2820,80,Female,No,Yes,117,92,101.5,None,Medium
+P2821,6,Female,Yes,Yes,93,98,102.4,None,High
+P2822,9,Male,No,Yes,164,109,100.0,None,High
+P2823,78,Female,No,No,107,113,98.9,"Diabetes, Heart_Disease, Kidney_Disease",High
+P2824,27,Female,No,No,157,60,99.1,"Asthma, Hypertension",High
+P2825,46,Female,No,No,155,60,101.0,Hypertension,High
+P2826,74,Female,Yes,No,164,113,101.4,Hypertension,High
+P2827,85,Female,Yes,Yes,168,76,98.9,Diabetes,High
+P2828,30,Male,No,Yes,132,93,99.0,"Asthma, Diabetes",Medium
+P2829,25,Female,Yes,Yes,119,66,100.9,Asthma,High
+P2830,61,Female,No,No,136,99,99.6,"Diabetes, Heart_Disease",High
+P2831,66,Female,No,Yes,115,60,100.5,"Heart_Disease, Hypertension",High
+P2832,83,Female,No,Yes,163,86,98.1,Hypertension,High
+P2833,22,Female,Yes,No,160,84,102.0,"Asthma, Hypertension",High
+P2834,54,Female,No,Yes,102,114,103.9,None,High
+P2835,1,Female,No,Yes,165,73,101.6,Diabetes,High
+P2836,48,Male,Yes,No,159,92,98.0,"Asthma, Heart_Disease",High
+P2837,44,Female,No,Yes,143,119,98.1,None,Medium
+P2838,19,Male,No,Yes,147,99,100.5,Hypertension,Medium
+P2839,22,Male,No,Yes,94,105,102.7,"Asthma, Heart_Disease",High
+P2840,35,Female,Yes,No,149,88,101.1,Diabetes,High
+P2841,81,Female,No,No,130,80,98.4,Kidney_Disease,High
+P2842,70,Male,No,Yes,149,92,97.5,Heart_Disease,High
+P2843,64,Male,No,No,155,98,102.3,Hypertension,High
+P2844,52,Male,No,No,142,73,100.7,"Asthma, Diabetes",Medium
+P2845,52,Male,Yes,Yes,165,85,101.8,None,High
+P2846,81,Male,No,Yes,160,116,102.7,None,High
+P2847,73,Female,Yes,Yes,93,101,102.8,None,High
+P2848,52,Female,Yes,Yes,96,89,101.1,None,High
+P2849,19,Male,No,Yes,118,77,103.3,Asthma,High
+P2850,85,Female,No,Yes,121,105,99.2,Heart_Disease,High
+P2851,59,Female,Yes,Yes,133,82,101.8,None,High
+P2852,63,Female,Yes,Yes,111,113,102.6,"Diabetes, Hypertension",High
+P2853,42,Female,No,Yes,177,114,102.4,Diabetes,High
+P2854,46,Male,Yes,No,169,98,101.7,Kidney_Disease,High
+P2855,36,Female,No,Yes,129,83,103.9,Diabetes,High
+P2856,10,Female,Yes,No,151,120,97.4,"Diabetes, Hypertension",High
+P2857,30,Female,Yes,Yes,141,94,103.9,None,High
+P2858,81,Female,Yes,Yes,164,100,100.1,"Asthma, Kidney_Disease",High
+P2859,69,Male,Yes,Yes,171,79,102.6,Heart_Disease,High
+P2860,55,Female,No,No,150,96,102.7,None,High
+P2861,30,Female,No,No,92,64,100.0,"Heart_Disease, Kidney_Disease",High
+P2862,62,Male,No,Yes,105,82,101.1,Asthma,Medium
+P2863,21,Male,No,Yes,103,92,99.8,Hypertension,Medium
+P2864,5,Male,Yes,No,161,83,103.5,Hypertension,High
+P2865,30,Male,Yes,No,101,84,103.0,Diabetes,High
+P2866,71,Female,No,Yes,164,87,102.6,None,High
+P2867,60,Male,No,No,139,114,100.3,None,Medium
+P2868,23,Male,No,No,159,78,101.6,"Asthma, Heart_Disease",High
+P2869,79,Male,No,Yes,146,60,99.4,"Diabetes, Hypertension",Medium
+P2870,66,Male,No,Yes,172,113,103.6,"Diabetes, Hypertension",High
+P2871,39,Female,No,No,179,116,97.4,Kidney_Disease,High
+P2872,27,Female,No,No,93,107,104.0,Hypertension,High
+P2873,69,Female,No,Yes,115,109,103.5,"Asthma, Heart_Disease",High
+P2874,4,Female,Yes,Yes,161,117,98.3,None,High
+P2875,59,Male,No,No,142,87,103.7,None,High
+P2876,41,Female,Yes,No,112,111,103.7,None,High
+P2877,17,Male,Yes,No,168,97,100.8,None,High
+P2878,27,Female,No,Yes,143,91,99.5,Diabetes,Medium
+P2879,61,Female,Yes,No,109,100,99.1,"Diabetes, Heart_Disease",High
+P2880,38,Male,Yes,Yes,121,109,103.0,None,High
+P2881,39,Female,No,No,129,68,103.1,None,High
+P2882,7,Male,No,Yes,152,108,97.9,None,High
+P2883,73,Female,No,No,135,97,102.3,Asthma,High
+P2884,88,Female,No,No,101,79,101.3,None,Low
+P2885,71,Female,Yes,Yes,132,81,97.4,Hypertension,High
+P2886,35,Female,No,No,151,69,98.3,"Diabetes, Hypertension",High
+P2887,39,Female,Yes,Yes,98,76,103.5,None,High
+P2888,90,Male,No,No,127,97,102.8,None,High
+P2889,12,Male,No,No,157,93,100.3,"Diabetes, Hypertension",High
+P2890,18,Male,No,Yes,164,80,99.0,Asthma,High
+P2891,55,Male,Yes,Yes,179,93,102.6,Diabetes,High
+P2892,13,Female,Yes,Yes,129,73,101.1,None,High
+P2893,9,Female,Yes,No,151,94,99.9,Diabetes,High
+P2894,63,Male,No,Yes,95,99,101.7,Heart_Disease,High
+P2895,55,Female,Yes,No,148,113,97.4,Diabetes,High
+P2896,19,Female,Yes,Yes,99,83,103.6,None,High
+P2897,26,Male,No,Yes,96,71,98.4,None,Medium
+P2898,65,Female,No,No,179,61,101.7,"Hypertension, Kidney_Disease",High
+P2899,37,Male,Yes,No,109,61,99.8,Diabetes,High
+P2900,41,Male,No,No,165,96,98.0,None,High
+P2901,52,Female,Yes,Yes,156,69,97.9,"Diabetes, Heart_Disease",High
+P2902,5,Female,Yes,Yes,113,102,98.2,None,High
+P2903,18,Male,Yes,Yes,99,67,102.3,None,High
+P2904,40,Male,Yes,Yes,114,74,101.5,None,High
+P2905,67,Female,Yes,Yes,110,75,102.1,None,High
+P2906,53,Female,No,Yes,117,79,98.3,None,Medium
+P2907,39,Female,No,Yes,112,76,101.1,Hypertension,Medium
+P2908,35,Male,Yes,No,121,87,102.3,Asthma,High
+P2909,81,Male,No,No,112,99,100.3,None,Low
+P2910,52,Male,No,Yes,139,85,99.6,None,Medium
+P2911,9,Female,No,No,110,83,102.5,"Diabetes, Kidney_Disease",High
+P2912,80,Female,No,No,103,77,100.3,"Asthma, Hypertension, Kidney_Disease",High
+P2913,75,Female,Yes,No,146,109,103.9,None,High
+P2914,51,Female,No,Yes,133,73,100.9,Asthma,Medium
+P2915,17,Female,Yes,Yes,127,72,103.1,Asthma,High
+P2916,64,Male,No,Yes,133,90,97.6,Asthma,Medium
+P2917,26,Male,No,No,117,120,101.6,Heart_Disease,High
+P2918,65,Female,Yes,Yes,142,110,97.7,Hypertension,High
+P2919,38,Female,Yes,Yes,143,66,99.5,None,High
+P2920,65,Male,Yes,No,155,101,98.4,Diabetes,High
+P2921,32,Male,No,Yes,150,68,99.7,Hypertension,Medium
+P2922,1,Male,No,No,151,95,103.3,None,High
+P2923,18,Female,No,Yes,105,68,103.9,"Asthma, Heart_Disease, Hypertension",High
+P2924,39,Female,No,Yes,131,101,98.9,None,Medium
+P2925,75,Male,No,No,134,108,99.8,"Diabetes, Hypertension",Medium
+P2926,59,Male,No,Yes,117,85,102.7,None,High
+P2927,86,Male,Yes,Yes,172,86,101.9,None,High
+P2928,38,Female,Yes,No,147,103,97.2,Kidney_Disease,High
+P2929,29,Male,No,Yes,166,67,97.2,"Asthma, Diabetes, Hypertension",High
+P2930,74,Male,Yes,No,121,96,101.2,Diabetes,High
+P2931,11,Male,Yes,Yes,124,77,98.5,"Asthma, Kidney_Disease",High
+P2932,85,Male,No,Yes,126,62,102.8,Heart_Disease,High
+P2933,12,Male,Yes,No,153,98,98.5,None,High
+P2934,33,Male,Yes,No,91,78,101.0,Diabetes,High
+P2935,4,Male,No,Yes,94,69,100.7,"Asthma, Kidney_Disease",High
+P2936,16,Female,Yes,Yes,169,98,97.3,None,High
+P2937,16,Male,No,No,128,95,98.8,None,Low
+P2938,8,Male,No,Yes,99,87,97.4,Diabetes,Medium
+P2939,63,Male,Yes,No,97,65,99.3,Diabetes,High
+P2940,64,Male,Yes,Yes,180,66,101.1,None,High
+P2941,3,Male,No,No,175,115,97.0,"Diabetes, Hypertension, Kidney_Disease",High
+P2942,12,Male,Yes,No,170,79,99.2,"Diabetes, Hypertension",High
+P2943,56,Female,No,No,138,78,103.0,None,High
+P2944,10,Male,Yes,Yes,171,91,99.1,"Asthma, Diabetes, Heart_Disease",High
+P2945,37,Male,Yes,Yes,105,82,99.0,None,High
+P2946,31,Male,No,Yes,132,63,99.9,Hypertension,Medium
+P2947,50,Male,No,No,134,81,98.2,None,Medium
+P2948,84,Female,No,Yes,90,68,101.4,None,Medium
+P2949,9,Female,No,No,144,84,101.2,Kidney_Disease,High
+P2950,29,Male,Yes,No,103,97,103.9,Heart_Disease,High
+P2951,56,Female,No,No,116,83,99.5,Hypertension,Medium
+P2952,24,Female,Yes,No,109,84,99.8,"Asthma, Heart_Disease",High
+P2953,47,Male,No,No,91,90,97.2,None,Low
+P2954,38,Female,Yes,Yes,90,112,99.6,Asthma,High
+P2955,24,Female,Yes,No,103,116,97.0,"Asthma, Heart_Disease, Kidney_Disease",High
+P2956,77,Male,No,Yes,152,68,100.8,None,High
+P2957,53,Male,Yes,Yes,105,82,103.1,Hypertension,High
+P2958,30,Male,Yes,Yes,112,95,98.1,None,High
+P2959,36,Female,No,Yes,157,72,99.5,Kidney_Disease,High
+P2960,39,Male,Yes,No,101,62,102.1,Asthma,High
+P2961,78,Male,Yes,No,103,105,97.8,None,High
+P2962,86,Male,No,Yes,130,109,103.6,"Hypertension, Kidney_Disease",High
+P2963,1,Female,No,Yes,171,104,103.6,None,High
+P2964,63,Male,No,Yes,93,68,103.5,None,High
+P2965,10,Male,No,Yes,169,78,103.4,Heart_Disease,High
+P2966,32,Female,Yes,No,106,110,102.3,"Diabetes, Heart_Disease",High
+P2967,37,Female,No,No,126,106,103.2,None,High
+P2968,5,Male,Yes,Yes,92,84,98.6,None,High
+P2969,72,Male,Yes,No,161,97,102.4,Diabetes,High
+P2970,29,Female,No,Yes,141,98,101.0,None,Medium
+P2971,43,Female,No,No,137,97,101.0,Diabetes,Medium
+P2972,70,Female,Yes,Yes,143,98,103.8,Diabetes,High
+P2973,89,Female,No,Yes,156,98,102.6,Asthma,High
+P2974,9,Male,No,No,143,89,98.7,Heart_Disease,High
+P2975,48,Female,Yes,Yes,141,80,98.0,Hypertension,High
+P2976,54,Male,No,Yes,107,82,98.5,None,Medium
+P2977,36,Male,No,No,168,99,98.1,Asthma,High
+P2978,38,Female,No,No,153,115,103.4,None,High
+P2979,2,Female,Yes,Yes,108,117,98.8,None,High
+P2980,66,Male,Yes,No,100,89,102.0,None,High
+P2981,43,Female,Yes,No,166,66,99.3,None,High
+P2982,59,Female,Yes,No,112,113,100.5,"Diabetes, Hypertension",High
+P2983,36,Male,No,No,97,75,104.0,None,High
+P2984,85,Male,No,No,135,71,103.5,"Heart_Disease, Hypertension",High
+P2985,68,Female,Yes,Yes,125,61,103.4,None,High
+P2986,56,Female,Yes,Yes,146,70,97.7,None,High
+P2987,21,Male,Yes,Yes,128,65,99.9,Hypertension,High
+P2988,16,Female,Yes,Yes,141,84,101.2,Diabetes,High
+P2989,51,Male,Yes,No,94,73,97.8,None,High
+P2990,21,Male,No,No,90,71,98.1,Kidney_Disease,High
+P2991,7,Male,Yes,Yes,117,83,101.3,Asthma,High
+P2992,11,Male,Yes,Yes,172,61,98.3,Heart_Disease,High
+P2993,56,Male,No,Yes,113,113,99.4,Heart_Disease,High
+P2994,90,Female,Yes,No,135,98,99.2,Kidney_Disease,High
+P2995,80,Male,Yes,Yes,126,110,102.5,Hypertension,High
+P2996,18,Male,Yes,No,173,100,100.3,"Diabetes, Kidney_Disease",High
+P2997,37,Female,No,No,146,106,99.0,None,Medium
+P2998,2,Male,No,No,115,103,101.3,"Asthma, Diabetes",Medium
+P2999,64,Female,No,No,133,63,99.4,Asthma,Medium
+P3000,9,Male,Yes,Yes,160,65,102.7,Asthma,High
