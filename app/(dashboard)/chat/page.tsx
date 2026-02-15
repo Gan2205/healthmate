@@ -105,7 +105,8 @@ export default function ChatScreen() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: textToSend,
-                    imageBase64: imageToSend
+                    imageBase64: imageToSend,
+                    userContext: userData // Send full user data including vitals
                 }),
             });
 

@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 
 export async function POST(req: Request) {
     try {
-        const { message, imageBase64 } = await req.json();
+        const { message, imageBase64, userContext } = await req.json();
 
         if (!process.env.GEMINI_API_KEY) {
             return NextResponse.json({ error: "GEMINI_API_KEY is not set" }, { status: 500 });
@@ -17,10 +17,27 @@ export async function POST(req: Request) {
 
         let prompt = message;
 
-        // Note: The previous implementation had userContext extraction. 
-        // The frontend at app/(dashboard)/chat/page.tsx DOES NOT seem to send userContext in the body.
-        // It sends { message, imageBase64 }.
-        // So we will stick to what the frontend sends.
+        if (userContext) {
+            const contextString = `
+User Profile:
+Name: ${userContext.name || 'Unknown'}
+Age: ${userContext.age || 'Unknown'}
+Gender: ${userContext.gender || 'Unknown'}
+Health Metrics:
+- Sugar Level: ${userContext.sugarLevel || 'Not recorded'}
+- Heart Rate: ${userContext.heartRate || 'Not recorded'}
+- Blood Pressure: ${userContext.bloodPressure || 'Not recorded'}
+- Weight: ${userContext.weight || 'Not recorded'}
+- Allergies: ${userContext.allergies || 'None'}
+- Conditions: ${userContext.conditions || 'None'}
+
+Instructions: You are a personalized AI medical assistant. 
+1. Use the User Profile above to tailor your advice. 
+2. If the user asks about their own health data (e.g., "what is my sugar level?"), answer based on the profile.
+3. If the query is general, answer generally but keep the user's context in mind (e.g., for a diabetic user, warn about sugar in recipes).
+`;
+            prompt = contextString + "\nUser Query: " + message;
+        }
 
         if (imageBase64) {
             prompt += "\n\n(Image provided but processing text only for this version)";
