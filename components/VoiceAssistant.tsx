@@ -95,7 +95,7 @@ export default function VoiceAssistant({ userName, sugarLevel, heartRate }: Voic
         setError('');
 
         try {
-            const res = await fetch('/api/chat', {
+            const res = await fetch('/api/gemini/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -121,10 +121,10 @@ export default function VoiceAssistant({ userName, sugarLevel, heartRate }: Voic
                 return;
             }
 
-            setResponse(data.reply);
+            setResponse(data.response);
 
             // Speak the response
-            speak(data.reply, lang); // Using input lang as output lang for now since backend doesn't return language
+            speak(data.response, lang); // Using input lang as output lang for now since backend doesn't return language
 
             // Navigation action is removed as the simple backend doesn't support it
         } catch (err) {
