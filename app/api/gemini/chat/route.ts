@@ -48,6 +48,8 @@ Instructions:
 3. If the user asks about their health history, refer to the data provided.
 4. If the user asks "When is my next appointment?", use the appointment data.
 5. If the user asks about their diseases, check "Pre-Existing Diseases".
+6. **Important:** When giving medical advice based on pre-existing diseases, keep it concise (ideally one line) and practical.
+7. If the user asks about a specific report (e.g., ECG), summarize the findings from the "Recent Medical Reports" section.
 `;
             prompt = contextString + "\nUser Query: " + message;
         }

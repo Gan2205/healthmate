@@ -20,6 +20,7 @@ import { collection, query, where, getDocs, addDoc, Timestamp } from 'firebase/f
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useUserData } from '../../../hooks/useUserData';
+import { usePatientData } from '../../../hooks/usePatientData';
 import { auth, db } from '../../../lib/firebase';
 import { doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import VoiceAssistant from '../../../components/VoiceAssistant';
@@ -28,6 +29,7 @@ export default function HomeScreen() {
     // Dummy data
     const router = useRouter();
     const { userData, loading } = useUserData();
+    const patientData = usePatientData(); // Fetch full dashboard data for Voice Assistant
     const username = userData?.name || auth.currentUser?.displayName || "User";
     // Vitals State
     const [sugarLevel, setSugarLevel] = React.useState("98");
@@ -492,6 +494,7 @@ export default function HomeScreen() {
                 userName={username}
                 sugarLevel={sugarLevel}
                 heartRate={heartRate}
+                patientData={patientData} // Pass full context
             />
 
         </div>

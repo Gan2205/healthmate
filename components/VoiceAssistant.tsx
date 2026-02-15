@@ -6,8 +6,9 @@ import { MdMic, MdMicOff, MdClose, MdVolumeUp, MdLanguage } from 'react-icons/md
 
 interface VoiceAssistantProps {
     userName?: string;
-    sugarLevel?: string;
+    sugarLevel?: string; // Keep for backward compat or display if needed
     heartRate?: string;
+    patientData?: any; // Full dashboard context
 }
 
 const LANGUAGES = [
@@ -21,7 +22,7 @@ const LANGUAGES = [
     { code: 'gu-IN', label: 'ગુજરાતી', shortLabel: 'GU', flag: '🇮🇳' },
 ];
 
-export default function VoiceAssistant({ userName, sugarLevel, heartRate }: VoiceAssistantProps) {
+export default function VoiceAssistant({ userName, sugarLevel, heartRate, patientData }: VoiceAssistantProps) {
     const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [isListening, setIsListening] = useState(false);
@@ -100,8 +101,9 @@ export default function VoiceAssistant({ userName, sugarLevel, heartRate }: Voic
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: text,
-                    // Keeping these for context if we enhance the backend later, though currently unused by the simple BLOOM backend
                     language: lang,
+                    // Send full patient data if available, otherwise fallback to basic context
+                    patientData: patientData ? patientData : undefined,
                     userContext: {
                         name: userName || 'User',
                         sugarLevel: sugarLevel || 'Unknown',
